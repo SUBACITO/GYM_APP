@@ -36,14 +36,17 @@
     <Reference Include="DevComponents.DotNetBar2">
       <HintPath>..\..\..\..\..\Downloads\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2">
-      <HintPath>Library\Guna.UI2\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="QuanLyBanHang.DataLayer">
       <HintPath>..\..\QuanLyBanHang.DataLayer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,17 +61,23 @@
     <Compile Include="clsMain.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\LoaiHang.cs" />
+    <Compile Include="Forms\Frm_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Dashboard.Designer.cs">
+      <DependentUpon>Frm_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_MembersManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_MembersManager.Designer.cs">
+      <DependentUpon>Frm_MembersManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Base.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Base.Designer.cs">
       <DependentUpon>Frm_Base.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_DangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_DangNhap.Designer.cs">
-      <DependentUpon>Frm_DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Main.cs">
       <SubType>Form</SubType>
@@ -76,16 +85,28 @@
     <Compile Include="Frm_Main.Designer.cs">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_PT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_PT.Designer.cs">
+      <DependentUpon>Frm_PT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Frm_Dashboard.resx">
+      <DependentUpon>Frm_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_MembersManager.resx">
+      <DependentUpon>Frm_MembersManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Base.resx">
       <DependentUpon>Frm_Base.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_DangNhap.resx">
-      <DependentUpon>Frm_DangNhap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_PT.resx">
+      <DependentUpon>Frm_PT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +117,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
