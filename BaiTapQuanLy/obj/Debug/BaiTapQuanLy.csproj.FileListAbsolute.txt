@@ -1,0 +1,72 @@
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe.config
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.pdb
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\QuanLyBanHang.DataLayer.dll
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_QuanLyKhachHang_Main.resources
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Properties.Resources.resources
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csproj.GenerateResource.Cache
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.exe
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.pdb
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_ThemSuaKhachHang.resources
+Z:\dataSuba\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csprojResolveAssemblyReference.cache
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe.config
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.exe
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.pdb
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.pdb
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csprojResolveAssemblyReference.cache
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_QuanLyKhachHang_Main.resources
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_ThemSuaKhachHang.resources
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Properties.Resources.resources
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csproj.GenerateResource.Cache
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_DangNhap.resources
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Main.resources
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_QuanLyLoaiHang.resources
+Z:\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_QuanLyLoaiHang_modifer.resources
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe.config
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.exe
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.pdb
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.pdb
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csprojResolveAssemblyReference.cache
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_DangNhap.resources
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Main.resources
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_QuanLyKhachHang_Main.resources
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_QuanLyLoaiHang.resources
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_QuanLyLoaiHang_modifer.resources
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_ThemSuaKhachHang.resources
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Properties.Resources.resources
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csproj.GenerateResource.Cache
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\LHUser\Desktop\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_PhanQuyen.resources
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe.config
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.pdb
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csproj.AssemblyReference.cache
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Base.resources
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_DangNhap.resources
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Main.resources
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_PhanQuyen.resources
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_QuanLyKhachHang_Main.resources
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_QuanLyLoaiHang.resources
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_QuanLyLoaiHang_modifer.resources
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_ThemSuaKhachHang.resources
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Properties.Resources.resources
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csproj.GenerateResource.cache
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csproj.CoreCompileInputs.cache
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQu.3721779F.Up2Date
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.exe
+C:\Users\nguye\Downloads\GymManagement\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.pdb
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csproj.AssemblyReference.cache
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Base.resources
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_DangNhap.resources
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Main.resources
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Properties.Resources.resources
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csproj.GenerateResource.cache
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.csproj.CoreCompileInputs.cache
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.exe
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.pdb
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe.config
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.pdb
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQu.3721779F.Up2Date

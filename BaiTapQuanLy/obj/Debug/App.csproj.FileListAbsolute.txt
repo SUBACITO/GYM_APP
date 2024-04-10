@@ -1,0 +1,14 @@
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe.config
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.exe
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\BaiTapQuanLy.pdb
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\bin\Debug\Guna.UI2.dll
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\App.csproj.AssemblyReference.cache
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Base.resources
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_DangNhap.resources
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Main.resources
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Properties.Resources.resources
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\App.csproj.GenerateResource.cache
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\App.csproj.CoreCompileInputs.cache
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\App.csproj.Up2Date
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.exe
+D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.pdb
