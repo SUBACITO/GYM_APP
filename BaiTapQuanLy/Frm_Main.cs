@@ -25,19 +25,6 @@ namespace BaiTapQuanLy
             currentButton = null;
         }
 
-        //Drag From
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void topPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        ///////////////////////////////////////////////
-        
-
         private void Frm_Main_Load(object sender, EventArgs e)
         {
             pressedBTN(homePageBTN);
@@ -179,13 +166,15 @@ namespace BaiTapQuanLy
         }
 
         /////////////////////////////////////////////////////////
+
+        /// Open popup form (User profile)
         private void userProfile_Click(object sender, EventArgs e)
         {
-            var popupForm = new Frm_UserProfile();
-            Point profileLocation = userProfile.PointToScreen(Point.Empty);
-            popupForm.StartPosition = FormStartPosition.Manual;
-            popupForm.Location = new Point(profileLocation.X - 40, (profileLocation.Y + userProfile.Height) + 10);
-            popupForm.ShowDialog();
+                var popupForm = new Frm_UserProfile();
+                Point profileLocation = userProfile.PointToScreen(Point.Empty);
+                popupForm.StartPosition = FormStartPosition.Manual;
+                popupForm.Location = new Point(profileLocation.X - 40, (profileLocation.Y + userProfile.Height) + 10);
+                popupForm.ShowDialog();
         }
     }
 }

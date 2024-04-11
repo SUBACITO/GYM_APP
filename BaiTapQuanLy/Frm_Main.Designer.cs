@@ -47,6 +47,7 @@
             this.userProfile = new System.Windows.Forms.PictureBox();
             this.sidebarPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.sidebarTransistion = new System.Windows.Forms.Timer(this.components);
+            this.gunaDragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuSidebarIcon)).BeginInit();
@@ -224,7 +225,6 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1142, 48);
             this.topPanel.TabIndex = 6;
-            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
             // 
             // usernameLabel
             // 
@@ -302,6 +302,12 @@
             this.sidebarTransistion.Interval = 10;
             this.sidebarTransistion.Tick += new System.EventHandler(this.sidebarTransistion_Tick);
             // 
+            // gunaDragControl
+            // 
+            this.gunaDragControl.DockIndicatorTransparencyValue = 0.6D;
+            this.gunaDragControl.TargetControl = this.topPanel;
+            this.gunaDragControl.UseTransparentDrag = true;
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,5 +352,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox userProfile;
         private System.Windows.Forms.Label usernameLabel;
+        private Guna.UI2.WinForms.Guna2DragControl gunaDragControl;
     }
 }

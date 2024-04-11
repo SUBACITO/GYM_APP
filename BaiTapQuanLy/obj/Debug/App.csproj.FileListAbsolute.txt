@@ -13,7 +13,6 @@ D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\App.csproj.Up2Date
 D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.exe
 D:\Gym Management\BaiTapQuanLy\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.pdb
 C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\obj\Debug\App.csproj.AssemblyReference.cache
-C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Base.resources
 C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Main.resources
 C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_PT.resources
 C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Properties.Resources.resources
