@@ -28,3 +28,5 @@ C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\bin\Debug\Guna.UI2.dll
 C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_Dashboard.resources
 C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_MembersManager.resources
 C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\obj\Debug\App.csproj.Up2Date
+C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_UserProfile.resources
+C:\Users\Admin\Desktop\GYM_APP_C-\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Frm_Login.resources
