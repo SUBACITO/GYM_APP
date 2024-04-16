@@ -92,6 +92,7 @@
             this.logOutBTN.Size = new System.Drawing.Size(236, 45);
             this.logOutBTN.TabIndex = 3;
             this.logOutBTN.Text = "Log Out";
+            this.logOutBTN.Click += new System.EventHandler(this.logOutBTN_Click);
             // 
             // closeProfileButton
             // 

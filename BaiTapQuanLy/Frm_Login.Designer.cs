@@ -29,41 +29,144 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnLearnMore = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Signin_EmailorPhone_Panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.signIn_RightEmailPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.backToEmailorPhoneBTN = new Guna.UI2.WinForms.Guna2Button();
+            this.cboxShowPassword = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.txtEmailorPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnForgotPassword = new Guna.UI2.WinForms.Guna2Button();
-            this.tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnLearnMore = new Guna.UI2.WinForms.Guna2Button();
+            this.btnForgotEmail = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPassword = new Guna.UI2.WinForms.Guna2Button();
+            this.label_LearnMore = new System.Windows.Forms.Label();
+            this.btnNext_EmailorPhone = new Guna.UI2.WinForms.Guna2Button();
             this.btnCreateAccount = new Guna.UI2.WinForms.Guna2Button();
-            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel2.SuspendLayout();
+            this.label_UserEmail = new System.Windows.Forms.Label();
+            this.label_Username = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbl_SignIn = new System.Windows.Forms.Label();
+            this.lblUseYourAccount = new System.Windows.Forms.Label();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Signin_EmailorPhone_Panel.SuspendLayout();
+            this.signIn_RightEmailPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2Panel2
+            // Signin_EmailorPhone_Panel
             // 
-            this.guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Panel2.AutoSize = true;
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.White;
-            this.guna2Panel2.BorderRadius = 35;
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.btnLearnMore);
-            this.guna2Panel2.Controls.Add(this.guna2Panel1);
-            this.guna2Panel2.Controls.Add(this.label3);
-            this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Controls.Add(this.label1);
-            this.guna2Panel2.Controls.Add(this.btnForgotPassword);
-            this.guna2Panel2.Controls.Add(this.tbUsername);
-            this.guna2Panel2.Controls.Add(this.btnCreateAccount);
-            this.guna2Panel2.Controls.Add(this.btnNext);
-            this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(205, 110);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(959, 369);
-            this.guna2Panel2.TabIndex = 4;
+            this.Signin_EmailorPhone_Panel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Signin_EmailorPhone_Panel.AutoSize = true;
+            this.Signin_EmailorPhone_Panel.BackColor = System.Drawing.Color.Transparent;
+            this.Signin_EmailorPhone_Panel.BorderColor = System.Drawing.Color.White;
+            this.Signin_EmailorPhone_Panel.BorderRadius = 35;
+            this.Signin_EmailorPhone_Panel.BorderThickness = 1;
+            this.Signin_EmailorPhone_Panel.Controls.Add(this.signIn_RightEmailPanel);
+            this.Signin_EmailorPhone_Panel.Controls.Add(this.label_UserEmail);
+            this.Signin_EmailorPhone_Panel.Controls.Add(this.label_Username);
+            this.Signin_EmailorPhone_Panel.Controls.Add(this.guna2Panel1);
+            this.Signin_EmailorPhone_Panel.Controls.Add(this.lbl_SignIn);
+            this.Signin_EmailorPhone_Panel.Controls.Add(this.lblUseYourAccount);
+            this.Signin_EmailorPhone_Panel.FillColor = System.Drawing.Color.White;
+            this.Signin_EmailorPhone_Panel.Location = new System.Drawing.Point(205, 110);
+            this.Signin_EmailorPhone_Panel.Name = "Signin_EmailorPhone_Panel";
+            this.Signin_EmailorPhone_Panel.Size = new System.Drawing.Size(959, 386);
+            this.Signin_EmailorPhone_Panel.TabIndex = 4;
+            // 
+            // signIn_RightEmailPanel
+            // 
+            this.signIn_RightEmailPanel.Controls.Add(this.txtPassword);
+            this.signIn_RightEmailPanel.Controls.Add(this.backToEmailorPhoneBTN);
+            this.signIn_RightEmailPanel.Controls.Add(this.cboxShowPassword);
+            this.signIn_RightEmailPanel.Controls.Add(this.txtEmailorPhone);
+            this.signIn_RightEmailPanel.Controls.Add(this.btnForgotPassword);
+            this.signIn_RightEmailPanel.Controls.Add(this.btnLearnMore);
+            this.signIn_RightEmailPanel.Controls.Add(this.btnForgotEmail);
+            this.signIn_RightEmailPanel.Controls.Add(this.btnPassword);
+            this.signIn_RightEmailPanel.Controls.Add(this.label_LearnMore);
+            this.signIn_RightEmailPanel.Controls.Add(this.btnNext_EmailorPhone);
+            this.signIn_RightEmailPanel.Controls.Add(this.btnCreateAccount);
+            this.signIn_RightEmailPanel.Location = new System.Drawing.Point(472, 17);
+            this.signIn_RightEmailPanel.Name = "signIn_RightEmailPanel";
+            this.signIn_RightEmailPanel.Size = new System.Drawing.Size(484, 343);
+            this.signIn_RightEmailPanel.TabIndex = 9;
+            // 
+            // backToEmailorPhoneBTN
+            // 
+            this.backToEmailorPhoneBTN.BorderRadius = 20;
+            this.backToEmailorPhoneBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backToEmailorPhoneBTN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.backToEmailorPhoneBTN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.backToEmailorPhoneBTN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.backToEmailorPhoneBTN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.backToEmailorPhoneBTN.FillColor = System.Drawing.Color.Azure;
+            this.backToEmailorPhoneBTN.Font = new System.Drawing.Font("Roboto", 12F);
+            this.backToEmailorPhoneBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
+            this.backToEmailorPhoneBTN.Location = new System.Drawing.Point(6, 18);
+            this.backToEmailorPhoneBTN.Name = "backToEmailorPhoneBTN";
+            this.backToEmailorPhoneBTN.Size = new System.Drawing.Size(113, 45);
+            this.backToEmailorPhoneBTN.TabIndex = 10;
+            this.backToEmailorPhoneBTN.Text = "Go back";
+            this.backToEmailorPhoneBTN.Click += new System.EventHandler(this.backToEmailorPhoneBTN_Click);
+            // 
+            // cboxShowPassword
+            // 
+            this.cboxShowPassword.AutoSize = true;
+            this.cboxShowPassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxShowPassword.CheckedState.BorderRadius = 0;
+            this.cboxShowPassword.CheckedState.BorderThickness = 0;
+            this.cboxShowPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboxShowPassword.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxShowPassword.Location = new System.Drawing.Point(125, 149);
+            this.cboxShowPassword.Name = "cboxShowPassword";
+            this.cboxShowPassword.Size = new System.Drawing.Size(141, 23);
+            this.cboxShowPassword.TabIndex = 3;
+            this.cboxShowPassword.Text = "Show password";
+            this.cboxShowPassword.UncheckedState.BorderColor = System.Drawing.Color.Black;
+            this.cboxShowPassword.UncheckedState.BorderRadius = 0;
+            this.cboxShowPassword.UncheckedState.BorderThickness = 0;
+            this.cboxShowPassword.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.cboxShowPassword.CheckedChanged += new System.EventHandler(this.cboxShowPassword_CheckedChanged);
+            // 
+            // txtEmailorPhone
+            // 
+            this.txtEmailorPhone.Animated = true;
+            this.txtEmailorPhone.BorderColor = System.Drawing.Color.Black;
+            this.txtEmailorPhone.BorderRadius = 3;
+            this.txtEmailorPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmailorPhone.DefaultText = "";
+            this.txtEmailorPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmailorPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmailorPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmailorPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmailorPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmailorPhone.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.txtEmailorPhone.ForeColor = System.Drawing.Color.Black;
+            this.txtEmailorPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmailorPhone.Location = new System.Drawing.Point(0, 82);
+            this.txtEmailorPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmailorPhone.Name = "txtEmailorPhone";
+            this.txtEmailorPhone.PasswordChar = '\0';
+            this.txtEmailorPhone.PlaceholderText = "Email or phone";
+            this.txtEmailorPhone.SelectedText = "";
+            this.txtEmailorPhone.Size = new System.Drawing.Size(449, 52);
+            this.txtEmailorPhone.TabIndex = 0;
+            // 
+            // btnForgotPassword
+            // 
+            this.btnForgotPassword.BorderRadius = 20;
+            this.btnForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnForgotPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnForgotPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnForgotPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnForgotPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnForgotPassword.FillColor = System.Drawing.Color.Azure;
+            this.btnForgotPassword.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgotPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
+            this.btnForgotPassword.Location = new System.Drawing.Point(265, 243);
+            this.btnForgotPassword.Name = "btnForgotPassword";
+            this.btnForgotPassword.Size = new System.Drawing.Size(184, 45);
+            this.btnForgotPassword.TabIndex = 2;
+            this.btnForgotPassword.Text = "Forgot your password?";
             // 
             // btnLearnMore
             // 
@@ -74,91 +177,76 @@
             this.btnLearnMore.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLearnMore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLearnMore.FillColor = System.Drawing.Color.Azure;
-            this.btnLearnMore.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLearnMore.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLearnMore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
-            this.btnLearnMore.Location = new System.Drawing.Point(480, 252);
+            this.btnLearnMore.Location = new System.Drawing.Point(6, 234);
             this.btnLearnMore.Name = "btnLearnMore";
             this.btnLearnMore.Size = new System.Drawing.Size(215, 29);
             this.btnLearnMore.TabIndex = 8;
             this.btnLearnMore.Text = "Learn more about using Guest mode";
             // 
-            // guna2Panel1
+            // btnForgotEmail
             // 
-            this.guna2Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel1.BackgroundImage")));
-            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2Panel1.Location = new System.Drawing.Point(29, 23);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(48, 48);
-            this.guna2Panel1.TabIndex = 7;
+            this.btnForgotEmail.BorderRadius = 10;
+            this.btnForgotEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnForgotEmail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnForgotEmail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnForgotEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnForgotEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnForgotEmail.FillColor = System.Drawing.Color.Azure;
+            this.btnForgotEmail.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgotEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
+            this.btnForgotEmail.Location = new System.Drawing.Point(3, 143);
+            this.btnForgotEmail.Name = "btnForgotEmail";
+            this.btnForgotEmail.Size = new System.Drawing.Size(116, 29);
+            this.btnForgotEmail.TabIndex = 3;
+            this.btnForgotEmail.Text = "Forrgot email?";
             // 
-            // label3
+            // btnPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F);
-            this.label3.Location = new System.Drawing.Point(19, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 53);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Sign in";
+            this.btnPassword.BorderRadius = 20;
+            this.btnPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
+            this.btnPassword.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPassword.ForeColor = System.Drawing.Color.White;
+            this.btnPassword.Location = new System.Drawing.Point(77, 295);
+            this.btnPassword.Name = "btnPassword";
+            this.btnPassword.Size = new System.Drawing.Size(100, 45);
+            this.btnPassword.TabIndex = 1;
+            this.btnPassword.Text = "Next";
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
             // 
-            // label2
+            // label_LearnMore
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(25, 160);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Use your Google Account";
+            this.label_LearnMore.AutoSize = true;
+            this.label_LearnMore.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_LearnMore.Location = new System.Drawing.Point(3, 215);
+            this.label_LearnMore.Name = "label_LearnMore";
+            this.label_LearnMore.Size = new System.Drawing.Size(352, 15);
+            this.label_LearnMore.TabIndex = 4;
+            this.label_LearnMore.Text = "Not your computer? Use a private browsing window to sign in.";
             // 
-            // label1
+            // btnNext_EmailorPhone
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(477, 234);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Not your computer? Use a private browsing window to sign in.";
-            // 
-            // btnForgotPassword
-            // 
-            this.btnForgotPassword.BorderRadius = 10;
-            this.btnForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnForgotPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnForgotPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnForgotPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnForgotPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnForgotPassword.FillColor = System.Drawing.Color.Azure;
-            this.btnForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForgotPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
-            this.btnForgotPassword.Location = new System.Drawing.Point(480, 160);
-            this.btnForgotPassword.Name = "btnForgotPassword";
-            this.btnForgotPassword.Size = new System.Drawing.Size(116, 29);
-            this.btnForgotPassword.TabIndex = 3;
-            this.btnForgotPassword.Text = "Forrgot email?";
-            // 
-            // tbUsername
-            // 
-            this.tbUsername.BorderColor = System.Drawing.Color.Black;
-            this.tbUsername.BorderRadius = 3;
-            this.tbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUsername.DefaultText = "";
-            this.tbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.tbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsername.Location = new System.Drawing.Point(480, 102);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbUsername.Name = "tbUsername";
-            this.tbUsername.PasswordChar = '\0';
-            this.tbUsername.PlaceholderText = "Email or phone";
-            this.tbUsername.SelectedText = "";
-            this.tbUsername.Size = new System.Drawing.Size(441, 52);
-            this.tbUsername.TabIndex = 0;
+            this.btnNext_EmailorPhone.BorderRadius = 20;
+            this.btnNext_EmailorPhone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext_EmailorPhone.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext_EmailorPhone.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext_EmailorPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNext_EmailorPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNext_EmailorPhone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
+            this.btnNext_EmailorPhone.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext_EmailorPhone.ForeColor = System.Drawing.Color.White;
+            this.btnNext_EmailorPhone.Location = new System.Drawing.Point(349, 295);
+            this.btnNext_EmailorPhone.Name = "btnNext_EmailorPhone";
+            this.btnNext_EmailorPhone.Size = new System.Drawing.Size(100, 45);
+            this.btnNext_EmailorPhone.TabIndex = 1;
+            this.btnNext_EmailorPhone.Text = "Next";
+            this.btnNext_EmailorPhone.Click += new System.EventHandler(this.btnNext_EmailorPhone_Click);
             // 
             // btnCreateAccount
             // 
@@ -169,45 +257,104 @@
             this.btnCreateAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCreateAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCreateAccount.FillColor = System.Drawing.Color.Azure;
-            this.btnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateAccount.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.btnCreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
-            this.btnCreateAccount.Location = new System.Drawing.Point(676, 303);
+            this.btnCreateAccount.Location = new System.Drawing.Point(191, 295);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(138, 45);
             this.btnCreateAccount.TabIndex = 2;
             this.btnCreateAccount.Text = "Create account";
             // 
-            // btnNext
+            // label_UserEmail
             // 
-            this.btnNext.BorderRadius = 20;
-            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNext.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(835, 303);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(86, 45);
-            this.btnNext.TabIndex = 1;
-            this.btnNext.Text = "Next";
+            this.label_UserEmail.AutoSize = true;
+            this.label_UserEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_UserEmail.Location = new System.Drawing.Point(25, 285);
+            this.label_UserEmail.Name = "label_UserEmail";
+            this.label_UserEmail.Size = new System.Drawing.Size(80, 19);
+            this.label_UserEmail.TabIndex = 5;
+            this.label_UserEmail.Text = "UserEmail";
+            // 
+            // label_Username
+            // 
+            this.label_Username.AutoSize = true;
+            this.label_Username.Font = new System.Drawing.Font("Roboto", 33.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Username.Location = new System.Drawing.Point(20, 227);
+            this.label_Username.Name = "label_Username";
+            this.label_Username.Size = new System.Drawing.Size(226, 54);
+            this.label_Username.TabIndex = 6;
+            this.label_Username.Text = "Username";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel1.BackgroundImage")));
+            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2Panel1.Location = new System.Drawing.Point(29, 23);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(48, 48);
+            this.guna2Panel1.TabIndex = 7;
+            // 
+            // lbl_SignIn
+            // 
+            this.lbl_SignIn.AutoSize = true;
+            this.lbl_SignIn.Font = new System.Drawing.Font("Roboto", 33.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SignIn.Location = new System.Drawing.Point(19, 98);
+            this.lbl_SignIn.Name = "lbl_SignIn";
+            this.lbl_SignIn.Size = new System.Drawing.Size(158, 54);
+            this.lbl_SignIn.TabIndex = 6;
+            this.lbl_SignIn.Text = "Sign in";
+            // 
+            // lblUseYourAccount
+            // 
+            this.lblUseYourAccount.AutoSize = true;
+            this.lblUseYourAccount.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseYourAccount.Location = new System.Drawing.Point(25, 160);
+            this.lblUseYourAccount.Name = "lblUseYourAccount";
+            this.lblUseYourAccount.Size = new System.Drawing.Size(186, 19);
+            this.lblUseYourAccount.TabIndex = 5;
+            this.lblUseYourAccount.Text = "Use your Google Account";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Animated = true;
+            this.txtPassword.BorderColor = System.Drawing.Color.Black;
+            this.txtPassword.BorderRadius = 3;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Location = new System.Drawing.Point(0, 178);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PlaceholderText = "Email or phone";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(449, 52);
+            this.txtPassword.TabIndex = 11;
             // 
             // Frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1441, 628);
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.Signin_EmailorPhone_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
+            this.Load += new System.EventHandler(this.Frm_Login_Load);
+            this.Signin_EmailorPhone_Panel.ResumeLayout(false);
+            this.Signin_EmailorPhone_Panel.PerformLayout();
+            this.signIn_RightEmailPanel.ResumeLayout(false);
+            this.signIn_RightEmailPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,15 +362,23 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2TextBox tbUsername;
+        private Guna.UI2.WinForms.Guna2Panel Signin_EmailorPhone_Panel;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmailorPhone;
         private Guna.UI2.WinForms.Guna2Button btnCreateAccount;
-        private Guna.UI2.WinForms.Guna2Button btnNext;
-        private Guna.UI2.WinForms.Guna2Button btnForgotPassword;
+        private Guna.UI2.WinForms.Guna2Button btnNext_EmailorPhone;
+        private Guna.UI2.WinForms.Guna2Button btnForgotEmail;
         private Guna.UI2.WinForms.Guna2Button btnLearnMore;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_SignIn;
+        private System.Windows.Forms.Label lblUseYourAccount;
+        private System.Windows.Forms.Label label_LearnMore;
+        private Guna.UI2.WinForms.Guna2Panel signIn_RightEmailPanel;
+        private Guna.UI2.WinForms.Guna2Button btnPassword;
+        private Guna.UI2.WinForms.Guna2Button btnForgotPassword;
+        private System.Windows.Forms.Label label_Username;
+        private System.Windows.Forms.Label label_UserEmail;
+        private Guna.UI2.WinForms.Guna2CheckBox cboxShowPassword;
+        private Guna.UI2.WinForms.Guna2Button backToEmailorPhoneBTN;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
     }
 }

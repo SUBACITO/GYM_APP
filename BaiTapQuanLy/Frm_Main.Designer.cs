@@ -35,7 +35,7 @@
             this.memberManagerBTN = new Guna.UI2.WinForms.Guna2Button();
             this.dashBoardBTN = new Guna.UI2.WinForms.Guna2Button();
             this.searchBarTxT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.exitAppBTN = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
@@ -159,17 +159,18 @@
             this.searchBarTxT.Size = new System.Drawing.Size(374, 34);
             this.searchBarTxT.TabIndex = 9;
             // 
-            // guna2ControlBox3
+            // exitAppBTN
             // 
-            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox3.BackColor = System.Drawing.Color.Red;
-            this.guna2ControlBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1097, 0);
-            this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox3.TabIndex = 4;
+            this.exitAppBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitAppBTN.BackColor = System.Drawing.Color.Red;
+            this.exitAppBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitAppBTN.FillColor = System.Drawing.Color.Transparent;
+            this.exitAppBTN.IconColor = System.Drawing.Color.White;
+            this.exitAppBTN.Location = new System.Drawing.Point(1097, 0);
+            this.exitAppBTN.Name = "exitAppBTN";
+            this.exitAppBTN.Size = new System.Drawing.Size(45, 29);
+            this.exitAppBTN.TabIndex = 4;
+            this.exitAppBTN.Click += new System.EventHandler(this.exitAppBTN_Click);
             // 
             // guna2ControlBox2
             // 
@@ -216,7 +217,7 @@
             this.topPanel.Controls.Add(this.pictureBox1);
             this.topPanel.Controls.Add(this.searchBarTxT);
             this.topPanel.Controls.Add(this.menuSidebarIcon);
-            this.topPanel.Controls.Add(this.guna2ControlBox3);
+            this.topPanel.Controls.Add(this.exitAppBTN);
             this.topPanel.Controls.Add(this.userProfile);
             this.topPanel.Controls.Add(this.guna2ControlBox1);
             this.topPanel.Controls.Add(this.guna2ControlBox2);
@@ -323,6 +324,7 @@
             this.Name = "Frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym Membership Management";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Main_Load);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
@@ -337,7 +339,7 @@
         #endregion
         private System.Windows.Forms.Panel panelDesktop;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private Guna.UI2.WinForms.Guna2ControlBox exitAppBTN;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Button dashBoardBTN;
         private Guna.UI2.WinForms.Guna2Button privateTrainerBTN;

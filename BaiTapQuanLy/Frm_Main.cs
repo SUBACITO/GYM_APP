@@ -176,5 +176,13 @@ namespace BaiTapQuanLy
                 popupForm.Location = new Point(profileLocation.X - 40, (profileLocation.Y + userProfile.Height) + 10);
                 popupForm.ShowDialog();
         }
+
+        private void exitAppBTN_Click(object sender, EventArgs e)
+        {
+            Frm_Login frm_Login = new Frm_Login();
+            frm_Login.Show();
+            Frm_Main frm_Main = new Frm_Main();
+            frm_Main.Close();
+        }
     }
 }
