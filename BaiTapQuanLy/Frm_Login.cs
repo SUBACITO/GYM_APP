@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transitions;
@@ -17,6 +18,15 @@ namespace BaiTapQuanLy
         public Frm_Login()
         {
             InitializeComponent();
+
+            /// Hide password items
+            hidePasswordFieldItems();
+            // Default accept button
+            this.AcceptButton = btnNext_EmailorPhone;
+        }
+
+        private void hidePasswordFieldItems()
+        {
             txtPassword.Visible = false;
             cboxShowPassword.Visible = false;
             btnForgotPassword.Visible = false;
@@ -24,70 +34,78 @@ namespace BaiTapQuanLy
             label_Username.Visible = false;
             label_UserEmail.Visible = false;
             backToEmailorPhoneBTN.Visible = false;
-            /////////////////////////////////////
-            this.AcceptButton = btnNext_EmailorPhone;
         }
+
         private void Frm_Login_Load(object sender, EventArgs e)
         {
             cboxShowPassword.Checked = false;
             txtPassword.UseSystemPasswordChar = true;
             txtEmailorPhone.Focus();
-            txtPassword.Focus();
         }
+
+        //Check if email is valid (contain '@gmail.com')
+        private bool isValidEmail(string email)
+        {
+            // Regular expression pattern for email validation
+            string emailPattern = @"^[a-zA-Z0-9._%+-]+@gmail\.com$";
+
+            // Check if the email matches the pattern
+            return Regex.IsMatch(email, emailPattern);
+        }
+
 
         //Click next if email is valid -> move to password form
         private void btnNext_EmailorPhone_Click(object sender, EventArgs e)
         {
             string userEmailText = txtEmailorPhone.Text.Trim();
-            if(!string.IsNullOrEmpty(txtEmailorPhone.Text))
+            if (!string.IsNullOrEmpty(txtEmailorPhone.Text))
             {
-                if(isValidEmail(userEmailText))
+                if (isValidEmail(userEmailText))
                 {
-                    doTransitionAnimation();
-                    this.AcceptButton = btnPassword;
-                } else
+                    doTransitionAnimationToPasswordFormField();
+                }
+                else
                 {
                     MessageBox.Show("Please enter a valid email! \n Email must contain '@gmail.com' ", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtEmailorPhone.Focus();
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("Please enter your email!", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtEmailorPhone.Focus();
             }
         }
 
-        //Check if email is valid (contain '@gmail.com')
-        private bool isValidEmail(string email)
-        {
-            try
-            {
-                var addr = new MailAddress(email);
-                if (addr.Address == email)
-                {
-                    // Check if the email contains "@gmail.com"
-                    if (email.ToLower().Contains("@gmail.com"))
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
         //Do transition animation to move to password form
-        private void doTransitionAnimation()
+        private void doTransitionAnimationToPasswordFormField()
         {
+            //////////////////////////////////
+            btnCreateAccount.Visible = false;
+            btnNext_EmailorPhone.Visible = false;
+            lbl_SignIn.Visible = false;
+            lblUseYourAccount.Visible = false;
+            /////////////////////////////////
+            label_Username.Text = "Quang Nguyen";
+            label_UserEmail.Text = txtEmailorPhone.Text;
+            /////////////////////////////////
             backToEmailorPhoneBTN.Visible = true;
             backToEmailorPhoneBTN.Location = new Point(-100, 60);
             txtPassword.Visible = true;
             txtPassword.Location = new Point(txtEmailorPhone.Location.X - 1000, txtEmailorPhone.Location.Y + 50);
             cboxShowPassword.Visible = true;
             cboxShowPassword.Location = new Point(txtPassword.Location.X - 100, txtPassword.Location.Y + 60);
+            btnForgotPassword.Visible = true;
+            btnForgotPassword.Location = new Point(btnCreateAccount.Location.X - 40, btnCreateAccount.Location.Y);
+            btnPassword.Visible = true;
+            btnPassword.Location = new Point(btnNext_EmailorPhone.Location.X, btnNext_EmailorPhone.Location.Y);
+            label_Username.Visible = true;
+            label_Username.Location = new Point(lbl_SignIn.Location.X, lbl_SignIn.Location.Y);
+            label_UserEmail.Visible = true;
+            label_UserEmail.Location = new Point(lblUseYourAccount.Location.X, lblUseYourAccount.Location.Y);
+            ////////////////////////////////
+            txtPassword.Focus();
+            this.AcceptButton = btnPassword;
             //////////////////////////////////////////////////////
             var anim = new Transition(new TransitionType_EaseInEaseOut(500));
             anim.add(txtEmailorPhone, "Left", this.Width - (txtEmailorPhone.Left + txtEmailorPhone.Width));
@@ -98,40 +116,11 @@ namespace BaiTapQuanLy
             anim.add(txtPassword, "Left", 0);
             anim.add(cboxShowPassword, "Left", 0);
             anim.run();
-            //////////////////////////////////
-            btnCreateAccount.Visible = false;
-            btnNext_EmailorPhone.Visible = false;
-            lbl_SignIn.Visible = false;
-            lblUseYourAccount.Visible = false;
-            /////////////////////////////////
-            label_Username.Text = "Quang Nguyen";
-            label_UserEmail.Text = txtEmailorPhone.Text;
-            /////////////////////////////////
-            btnForgotPassword.Visible = true;
-            btnForgotPassword.Location = new Point(btnCreateAccount.Location.X - 40, btnCreateAccount.Location.Y);
-            btnPassword.Visible = true;
-            btnPassword.Location = new Point(btnNext_EmailorPhone.Location.X, btnNext_EmailorPhone.Location.Y);
-            label_Username.Visible = true;
-            label_Username.Location = new Point(lbl_SignIn.Location.X, lbl_SignIn.Location.Y);
-            label_UserEmail.Visible = true;
-            label_UserEmail.Location = new Point(lblUseYourAccount.Location.X, lblUseYourAccount.Location.Y);
-            ////////////////////////////////
         }
 
         //Back to email form with transition (current in password form)
         private void backToEmailorPhoneBTN_Click(object sender, EventArgs e)
         {
-            ///////////////////////////////////
-            int goBack = 0;
-            var anim = new Transition(new TransitionType_EaseInEaseOut(500));
-            anim.add(txtEmailorPhone, "Left", goBack);
-            anim.add(btnForgotEmail, "Left", goBack);
-            anim.add(label_LearnMore, "Left", goBack);
-            anim.add(btnLearnMore, "Left", goBack);
-            anim.add(backToEmailorPhoneBTN, "Left", -150);
-            anim.add(txtPassword, "Left", -1000);
-            anim.add(cboxShowPassword, "Left", -150);
-            anim.run();
             /////////////////////////////////
             btnCreateAccount.Visible = true;
             btnNext_EmailorPhone.Visible = true;
@@ -148,6 +137,18 @@ namespace BaiTapQuanLy
             label_UserEmail.Visible = false;
             /////////////////////////////////
             txtEmailorPhone.Focus();
+            this.AcceptButton = btnNext_EmailorPhone;
+            ///////////////////////////////////
+            int goBack = 0;
+            var anim = new Transition(new TransitionType_EaseInEaseOut(500));
+            anim.add(txtEmailorPhone, "Left", goBack);
+            anim.add(btnForgotEmail, "Left", goBack);
+            anim.add(label_LearnMore, "Left", goBack);
+            anim.add(btnLearnMore, "Left", goBack);
+            anim.add(backToEmailorPhoneBTN, "Left", -150);
+            anim.add(txtPassword, "Left", -1000);
+            anim.add(cboxShowPassword, "Left", -150);
+            anim.run();
         }
 
         //Check box to show and hide password
@@ -155,16 +156,17 @@ namespace BaiTapQuanLy
         {
             txtPassword.UseSystemPasswordChar = !cboxShowPassword.Checked;
         }
-        
+
         //Check if password correct with the email address, if yes then move to Main form
         private void btnPassword_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(txtPassword.Text))
+            if (!string.IsNullOrEmpty(txtPassword.Text))
             {
                 Frm_Main frm_Main = new Frm_Main();
                 frm_Main.Show();
                 this.Hide();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Please enter your password!", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtPassword.Focus();
