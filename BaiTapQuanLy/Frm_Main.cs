@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using BaiTapQuanLy.Forms;
 using Guna.UI2.WinForms;
+using Transitions;
 
 namespace BaiTapQuanLy
 {
@@ -130,10 +131,12 @@ namespace BaiTapQuanLy
                 currentButton.ForeColor = System.Drawing.Color.Black;
             }
             currentButton = button;
-            currentButton.FillColor = System.Drawing.Color.FromArgb(254, 239, 195);
+            currentButton.FillColor = System.Drawing.Color.FromArgb(33, 150, 243);
+            currentButton.ForeColor = System.Drawing.Color.White;
+
         }
         /////////////////////////////////////////////////
-        
+
         //Open other forms as a child form with button click
         private void dashBoardBTN_Click(object sender, EventArgs e)
         {
@@ -171,18 +174,14 @@ namespace BaiTapQuanLy
         private void userProfile_Click(object sender, EventArgs e)
         {
                 var popupForm = new Frm_UserProfile();
+                var anim = new Transition(new TransitionType_CriticalDamping(500));
                 Point profileLocation = userProfile.PointToScreen(Point.Empty);
                 popupForm.StartPosition = FormStartPosition.Manual;
-                popupForm.Location = new Point(profileLocation.X - 40, (profileLocation.Y + userProfile.Height) + 10);
+                popupForm.Location = new Point(profileLocation.X - 40);
+                var getWidthY = profileLocation.Y + userProfile.Height;
+                anim.add(popupForm, "Top", getWidthY + 10);
+                anim.run();
                 popupForm.ShowDialog();
-        }
-
-        private void exitAppBTN_Click(object sender, EventArgs e)
-        {
-            Frm_Login frm_Login = new Frm_Login();
-            frm_Login.Show();
-            Frm_Main frm_Main = new Frm_Main();
-            frm_Main.Close();
         }
     }
 }

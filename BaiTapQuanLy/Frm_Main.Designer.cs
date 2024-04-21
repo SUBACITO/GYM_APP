@@ -35,9 +35,6 @@
             this.memberManagerBTN = new Guna.UI2.WinForms.Guna2Button();
             this.dashBoardBTN = new Guna.UI2.WinForms.Guna2Button();
             this.searchBarTxT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.exitAppBTN = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
             this.usernameLabel = new System.Windows.Forms.Label();
@@ -47,7 +44,6 @@
             this.userProfile = new System.Windows.Forms.PictureBox();
             this.sidebarPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.sidebarTransistion = new System.Windows.Forms.Timer(this.components);
-            this.gunaDragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuSidebarIcon)).BeginInit();
@@ -134,6 +130,8 @@
             // 
             // searchBarTxT
             // 
+            this.searchBarTxT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.searchBarTxT.AutoRoundedCorners = true;
             this.searchBarTxT.BorderRadius = 16;
             this.searchBarTxT.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -156,47 +154,8 @@
             this.searchBarTxT.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.searchBarTxT.PlaceholderText = "Search";
             this.searchBarTxT.SelectedText = "";
-            this.searchBarTxT.Size = new System.Drawing.Size(374, 34);
+            this.searchBarTxT.Size = new System.Drawing.Size(426, 34);
             this.searchBarTxT.TabIndex = 9;
-            // 
-            // exitAppBTN
-            // 
-            this.exitAppBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitAppBTN.BackColor = System.Drawing.Color.Red;
-            this.exitAppBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitAppBTN.FillColor = System.Drawing.Color.Transparent;
-            this.exitAppBTN.IconColor = System.Drawing.Color.White;
-            this.exitAppBTN.Location = new System.Drawing.Point(1097, 0);
-            this.exitAppBTN.Name = "exitAppBTN";
-            this.exitAppBTN.Size = new System.Drawing.Size(45, 29);
-            this.exitAppBTN.TabIndex = 4;
-            this.exitAppBTN.Click += new System.EventHandler(this.exitAppBTN_Click);
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1055, 0);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox2.TabIndex = 3;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1013, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox1.TabIndex = 2;
             // 
             // panelDesktop
             // 
@@ -217,10 +176,7 @@
             this.topPanel.Controls.Add(this.pictureBox1);
             this.topPanel.Controls.Add(this.searchBarTxT);
             this.topPanel.Controls.Add(this.menuSidebarIcon);
-            this.topPanel.Controls.Add(this.exitAppBTN);
             this.topPanel.Controls.Add(this.userProfile);
-            this.topPanel.Controls.Add(this.guna2ControlBox1);
-            this.topPanel.Controls.Add(this.guna2ControlBox2);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
@@ -233,11 +189,11 @@
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Cursor = System.Windows.Forms.Cursors.Default;
             this.usernameLabel.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(808, 18);
+            this.usernameLabel.Location = new System.Drawing.Point(810, 17);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(136, 18);
+            this.usernameLabel.Size = new System.Drawing.Size(140, 18);
             this.usernameLabel.TabIndex = 0;
-            this.usernameLabel.Text = "Nguyễn Hào Quang";
+            this.usernameLabel.Text = "Nguyễn Hào Quang ";
             // 
             // label1
             // 
@@ -276,7 +232,7 @@
             this.userProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.userProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userProfile.Image = ((System.Drawing.Image)(resources.GetObject("userProfile.Image")));
-            this.userProfile.Location = new System.Drawing.Point(764, 5);
+            this.userProfile.Location = new System.Drawing.Point(766, 4);
             this.userProfile.Name = "userProfile";
             this.userProfile.Size = new System.Drawing.Size(38, 37);
             this.userProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -302,12 +258,6 @@
             // 
             this.sidebarTransistion.Interval = 10;
             this.sidebarTransistion.Tick += new System.EventHandler(this.sidebarTransistion_Tick);
-            // 
-            // gunaDragControl
-            // 
-            this.gunaDragControl.DockIndicatorTransparencyValue = 0.6D;
-            this.gunaDragControl.TargetControl = this.topPanel;
-            this.gunaDragControl.UseTransparentDrag = true;
             // 
             // Frm_Main
             // 
@@ -338,9 +288,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panelDesktop;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox exitAppBTN;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Button dashBoardBTN;
         private Guna.UI2.WinForms.Guna2Button privateTrainerBTN;
         private Guna.UI2.WinForms.Guna2Button memberManagerBTN;
@@ -354,6 +301,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox userProfile;
         private System.Windows.Forms.Label usernameLabel;
-        private Guna.UI2.WinForms.Guna2DragControl gunaDragControl;
     }
 }

@@ -62,19 +62,30 @@
   <ItemGroup>
     <Compile Include="BussinessLayer\Bll_HeThong.cs" />
     <Compile Include="clsMain.cs" />
-    <Compile Include="DTO\KhachHang.cs" />
-    <Compile Include="DTO\LoaiHang.cs" />
+    <Compile Include="DTO\Member.cs" />
     <Compile Include="Forms\Frm_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Frm_Dashboard.Designer.cs">
       <DependentUpon>Frm_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_MembersAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_MembersAdd.Designer.cs">
+      <DependentUpon>Frm_MembersAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_MembersManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Frm_MembersManager.Designer.cs">
       <DependentUpon>Frm_MembersManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_MemberUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_MemberUpdate.Designer.cs">
+      <DependentUpon>Frm_MemberUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
@@ -106,8 +117,14 @@
     <EmbeddedResource Include="Forms\Frm_Dashboard.resx">
       <DependentUpon>Frm_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_MembersAdd.resx">
+      <DependentUpon>Frm_MembersAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_MembersManager.resx">
       <DependentUpon>Frm_MembersManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_MemberUpdate.resx">
+      <DependentUpon>Frm_MemberUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
