@@ -36,6 +36,25 @@ namespace BaiTapQuanLy.Forms
         {
             try
             {
+                // Check if any required fields are empty
+                if (string.IsNullOrWhiteSpace(txt_FullName.Text) ||
+                    cbox_Gender.SelectedItem == null ||
+                    string.IsNullOrWhiteSpace(txt_Email.Text) ||
+                    string.IsNullOrWhiteSpace(txt_Phone.Text) ||
+                    cbox_MembershipType.SelectedItem == null)
+                {
+                    // Notify the user about missing information
+                    Frm_Messages noti = new Frm_Messages();
+                    noti.StartPosition = FormStartPosition.CenterParent;
+                    noti.TitleText = "INFO";
+                    noti.MessageText = "Please fill in all required fields!";
+                    var anim = new Transition(new TransitionType_Deceleration(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
+                    return;
+                }
+
                 // Collect information from the user
                 string fullName = txt_FullName.Text;
                 string gender = cbox_Gender.SelectedItem.ToString();
@@ -67,7 +86,7 @@ namespace BaiTapQuanLy.Forms
                     Frm_Messages noti = new Frm_Messages();
                     noti.StartPosition = FormStartPosition.CenterParent;
                     noti.TitleText = "SUCCESS";
-                    noti.MessageText = "A new member has been added";
+                    noti.MessageText = "A new member has been added!";
                     var anim = new Transition(new TransitionType_Deceleration(300));
                     anim.add(noti, "Top", 500);
                     anim.run();
@@ -81,7 +100,7 @@ namespace BaiTapQuanLy.Forms
                     Frm_Messages noti = new Frm_Messages();
                     noti.StartPosition = FormStartPosition.CenterParent;
                     noti.TitleText = "ERROR";
-                    noti.MessageText = "Error adding member";
+                    noti.MessageText = "Error adding member!";
                     var anim = new Transition(new TransitionType_Deceleration(300));
                     anim.add(noti, "Top", 500);
                     anim.run();
@@ -93,7 +112,7 @@ namespace BaiTapQuanLy.Forms
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
                 noti.TitleText = "ERROR";
-                noti.MessageText = "An error occured "+ex;
+                noti.MessageText = "An error occurred: " + ex.Message;
                 var anim = new Transition(new TransitionType_Deceleration(300));
                 anim.add(noti, "Top", 500);
                 anim.run();

@@ -251,7 +251,7 @@
             // 
             this.label_LearnMore.AutoSize = true;
             this.label_LearnMore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_LearnMore.Location = new System.Drawing.Point(3, 143);
+            this.label_LearnMore.Location = new System.Drawing.Point(0, 141);
             this.label_LearnMore.Name = "label_LearnMore";
             this.label_LearnMore.Size = new System.Drawing.Size(310, 16);
             this.label_LearnMore.TabIndex = 4;
@@ -338,9 +338,9 @@
             this.lblUseYourAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUseYourAccount.Location = new System.Drawing.Point(25, 160);
             this.lblUseYourAccount.Name = "lblUseYourAccount";
-            this.lblUseYourAccount.Size = new System.Drawing.Size(274, 20);
+            this.lblUseYourAccount.Size = new System.Drawing.Size(293, 20);
             this.lblUseYourAccount.TabIndex = 5;
-            this.lblUseYourAccount.Text = "Use your GYM Management Account";
+            this.lblUseYourAccount.Text = "To use your GYM Management Account";
             // 
             // Frm_Login
             // 

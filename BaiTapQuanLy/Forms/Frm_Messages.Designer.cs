@@ -48,8 +48,8 @@
             // 
             // lblMessage
             // 
-            this.lblMessage.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(12, 75);
+            this.lblMessage.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(12, 65);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(396, 25);
             this.lblMessage.TabIndex = 1;
@@ -66,7 +66,7 @@
             this.btnCancel.FillColor = System.Drawing.Color.Transparent;
             this.btnCancel.Font = new System.Drawing.Font("Roboto", 14.25F);
             this.btnCancel.ForeColor = System.Drawing.Color.Blue;
-            this.btnCancel.Location = new System.Drawing.Point(1, 135);
+            this.btnCancel.Location = new System.Drawing.Point(0, 107);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(210, 60);
             this.btnCancel.TabIndex = 2;
@@ -83,7 +83,7 @@
             this.btnOK.FillColor = System.Drawing.Color.Transparent;
             this.btnOK.Font = new System.Drawing.Font("Roboto", 14.25F);
             this.btnOK.ForeColor = System.Drawing.Color.Blue;
-            this.btnOK.Location = new System.Drawing.Point(207, 135);
+            this.btnOK.Location = new System.Drawing.Point(203, 107);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(214, 60);
             this.btnOK.TabIndex = 3;
@@ -104,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(420, 191);
+            this.ClientSize = new System.Drawing.Size(420, 168);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblMessage);

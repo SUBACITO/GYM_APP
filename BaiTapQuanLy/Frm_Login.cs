@@ -1,4 +1,5 @@
 ﻿using BaiTapQuanLy.BussinessLayer;
+using BaiTapQuanLy.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,19 +79,43 @@ namespace BaiTapQuanLy
                     }
                     else
                     {
-                        MessageBox.Show("Username does not exist! Please enter a valid username.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        /*MessageBox.Show("Username does not exist! Please enter a valid username.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
+                        Frm_Messages noti = new Frm_Messages();
+                        noti.StartPosition = FormStartPosition.CenterParent;
+                        noti.TitleText = "INFO";
+                        noti.MessageText = "User does not exist!";
+                        var anim = new Transition(new TransitionType_CriticalDamping(200));
+                        anim.add(noti, "Top", 450);
+                        anim.run();
+                        noti.ShowDialog();
                         txtEmailorPhone.Focus();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid email! \n Email must contain '@gmail.com' ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    /*MessageBox.Show("Please enter a valid email! \n Email must contain '@gmail.com' ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
+                    Frm_Messages noti = new Frm_Messages();
+                    noti.StartPosition = FormStartPosition.CenterParent;
+                    noti.TitleText = "INFO";
+                    noti.MessageText = "Please enter a valid email!";
+                    var anim = new Transition(new TransitionType_CriticalDamping(200));
+                    anim.add(noti, "Top", 450);
+                    anim.run();
+                    noti.ShowDialog();
                     txtEmailorPhone.Focus();
                 }
             }
             else
             {
-                MessageBox.Show("Please enter your email!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                /*MessageBox.Show("Please enter your email!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
+                Frm_Messages noti = new Frm_Messages();
+                noti.StartPosition = FormStartPosition.CenterParent;
+                noti.TitleText = "INFO";
+                noti.MessageText = "Please enter your email!";
+                var anim = new Transition(new TransitionType_CriticalDamping(200));
+                anim.add(noti, "Top", 450);
+                anim.run();
+                noti.ShowDialog();
                 txtEmailorPhone.Focus();
             }
 
@@ -190,16 +215,39 @@ namespace BaiTapQuanLy
             string userEmailText = txtEmailorPhone.Text.Trim();
             string userPassword = txtPassword.Text.Trim();
             string loginStatus = bll.AuthenticateUser(ref err, userEmailText, userPassword);
-            if (loginStatus == "Thanh cong")
+            if(!string.IsNullOrEmpty(txtPassword.Text))
             {
-                // Nếu đăng nhập thành công, chuyển đến form chính
-                Frm_Main frm_Main = new Frm_Main();
-                frm_Main.Show();
-                this.Hide();
-            }
-            else
+                if (loginStatus == "Thanh cong")
+                {
+                    // Nếu đăng nhập thành công, chuyển đến form chính
+                    Frm_Main frm_Main = new Frm_Main();
+                    frm_Main.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    /*MessageBox.Show("Invalid username or password! Please try again.", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
+                    Frm_Messages noti = new Frm_Messages();
+                    noti.StartPosition = FormStartPosition.CenterParent;
+                    noti.TitleText = "INFO";
+                    noti.MessageText = "Invalid password! Please try again.";
+                    var anim = new Transition(new TransitionType_CriticalDamping(200));
+                    anim.add(noti, "Top", 450);
+                    anim.run();
+                    noti.ShowDialog();
+                    txtPassword.Focus();
+                }
+
+            } else
             {
-                MessageBox.Show("Invalid username or password! Please try again.", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Frm_Messages noti = new Frm_Messages();
+                noti.StartPosition = FormStartPosition.CenterParent;
+                noti.TitleText = "INFO";
+                noti.MessageText = "Please enter your password!";
+                var anim = new Transition(new TransitionType_CriticalDamping(200));
+                anim.add(noti, "Top", 450);
+                anim.run();
+                noti.ShowDialog();
                 txtPassword.Focus();
             }
         }

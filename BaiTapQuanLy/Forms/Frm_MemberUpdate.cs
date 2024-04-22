@@ -65,25 +65,46 @@ namespace BaiTapQuanLy.Forms
             try
             {
                 // Retrieve the modified member information from the form controls
-                string fullName = txt_FullName.Text;
-                string gender = cbox_Gender.SelectedItem.ToString();
-                DateTime dateOfBirth = dtp_DateOfBirth.Value;
-                string email = txt_Email.Text;
-                string phone = txt_Phone.Text;
-                DateTime joinDate = dtp_JoinDate.Value;
-                string membershipType = cbox_MembershipType.SelectedItem.ToString();
+                string newFullName = txt_FullName.Text;
+                string newGender = cbox_Gender.SelectedItem.ToString();
+                DateTime newDateOfBirth = dtp_DateOfBirth.Value;
+                string newEmail = txt_Email.Text;
+                string newPhone = txt_Phone.Text;
+                DateTime newJoinDate = dtp_JoinDate.Value;
+                string newMembershipType = cbox_MembershipType.SelectedItem.ToString();
+
+                // Check if any information has changed
+                if (newFullName == fullName &&
+                    newGender == gender &&
+                    newDateOfBirth == dateOfBirth &&
+                    newEmail == email &&
+                    newPhone == phone &&
+                    newJoinDate == joinDate &&
+                    newMembershipType == membershipType)
+                {
+                    // Nothing has changed
+                    Frm_Messages noti = new Frm_Messages();
+                    noti.StartPosition = FormStartPosition.CenterParent;
+                    noti.TitleText = "INFO";
+                    noti.MessageText = "Nothing was changed!";
+                    var anim = new Transition(new TransitionType_Deceleration(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
+                    return; // Skip the update process
+                }
 
                 // Call the appropriate method from your business layer to update the member's information
                 int result = bll_heThong.UpdateMemberToDGV(ref err, new Member()
                 {
-                    MemberID = memberID, 
-                    FullName = fullName,
-                    Gender = gender,
-                    DateOfBirth = dateOfBirth,
-                    Email = email,
-                    Phone = phone,
-                    JoinDate = joinDate,
-                    MembershipType = membershipType
+                    MemberID = memberID,
+                    FullName = newFullName,
+                    Gender = newGender,
+                    DateOfBirth = newDateOfBirth,
+                    Email = newEmail,
+                    Phone = newPhone,
+                    JoinDate = newJoinDate,
+                    MembershipType = newMembershipType
                 });
 
                 if (result > 0)
@@ -92,7 +113,7 @@ namespace BaiTapQuanLy.Forms
                     Frm_Messages noti = new Frm_Messages();
                     noti.StartPosition = FormStartPosition.CenterParent;
                     noti.TitleText = "SUCCESS";
-                    noti.MessageText = "A member has been updated";
+                    noti.MessageText = "A member has been updated!";
                     var anim = new Transition(new TransitionType_Deceleration(300));
                     anim.add(noti, "Top", 500);
                     anim.run();
@@ -106,7 +127,7 @@ namespace BaiTapQuanLy.Forms
                     Frm_Messages noti = new Frm_Messages();
                     noti.StartPosition = FormStartPosition.CenterParent;
                     noti.TitleText = "ERROR";
-                    noti.MessageText = "Error updaing member";
+                    noti.MessageText = "Error updating member!";
                     var anim = new Transition(new TransitionType_Deceleration(300));
                     anim.add(noti, "Top", 500);
                     anim.run();
@@ -118,7 +139,7 @@ namespace BaiTapQuanLy.Forms
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
                 noti.TitleText = "ERROR";
-                noti.MessageText = "An error occured "+ex;
+                noti.MessageText = "An error occurred: " + ex.Message;
                 var anim = new Transition(new TransitionType_Deceleration(300));
                 anim.add(noti, "Top", 500);
                 anim.run();
