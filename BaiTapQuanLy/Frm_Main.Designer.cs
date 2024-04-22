@@ -58,7 +58,7 @@
             this.homePageBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.homePageBTN.Dock = System.Windows.Forms.DockStyle.Top;
             this.homePageBTN.FillColor = System.Drawing.Color.Transparent;
-            this.homePageBTN.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homePageBTN.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homePageBTN.ForeColor = System.Drawing.Color.Black;
             this.homePageBTN.Image = ((System.Drawing.Image)(resources.GetObject("homePageBTN.Image")));
             this.homePageBTN.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -78,7 +78,7 @@
             this.privateTrainerBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.privateTrainerBTN.Dock = System.Windows.Forms.DockStyle.Top;
             this.privateTrainerBTN.FillColor = System.Drawing.Color.Transparent;
-            this.privateTrainerBTN.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.privateTrainerBTN.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.privateTrainerBTN.ForeColor = System.Drawing.Color.Black;
             this.privateTrainerBTN.Image = ((System.Drawing.Image)(resources.GetObject("privateTrainerBTN.Image")));
             this.privateTrainerBTN.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -97,7 +97,7 @@
             this.memberManagerBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.memberManagerBTN.Dock = System.Windows.Forms.DockStyle.Top;
             this.memberManagerBTN.FillColor = System.Drawing.Color.Transparent;
-            this.memberManagerBTN.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memberManagerBTN.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memberManagerBTN.ForeColor = System.Drawing.Color.Black;
             this.memberManagerBTN.Image = ((System.Drawing.Image)(resources.GetObject("memberManagerBTN.Image")));
             this.memberManagerBTN.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -116,7 +116,7 @@
             this.dashBoardBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashBoardBTN.Dock = System.Windows.Forms.DockStyle.Top;
             this.dashBoardBTN.FillColor = System.Drawing.Color.Transparent;
-            this.dashBoardBTN.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashBoardBTN.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashBoardBTN.ForeColor = System.Drawing.Color.Black;
             this.dashBoardBTN.Image = ((System.Drawing.Image)(resources.GetObject("dashBoardBTN.Image")));
             this.dashBoardBTN.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;

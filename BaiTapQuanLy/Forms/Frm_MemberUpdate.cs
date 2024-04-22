@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transitions;
 
 namespace BaiTapQuanLy.Forms
 {
@@ -88,19 +89,40 @@ namespace BaiTapQuanLy.Forms
                 if (result > 0)
                 {
                     // Member updated successfully
+                    Frm_Messages noti = new Frm_Messages();
+                    noti.StartPosition = FormStartPosition.CenterParent;
+                    noti.TitleText = "SUCCESS";
+                    noti.MessageText = "A member has been updated";
+                    var anim = new Transition(new TransitionType_Deceleration(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
                     ParentForm?.refreshMemberDataGridView();
-                    MessageBox.Show("Member updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 else
                 {
                     // Error occurred while updating member
-                    MessageBox.Show("Error updating member: " + err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Frm_Messages noti = new Frm_Messages();
+                    noti.StartPosition = FormStartPosition.CenterParent;
+                    noti.TitleText = "ERROR";
+                    noti.MessageText = "Error updaing member";
+                    var anim = new Transition(new TransitionType_Deceleration(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Frm_Messages noti = new Frm_Messages();
+                noti.StartPosition = FormStartPosition.CenterParent;
+                noti.TitleText = "ERROR";
+                noti.MessageText = "An error occured "+ex;
+                var anim = new Transition(new TransitionType_Deceleration(300));
+                anim.add(noti, "Top", 500);
+                anim.run();
+                noti.ShowDialog();
             }
         }
     }

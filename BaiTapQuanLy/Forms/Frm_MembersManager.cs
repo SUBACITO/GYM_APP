@@ -79,7 +79,14 @@ namespace BaiTapQuanLy.Forms
             frmMemAdd.ShowDialog();
             } else
             {
-                MessageBox.Show("Please deselect an item to add a new member!", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Frm_Messages noti = new Frm_Messages();
+                noti.StartPosition = FormStartPosition.CenterParent;
+                noti.TitleText = "NOTIFICATION";
+                noti.MessageText = "Deselect an item to add a new member";
+                var anim = new Transition(new TransitionType_Deceleration(300));
+                anim.add(noti, "Top", 500);
+                anim.run();
+                noti.ShowDialog();
             }
         }
 
@@ -106,7 +113,14 @@ namespace BaiTapQuanLy.Forms
                 frmMemUpdate.ShowDialog();
             } else
             {
-                MessageBox.Show("Please select a member to edit!", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Frm_Messages noti = new Frm_Messages();
+                noti.StartPosition = FormStartPosition.CenterParent;
+                noti.TitleText = "NOTIFICATION";
+                noti.MessageText = "Select a member to edit";
+                var anim = new Transition(new TransitionType_Deceleration(300));
+                anim.add(noti, "Top", 500);
+                anim.run();
+                noti.ShowDialog();
             }
         }
 
@@ -120,12 +134,26 @@ namespace BaiTapQuanLy.Forms
                 {
                     MemberID = memberID
                 });
-                MessageBox.Show("Delete member succesfully!", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Frm_Messages noti = new Frm_Messages();
+                noti.StartPosition = FormStartPosition.CenterParent;
+                noti.TitleText = "SUCCESS";
+                noti.MessageText = "A member has been deleted";
+                var anim = new Transition(new TransitionType_Deceleration(300));
+                anim.add(noti, "Top", 500);
+                anim.run();
+                noti.ShowDialog();
                 refreshMemberDataGridView();
             }
             else
             {
-                MessageBox.Show("Please select a member to delete!", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Frm_Messages noti = new Frm_Messages();
+                noti.StartPosition = FormStartPosition.CenterParent;
+                noti.TitleText = "NOTIFICATION";
+                noti.MessageText = "Select a member to delete";
+                var anim = new Transition(new TransitionType_Deceleration(300));
+                anim.add(noti, "Top", 500);
+                anim.run();
+                noti.ShowDialog();
             }
         }
     }

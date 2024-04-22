@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.topPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -44,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbox_Gender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_FullName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.topPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -313,8 +315,16 @@
             this.txt_FullName.Size = new System.Drawing.Size(428, 46);
             this.txt_FullName.TabIndex = 0;
             // 
+            // guna2BorderlessForm
+            // 
+            this.guna2BorderlessForm.BorderRadius = 20;
+            this.guna2BorderlessForm.ContainerControl = this;
+            this.guna2BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm.TransparentWhileDrag = true;
+            // 
             // Frm_MemberUpdate
             // 
+            this.AcceptButton = this.updateMemberBTN;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 520);
@@ -350,5 +360,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox cbox_Gender;
         private Guna.UI2.WinForms.Guna2TextBox txt_FullName;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm;
     }
 }

@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using BaiTapQuanLy.Forms;
 using Guna.UI2.WinForms;
 using Transitions;
+using System.IO;
 
 namespace BaiTapQuanLy
 {

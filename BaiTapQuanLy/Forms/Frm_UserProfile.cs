@@ -16,7 +16,7 @@ namespace BaiTapQuanLy
         public Frm_UserProfile()
         {
             InitializeComponent();
-            new makeFormRounded(this);
+            /*new makeFormRounded(this);*/
         }
 
         private void closeProfileButton_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace BaiTapQuanLy
 
         private void Frm_UserProfile_Load(object sender, EventArgs e)
         {
-            gunaShadowForm.SetShadowForm(this);
+
         }
 
         private void logOutBTN_Click(object sender, EventArgs e)

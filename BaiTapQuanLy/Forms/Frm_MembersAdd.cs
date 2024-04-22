@@ -64,21 +64,41 @@ namespace BaiTapQuanLy.Forms
                 if (result > 0)
                 {
                     // Member added successfully
+                    Frm_Messages noti = new Frm_Messages();
+                    noti.StartPosition = FormStartPosition.CenterParent;
+                    noti.TitleText = "SUCCESS";
+                    noti.MessageText = "A new member has been added";
+                    var anim = new Transition(new TransitionType_Deceleration(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
                     ParentForm?.refreshMemberDataGridView();
-                    MessageBox.Show("Member added successfully!", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 else
                 {
                     // Error occurred while adding member
-                    MessageBox.Show("Error adding member: " + err, "Google", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Frm_Messages noti = new Frm_Messages();
+                    noti.StartPosition = FormStartPosition.CenterParent;
+                    noti.TitleText = "ERROR";
+                    noti.MessageText = "Error adding member";
+                    var anim = new Transition(new TransitionType_Deceleration(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message, "Google", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Frm_Messages noti = new Frm_Messages();
+                noti.StartPosition = FormStartPosition.CenterParent;
+                noti.TitleText = "ERROR";
+                noti.MessageText = "An error occured "+ex;
+                var anim = new Transition(new TransitionType_Deceleration(300));
+                anim.add(noti, "Top", 500);
+                anim.run();
+                noti.ShowDialog();
             }
         }
-
     }
 }

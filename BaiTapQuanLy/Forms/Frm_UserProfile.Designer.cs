@@ -37,7 +37,7 @@
             this.closeProfileButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.gunaShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,10 +148,12 @@
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Text = "Privacy Policy";
             // 
-            // gunaShadowForm
+            // guna2BorderlessForm
             // 
-            this.gunaShadowForm.BorderRadius = 50;
-            this.gunaShadowForm.TargetForm = this;
+            this.guna2BorderlessForm.BorderRadius = 20;
+            this.guna2BorderlessForm.ContainerControl = this;
+            this.guna2BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm.TransparentWhileDrag = true;
             // 
             // Frm_UserProfile
             // 
@@ -186,6 +188,6 @@
         private Guna.UI2.WinForms.Guna2Button closeProfileButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2ShadowForm gunaShadowForm;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm;
     }
 }
