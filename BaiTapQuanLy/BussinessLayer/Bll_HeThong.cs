@@ -19,6 +19,37 @@ namespace BaiTapQuanLy.BussinessLayer
             db = new MyDatabase(path);
         }
 
+        // Check username existence
+        public int CheckUsernameExistence(ref string err, string username)
+        {
+            SqlParameter[] sqlPara = new SqlParameter[]
+            {
+                new SqlParameter("@Username", username)
+            };
+            DataTable dt = db.GetDataTable(ref err, "PSP_UsernameChecker", CommandType.StoredProcedure, sqlPara);
+            if (dt.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dt.Rows[0]["State_callback"]);
+            }
+            return 0; // Username không tồn tại
+        }
+
+        // Kiểm tra đăng nhập
+        public string AuthenticateUser(ref string err, string username, string password)
+        {
+            SqlParameter[] sqlPara = new SqlParameter[]
+            {
+                new SqlParameter("@Username", username),
+                new SqlParameter("@Password", password)
+            };
+            DataTable dt = db.GetDataTable(ref err, "PSP_Login", CommandType.StoredProcedure, sqlPara);
+            if (dt.Rows.Count > 0)
+            {
+                return dt.Rows[0]["TrangThai"].ToString();
+            }
+            return "That bai"; // Đăng nhập thất bại
+        }
+
         //Get List Customer
         public DataTable KiemTraDangNhap (ref string err, string username, string password)
         {
@@ -83,5 +114,7 @@ namespace BaiTapQuanLy.BussinessLayer
             };
             return db.MyExcuteNonQuery(ref err, "Member_Delete", CommandType.StoredProcedure, sqlPara);
         }
+
+        
     }
 }

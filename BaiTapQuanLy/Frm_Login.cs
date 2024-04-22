@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaiTapQuanLy.BussinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace BaiTapQuanLy
 {
     public partial class Frm_Login : Form
     {
+        Bll_HeThong bll;
+        string err = string.Empty;
+        DataTable dtNhanVien;
         public Frm_Login()
         {
             InitializeComponent();
@@ -38,6 +42,9 @@ namespace BaiTapQuanLy
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
+            bll = new Bll_HeThong(clsMain.path);
+            //comment
+            btnCreateAccount.Visible = false;
             cboxShowPassword.Checked = false;
             txtPassword.UseSystemPasswordChar = true;
             txtEmailorPhone.Focus();
@@ -62,31 +69,50 @@ namespace BaiTapQuanLy
             {
                 if (isValidEmail(userEmailText))
                 {
-                    doTransitionAnimationToPasswordFormField();
+                    // Kiểm tra sự tồn tại của username trước khi chuyển đến form nhập mật khẩu
+                    int usernameExists = bll.CheckUsernameExistence(ref err, userEmailText);
+                    if (usernameExists == 1)
+                    {
+                        // Nếu username tồn tại, hiển thị các mục nhập mật khẩu và chuyển đến form nhập mật khẩu
+                        doTransitionAnimationToPasswordFormField();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username does not exist! Please enter a valid username.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtEmailorPhone.Focus();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid email! \n Email must contain '@gmail.com' ", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please enter a valid email! \n Email must contain '@gmail.com' ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtEmailorPhone.Focus();
                 }
             }
             else
             {
-                MessageBox.Show("Please enter your email!", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please enter your email!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtEmailorPhone.Focus();
             }
+
         }
+
+        //private bool KiemTraDangNhap(string taiKhoan, string matKhau)
+        //{
+        //    dtNhanVien = new DataTable();
+        //    dtNhanVien = bll.KiemTraDangNhap(ref err, taiKhoan, matKhau);
+        //    return false;
+        //}
 
         //Do transition animation to move to password form
         private void doTransitionAnimationToPasswordFormField()
         {
             //////////////////////////////////
-            btnCreateAccount.Visible = false;
+            //btnCreateAccount.Visible = false;
             btnNext_EmailorPhone.Visible = false;
             lbl_SignIn.Visible = false;
             lblUseYourAccount.Visible = false;
             /////////////////////////////////
-            label_Username.Text = "Quang Nguyen";
+            label_Username.Text = "Hi";
             label_UserEmail.Text = txtEmailorPhone.Text;
             /////////////////////////////////
             backToEmailorPhoneBTN.Visible = true;
@@ -95,7 +121,7 @@ namespace BaiTapQuanLy
             txtPassword.Location = new Point(txtEmailorPhone.Location.X - 1000, txtEmailorPhone.Location.Y + 50);
             cboxShowPassword.Visible = true;
             cboxShowPassword.Location = new Point(txtPassword.Location.X - 100, txtPassword.Location.Y + 60);
-            btnForgotPassword.Visible = true;
+            btnForgotPassword.Visible = false;
             btnForgotPassword.Location = new Point(btnCreateAccount.Location.X - 40, btnCreateAccount.Location.Y);
             btnPassword.Visible = true;
             btnPassword.Location = new Point(btnNext_EmailorPhone.Location.X, btnNext_EmailorPhone.Location.Y);
@@ -122,7 +148,7 @@ namespace BaiTapQuanLy
         private void backToEmailorPhoneBTN_Click(object sender, EventArgs e)
         {
             /////////////////////////////////
-            btnCreateAccount.Visible = true;
+            //btnCreateAccount.Visible = true;
             btnNext_EmailorPhone.Visible = true;
             lbl_SignIn.Visible = true;
             lblUseYourAccount.Visible = true;
@@ -160,15 +186,20 @@ namespace BaiTapQuanLy
         //Check if password correct with the email address, if yes then move to Main form
         private void btnPassword_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtPassword.Text))
+            // Kiểm tra đăng nhập khi người dùng nhấp vào nút Đăng nhập
+            string userEmailText = txtEmailorPhone.Text.Trim();
+            string userPassword = txtPassword.Text.Trim();
+            string loginStatus = bll.AuthenticateUser(ref err, userEmailText, userPassword);
+            if (loginStatus == "Thanh cong")
             {
+                // Nếu đăng nhập thành công, chuyển đến form chính
                 Frm_Main frm_Main = new Frm_Main();
                 frm_Main.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Please enter your password!", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Invalid username or password! Please try again.", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtPassword.Focus();
             }
         }
