@@ -48,6 +48,7 @@
             this.colPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colJoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMembershipType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colexpiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
@@ -157,7 +158,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -172,7 +173,8 @@
             this.colEmail,
             this.colPhone,
             this.colJoinDate,
-            this.colMembershipType});
+            this.colMembershipType,
+            this.colexpiredDate});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -299,6 +301,13 @@
             this.colMembershipType.Name = "colMembershipType";
             this.colMembershipType.ReadOnly = true;
             // 
+            // colexpiredDate
+            // 
+            this.colexpiredDate.DataPropertyName = "expiredDate";
+            this.colexpiredDate.HeaderText = "Expired Date";
+            this.colexpiredDate.Name = "colexpiredDate";
+            this.colexpiredDate.ReadOnly = true;
+            // 
             // Frm_MembersManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,5 +347,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn colJoinDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMembershipType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colexpiredDate;
     }
 }

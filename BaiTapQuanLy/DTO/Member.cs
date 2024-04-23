@@ -16,5 +16,6 @@ namespace BaiTapQuanLy.DTO
         public string MembershipType { get; set; }
         public DateTime DateOfBirth { get; set; }
         public DateTime JoinDate { get; set; }
+        public DateTime ExpiredDate { get; set; }
     }
 }

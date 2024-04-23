@@ -79,10 +79,9 @@ namespace BaiTapQuanLy
                     }
                     else
                     {
-                        /*MessageBox.Show("Username does not exist! Please enter a valid username.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
                         Frm_Messages noti = new Frm_Messages();
                         noti.StartPosition = FormStartPosition.CenterParent;
-                        noti.TitleText = "INFO";
+                        noti.TitleText = "GYM APP";
                         noti.MessageText = "User does not exist!";
                         var anim = new Transition(new TransitionType_CriticalDamping(200));
                         anim.add(noti, "Top", 450);
@@ -93,30 +92,38 @@ namespace BaiTapQuanLy
                 }
                 else
                 {
-                    /*MessageBox.Show("Please enter a valid email! \n Email must contain '@gmail.com' ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
                     Frm_Messages noti = new Frm_Messages();
                     noti.StartPosition = FormStartPosition.CenterParent;
-                    noti.TitleText = "INFO";
+                    noti.TitleText = "GYM APP";
                     noti.MessageText = "Please enter a valid email!";
-                    var anim = new Transition(new TransitionType_CriticalDamping(200));
-                    anim.add(noti, "Top", 450);
-                    anim.run();
-                    noti.ShowDialog();
-                    txtEmailorPhone.Focus();
+
+                    Task.Delay(200).ContinueWith(_ =>
+                    {
+                        var anim = new Transition(new TransitionType_CriticalDamping(200));
+                        anim.add(noti, "Top", 450);
+                        anim.run();
+
+                        noti.ShowDialog();
+                        txtEmailorPhone.Focus();
+                    }, TaskScheduler.FromCurrentSynchronizationContext());
                 }
             }
             else
             {
-                /*MessageBox.Show("Please enter your email!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
-                noti.TitleText = "INFO";
+                noti.TitleText = "GYM APP";
                 noti.MessageText = "Please enter your email!";
-                var anim = new Transition(new TransitionType_CriticalDamping(200));
-                anim.add(noti, "Top", 450);
-                anim.run();
-                noti.ShowDialog();
-                txtEmailorPhone.Focus();
+
+                Task.Delay(200).ContinueWith(_ =>
+                {
+                    var anim = new Transition(new TransitionType_CriticalDamping(200));
+                    anim.add(noti, "Top", 450);
+                    anim.run();
+
+                    noti.ShowDialog();
+                    txtEmailorPhone.Focus();
+                }, TaskScheduler.FromCurrentSynchronizationContext());
             }
 
         }
@@ -226,29 +233,38 @@ namespace BaiTapQuanLy
                 }
                 else
                 {
-                    /*MessageBox.Show("Invalid username or password! Please try again.", "Google", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
                     Frm_Messages noti = new Frm_Messages();
                     noti.StartPosition = FormStartPosition.CenterParent;
-                    noti.TitleText = "INFO";
+                    noti.TitleText = "GYM APP";
                     noti.MessageText = "Invalid password! Please try again.";
-                    var anim = new Transition(new TransitionType_CriticalDamping(200));
-                    anim.add(noti, "Top", 450);
-                    anim.run();
-                    noti.ShowDialog();
-                    txtPassword.Focus();
+
+                    Task.Delay(100).ContinueWith(_ =>
+                    {
+                        var anim = new Transition(new TransitionType_CriticalDamping(200));
+                        anim.add(noti, "Top", 450);
+                        anim.run();
+
+                        noti.ShowDialog();
+                        txtPassword.Focus();
+                    }, TaskScheduler.FromCurrentSynchronizationContext());
                 }
 
             } else
             {
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
-                noti.TitleText = "INFO";
+                noti.TitleText = "GYM APP";
                 noti.MessageText = "Please enter your password!";
-                var anim = new Transition(new TransitionType_CriticalDamping(200));
-                anim.add(noti, "Top", 450);
-                anim.run();
-                noti.ShowDialog();
-                txtPassword.Focus();
+
+                Task.Delay(100).ContinueWith(_ =>
+                {
+                    var anim = new Transition(new TransitionType_CriticalDamping(200));
+                    anim.add(noti, "Top", 450);
+                    anim.run();
+
+                    noti.ShowDialog();
+                    txtPassword.Focus();
+                }, TaskScheduler.FromCurrentSynchronizationContext());
             }
         }
     }

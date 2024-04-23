@@ -73,7 +73,7 @@ namespace BaiTapQuanLy.Forms
             Frm_MembersAdd frmMemAdd = new Frm_MembersAdd();
             frmMemAdd.ParentForm = this;
             frmMemAdd.StartPosition = FormStartPosition.CenterParent;
-            var anim = new Transition(new TransitionType_CriticalDamping(500));
+            var anim = new Transition(new TransitionType_EaseInEaseOut(400));
             anim.add(frmMemAdd, "Top", 300);
             anim.run();
             frmMemAdd.ShowDialog();
@@ -81,12 +81,15 @@ namespace BaiTapQuanLy.Forms
             {
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
-                noti.TitleText = "INFO";
+                noti.TitleText = "GYM APP";
                 noti.MessageText = "Deselect an item to add a new member!";
-                var anim = new Transition(new TransitionType_Deceleration(300));
-                anim.add(noti, "Top", 500);
-                anim.run();
-                noti.ShowDialog();
+                Task.Delay(150).ContinueWith(_ =>
+                {
+                    var anim = new Transition(new TransitionType_CriticalDamping(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
+                }, TaskScheduler.FromCurrentSynchronizationContext());
             }
         }
 
@@ -107,7 +110,7 @@ namespace BaiTapQuanLy.Forms
                 Frm_MemberUpdate frmMemUpdate = new Frm_MemberUpdate(memberID, fullName, gender, dateOfBirth, email, phone, joinDate, membershipType);
                 frmMemUpdate.ParentForm = this;
                 frmMemUpdate.StartPosition = FormStartPosition.CenterParent;
-                var anim = new Transition(new TransitionType_CriticalDamping(500));
+                var anim = new Transition(new TransitionType_EaseInEaseOut(400));
                 anim.add(frmMemUpdate, "Top", 300);
                 anim.run();
                 frmMemUpdate.ShowDialog();
@@ -115,12 +118,15 @@ namespace BaiTapQuanLy.Forms
             {
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
-                noti.TitleText = "INFO";
+                noti.TitleText = "GYM APP";
                 noti.MessageText = "Select a member to edit!";
-                var anim = new Transition(new TransitionType_Deceleration(300));
-                anim.add(noti, "Top", 500);
-                anim.run();
-                noti.ShowDialog();
+                Task.Delay(150).ContinueWith(_ =>
+                {
+                    var anim = new Transition(new TransitionType_CriticalDamping(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
+                }, TaskScheduler.FromCurrentSynchronizationContext());
             }
         }
 
@@ -136,24 +142,30 @@ namespace BaiTapQuanLy.Forms
                 });
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
-                noti.TitleText = "SUCCESS";
+                noti.TitleText = "GYM APP";
                 noti.MessageText = "A member has been deleted!";
-                var anim = new Transition(new TransitionType_Deceleration(300));
-                anim.add(noti, "Top", 500);
-                anim.run();
-                noti.ShowDialog();
+                Task.Delay(150).ContinueWith(_ =>
+                {
+                    var anim = new Transition(new TransitionType_CriticalDamping(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
+                }, TaskScheduler.FromCurrentSynchronizationContext());
                 refreshMemberDataGridView();
             }
             else
             {
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
-                noti.TitleText = "INFO";
+                noti.TitleText = "GYM APP";
                 noti.MessageText = "Select a member to delete!";
-                var anim = new Transition(new TransitionType_Deceleration(300));
-                anim.add(noti, "Top", 500);
-                anim.run();
-                noti.ShowDialog();
+                Task.Delay(150).ContinueWith(_ =>
+                {
+                    var anim = new Transition(new TransitionType_CriticalDamping(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
+                }, TaskScheduler.FromCurrentSynchronizationContext());
             }
         }
     }

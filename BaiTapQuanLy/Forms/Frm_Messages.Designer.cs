@@ -83,7 +83,7 @@
             this.btnOK.FillColor = System.Drawing.Color.Transparent;
             this.btnOK.Font = new System.Drawing.Font("Roboto", 14.25F);
             this.btnOK.ForeColor = System.Drawing.Color.Blue;
-            this.btnOK.Location = new System.Drawing.Point(203, 107);
+            this.btnOK.Location = new System.Drawing.Point(206, 107);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(214, 60);
             this.btnOK.TabIndex = 3;

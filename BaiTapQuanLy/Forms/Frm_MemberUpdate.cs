@@ -82,15 +82,18 @@ namespace BaiTapQuanLy.Forms
                     newJoinDate == joinDate &&
                     newMembershipType == membershipType)
                 {
-                    // Nothing has changed
+                    // Nothing was changed
                     Frm_Messages noti = new Frm_Messages();
                     noti.StartPosition = FormStartPosition.CenterParent;
-                    noti.TitleText = "INFO";
+                    noti.TitleText = "GYM APP";
                     noti.MessageText = "Nothing was changed!";
-                    var anim = new Transition(new TransitionType_Deceleration(300));
-                    anim.add(noti, "Top", 500);
-                    anim.run();
-                    noti.ShowDialog();
+                    Task.Delay(200).ContinueWith(_ =>
+                    {
+                        var anim = new Transition(new TransitionType_CriticalDamping(300));
+                        anim.add(noti, "Top", 500);
+                        anim.run();
+                        noti.ShowDialog();
+                    }, TaskScheduler.FromCurrentSynchronizationContext());
                     return; // Skip the update process
                 }
 
@@ -114,10 +117,13 @@ namespace BaiTapQuanLy.Forms
                     noti.StartPosition = FormStartPosition.CenterParent;
                     noti.TitleText = "SUCCESS";
                     noti.MessageText = "A member has been updated!";
-                    var anim = new Transition(new TransitionType_Deceleration(300));
-                    anim.add(noti, "Top", 500);
-                    anim.run();
-                    noti.ShowDialog();
+                    Task.Delay(150).ContinueWith(_ =>
+                    {
+                        var anim = new Transition(new TransitionType_CriticalDamping(300));
+                        anim.add(noti, "Top", 500);
+                        anim.run();
+                        noti.ShowDialog();
+                    }, TaskScheduler.FromCurrentSynchronizationContext());
                     ParentForm?.refreshMemberDataGridView();
                     this.Close();
                 }
@@ -128,10 +134,13 @@ namespace BaiTapQuanLy.Forms
                     noti.StartPosition = FormStartPosition.CenterParent;
                     noti.TitleText = "ERROR";
                     noti.MessageText = "Error updating member!";
-                    var anim = new Transition(new TransitionType_Deceleration(300));
-                    anim.add(noti, "Top", 500);
-                    anim.run();
-                    noti.ShowDialog();
+                    Task.Delay(150).ContinueWith(_ =>
+                    {
+                        var anim = new Transition(new TransitionType_CriticalDamping(300));
+                        anim.add(noti, "Top", 500);
+                        anim.run();
+                        noti.ShowDialog();
+                    }, TaskScheduler.FromCurrentSynchronizationContext());
                 }
             }
             catch (Exception ex)
@@ -139,11 +148,14 @@ namespace BaiTapQuanLy.Forms
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
                 noti.TitleText = "ERROR";
-                noti.MessageText = "An error occurred: " + ex.Message;
-                var anim = new Transition(new TransitionType_Deceleration(300));
-                anim.add(noti, "Top", 500);
-                anim.run();
-                noti.ShowDialog();
+                noti.MessageText = "An error occured " + ex.Message;
+                Task.Delay(150).ContinueWith(_ =>
+                {
+                    var anim = new Transition(new TransitionType_CriticalDamping(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
+                }, TaskScheduler.FromCurrentSynchronizationContext());
             }
         }
     }

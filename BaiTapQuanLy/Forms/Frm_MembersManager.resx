@@ -121,7 +121,7 @@
   <data name="addMemberBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADKaSURBVHhe7d0L
+        DwAACw8BkvkDpQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADKaSURBVHhe7d0L
         mCRVfffx2V1AuWv0FVmWnaqagQWH4GVVUFEXE8RLSLyAIiCJomvUN/rm8qjRxHcSxeiLWV6HqappYF8W
         UMBRAysQL6hRgigCykUERFDQ4DLL7s7UqZ7e2Qv1njP7J7tUn5npS3V3ddf39zyfZ2D7Vl11zvmf7q5L
         HyEk31k1nOzVXyof6gbxse5YfJIbqNO01Y4ffcQJ4s84gQqcUF2h/229doPrq5v139u0B/RjHtJ/N6ds
@@ -344,7 +344,7 @@
   <data name="editMemberBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADg5SURBVHhe7d0J
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADg5SURBVHhe7d0J
         eCRlnfjxwHCpqBwqguw6A11VCWEQGFZX110GHXQ9AEG8QbkEr1XWA9xdj1EBR133v6Irzgp0VSUzQFBA
         DpFz5BRh5D4FuYW5J+l6K3dS//ftebMTqt9MupM+6vh+n+fzoJOk011dXb/qTndVGxEluwVLo22d88I9
         rKLYv+CKdzlu8GHbDU92PHG67YnvW25wjvzvcssLfiP/e53jBbfL/660vfBx+d+npA0xw1IUo/4t/n1P
@@ -591,7 +591,7 @@
   <data name="deleteMemberBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADnZSURBVHhe7d0J
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADnZSURBVHhe7d0J
         nBxVgfjx4VBQ8QB0UWT/BuiqmjCEK+qu6ELUoIuALi7eJyDH6oqsoui6rlFBg+sesqJGA1NVMwkwIMFw
         RAjhCkEIkRjCKRCuALkz0/Wqe+76vzd5bIbqNzPdPdU91V2/3+fz/aCZmZ7u6nrv1cx0V7UQUbqbOS96
         hXNpuL/VLo7IueIDjht83HbDMx1PnG974ieWG/xK/neh5QW/l/9d6njB3fK/q2wvfFz+9ylpW0y/FMWo
@@ -863,6 +863,9 @@
     <value>True</value>
   </metadata>
   <metadata name="colMembershipType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colexpiredDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>
