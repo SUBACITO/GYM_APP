@@ -83,7 +83,7 @@ namespace BaiTapQuanLy.Forms
                 noti.StartPosition = FormStartPosition.CenterParent;
                 noti.TitleText = "GYM APP";
                 noti.MessageText = "Deselect an item to add a new member!";
-                Task.Delay(150).ContinueWith(_ =>
+                Task.Delay(200).ContinueWith(_ =>
                 {
                     var anim = new Transition(new TransitionType_CriticalDamping(300));
                     anim.add(noti, "Top", 500);
@@ -120,7 +120,7 @@ namespace BaiTapQuanLy.Forms
                 noti.StartPosition = FormStartPosition.CenterParent;
                 noti.TitleText = "GYM APP";
                 noti.MessageText = "Select a member to edit!";
-                Task.Delay(150).ContinueWith(_ =>
+                Task.Delay(200).ContinueWith(_ =>
                 {
                     var anim = new Transition(new TransitionType_CriticalDamping(300));
                     anim.add(noti, "Top", 500);
@@ -159,7 +159,7 @@ namespace BaiTapQuanLy.Forms
                 noti.StartPosition = FormStartPosition.CenterParent;
                 noti.TitleText = "GYM APP";
                 noti.MessageText = "Select a member to delete!";
-                Task.Delay(150).ContinueWith(_ =>
+                Task.Delay(200).ContinueWith(_ =>
                 {
                     var anim = new Transition(new TransitionType_CriticalDamping(300));
                     anim.add(noti, "Top", 500);
