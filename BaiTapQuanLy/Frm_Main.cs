@@ -13,6 +13,7 @@ using BaiTapQuanLy.Forms;
 using Guna.UI2.WinForms;
 using Transitions;
 using System.IO;
+using BaiTapQuanLy.Properties;
 
 namespace BaiTapQuanLy
 {
@@ -20,6 +21,8 @@ namespace BaiTapQuanLy
     {
         private Form currentChildForm;
         private Guna2Button currentButton;
+        private Dictionary<Guna2Button, bool> buttonPressedState = new Dictionary<Guna2Button, bool>();
+
 
         public Frm_Main()
         {
@@ -27,8 +30,28 @@ namespace BaiTapQuanLy
             currentButton = null;
         }
 
+        private void InitializeButtonStates()
+        {
+            buttonPressedState.Add(homePageBTN, false);
+            buttonPressedState.Add(dashBoardBTN, false);
+            buttonPressedState.Add(memberManagerBTN, false);
+            buttonPressedState.Add(privateTrainerBTN, false);
+
+            UpdateButtonImages();
+        }
+
+        private void UpdateButtonImages()
+        {
+            foreach (var button in buttonPressedState.Keys)
+            {
+                string imageName = buttonPressedState[button] ? "_pressed" : "_unpressed";
+                button.Image = Image.FromFile($"..\\..\\..\\image\\{button.Name}{imageName}.png");
+            }
+        }
+
         private void Frm_Main_Load(object sender, EventArgs e)
         {
+            InitializeButtonStates();
             pressedBTN(homePageBTN);
         }
 
@@ -93,7 +116,7 @@ namespace BaiTapQuanLy
         {
             homePageBTN.Text = state == "Collapsed" ? "" : "Home";
             dashBoardBTN.Text = state == "Collapsed" ? "" : "Dashboard";
-            memberManagerBTN.Text = state == "Collapsed" ? "" : "Members Management";
+            memberManagerBTN.Text = state == "Collapsed" ? "" : "Members Manager";
             privateTrainerBTN.Text = state == "Collapsed" ? "" : "Personal Trainer";
         }
 
@@ -126,15 +149,21 @@ namespace BaiTapQuanLy
         //Change colors when button is pressed
         private void pressedBTN(Guna2Button button)
         {
+            // Update appearance of the previously pressed button
             if (currentButton != null)
             {
                 currentButton.FillColor = System.Drawing.Color.Transparent;
                 currentButton.ForeColor = System.Drawing.Color.Black;
+                currentButton.Image = Image.FromFile($"..\\..\\..\\image\\{currentButton.Name}_unpressed.png");
             }
-            currentButton = button;
-            currentButton.FillColor = System.Drawing.Color.FromArgb(33, 150, 243);
-            currentButton.ForeColor = System.Drawing.Color.White;
 
+            // Update appearance of the current button
+            button.FillColor = System.Drawing.Color.FromArgb(11, 87, 208);
+            button.ForeColor = System.Drawing.Color.White;
+            button.Image = Image.FromFile($"..\\..\\..\\image\\{button.Name}_pressed.png");
+
+            // Update the current button
+            currentButton = button;
         }
         /////////////////////////////////////////////////
 

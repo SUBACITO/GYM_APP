@@ -38,8 +38,6 @@
             this.editMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
             this.deleteMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
             this.dgvMembers = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.colMemberID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +47,9 @@
             this.colJoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMembershipType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colexpiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.searchBarTxT = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
@@ -60,9 +61,9 @@
             this.panel2.Controls.Add(this.guna2Panel1);
             this.panel2.Controls.Add(this.dgvMembers);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Location = new System.Drawing.Point(0, 111);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 350);
+            this.panel2.Size = new System.Drawing.Size(800, 339);
             this.panel2.TabIndex = 6;
             // 
             // guna2Panel1
@@ -71,7 +72,7 @@
             this.guna2Panel1.Controls.Add(this.addMemberBTN);
             this.guna2Panel1.Controls.Add(this.editMemberBTN);
             this.guna2Panel1.Controls.Add(this.deleteMemberBTN);
-            this.guna2Panel1.Location = new System.Drawing.Point(686, 6);
+            this.guna2Panel1.Location = new System.Drawing.Point(686, -5);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(102, 332);
             this.guna2Panel1.TabIndex = 2;
@@ -179,7 +180,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMembers.DefaultCellStyle = dataGridViewCellStyle3;
@@ -191,7 +192,7 @@
             this.dgvMembers.RowHeadersVisible = false;
             this.dgvMembers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvMembers.RowTemplate.Height = 50;
-            this.dgvMembers.Size = new System.Drawing.Size(655, 332);
+            this.dgvMembers.Size = new System.Drawing.Size(655, 321);
             this.dgvMembers.TabIndex = 0;
             this.dgvMembers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMembers.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -216,25 +217,6 @@
             this.dgvMembers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvMembers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembers_CellClick);
             this.dgvMembers.SelectionChanged += new System.EventHandler(this.dgvMembers_SelectionChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 100);
-            this.panel1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Members Management";
             // 
             // colMemberID
             // 
@@ -271,6 +253,7 @@
             // 
             // colEmail
             // 
+            this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colEmail.DataPropertyName = "Email";
             this.colEmail.FillWeight = 101.0787F;
             this.colEmail.HeaderText = "Email";
@@ -307,6 +290,59 @@
             this.colexpiredDate.HeaderText = "Expired Date";
             this.colexpiredDate.Name = "colexpiredDate";
             this.colexpiredDate.ReadOnly = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.searchBarTxT);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 111);
+            this.panel1.TabIndex = 5;
+            // 
+            // searchBarTxT
+            // 
+            this.searchBarTxT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBarTxT.AutoRoundedCorners = true;
+            this.searchBarTxT.BackColor = System.Drawing.Color.Transparent;
+            this.searchBarTxT.BorderColor = System.Drawing.Color.Silver;
+            this.searchBarTxT.BorderRadius = 21;
+            this.searchBarTxT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchBarTxT.DefaultText = "";
+            this.searchBarTxT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.searchBarTxT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.searchBarTxT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchBarTxT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchBarTxT.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.searchBarTxT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchBarTxT.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.searchBarTxT.ForeColor = System.Drawing.Color.Black;
+            this.searchBarTxT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchBarTxT.IconLeft = ((System.Drawing.Image)(resources.GetObject("searchBarTxT.IconLeft")));
+            this.searchBarTxT.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.searchBarTxT.Location = new System.Drawing.Point(25, 58);
+            this.searchBarTxT.Margin = new System.Windows.Forms.Padding(5);
+            this.searchBarTxT.Name = "searchBarTxT";
+            this.searchBarTxT.PasswordChar = '\0';
+            this.searchBarTxT.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.searchBarTxT.PlaceholderText = "Search";
+            this.searchBarTxT.SelectedText = "";
+            this.searchBarTxT.ShadowDecoration.Depth = 50;
+            this.searchBarTxT.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1);
+            this.searchBarTxT.Size = new System.Drawing.Size(655, 45);
+            this.searchBarTxT.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(243, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Members Manager";
             // 
             // Frm_MembersManager
             // 
@@ -348,5 +384,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colJoinDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMembershipType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colexpiredDate;
+        private Guna.UI2.WinForms.Guna2TextBox searchBarTxT;
     }
 }

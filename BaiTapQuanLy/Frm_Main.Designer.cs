@@ -34,7 +34,6 @@
             this.privateTrainerBTN = new Guna.UI2.WinForms.Guna2Button();
             this.memberManagerBTN = new Guna.UI2.WinForms.Guna2Button();
             this.dashBoardBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.searchBarTxT = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
             this.usernameLabel = new System.Windows.Forms.Label();
@@ -69,6 +68,7 @@
             this.homePageBTN.Size = new System.Drawing.Size(260, 45);
             this.homePageBTN.TabIndex = 10;
             this.homePageBTN.Text = "Home";
+            this.homePageBTN.TextOffset = new System.Drawing.Point(-40, 0);
             this.homePageBTN.Click += new System.EventHandler(this.homePageBTN_Click);
             // 
             // privateTrainerBTN
@@ -88,6 +88,7 @@
             this.privateTrainerBTN.Size = new System.Drawing.Size(260, 45);
             this.privateTrainerBTN.TabIndex = 8;
             this.privateTrainerBTN.Text = "Personal Trainer";
+            this.privateTrainerBTN.TextOffset = new System.Drawing.Point(-10, 0);
             this.privateTrainerBTN.Click += new System.EventHandler(this.privateTrainerBTN_Click);
             // 
             // memberManagerBTN
@@ -126,36 +127,8 @@
             this.dashBoardBTN.Size = new System.Drawing.Size(260, 45);
             this.dashBoardBTN.TabIndex = 6;
             this.dashBoardBTN.Text = "Dashboard";
+            this.dashBoardBTN.TextOffset = new System.Drawing.Point(-25, 0);
             this.dashBoardBTN.Click += new System.EventHandler(this.dashBoardBTN_Click);
-            // 
-            // searchBarTxT
-            // 
-            this.searchBarTxT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBarTxT.AutoRoundedCorners = true;
-            this.searchBarTxT.BorderRadius = 16;
-            this.searchBarTxT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchBarTxT.DefaultText = "";
-            this.searchBarTxT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.searchBarTxT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.searchBarTxT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchBarTxT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchBarTxT.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.searchBarTxT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBarTxT.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.searchBarTxT.ForeColor = System.Drawing.Color.Black;
-            this.searchBarTxT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBarTxT.IconLeft = ((System.Drawing.Image)(resources.GetObject("searchBarTxT.IconLeft")));
-            this.searchBarTxT.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.searchBarTxT.Location = new System.Drawing.Point(270, 7);
-            this.searchBarTxT.Margin = new System.Windows.Forms.Padding(4);
-            this.searchBarTxT.Name = "searchBarTxT";
-            this.searchBarTxT.PasswordChar = '\0';
-            this.searchBarTxT.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.searchBarTxT.PlaceholderText = "Search";
-            this.searchBarTxT.SelectedText = "";
-            this.searchBarTxT.Size = new System.Drawing.Size(426, 34);
-            this.searchBarTxT.TabIndex = 9;
             // 
             // panelDesktop
             // 
@@ -174,7 +147,6 @@
             this.topPanel.Controls.Add(this.usernameLabel);
             this.topPanel.Controls.Add(this.label1);
             this.topPanel.Controls.Add(this.pictureBox1);
-            this.topPanel.Controls.Add(this.searchBarTxT);
             this.topPanel.Controls.Add(this.menuSidebarIcon);
             this.topPanel.Controls.Add(this.userProfile);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -189,7 +161,7 @@
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Cursor = System.Windows.Forms.Cursors.Default;
             this.usernameLabel.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(810, 17);
+            this.usernameLabel.Location = new System.Drawing.Point(754, 17);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(140, 18);
             this.usernameLabel.TabIndex = 0;
@@ -197,17 +169,17 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(111, 17);
+            this.label1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(107, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 23);
+            this.label1.Size = new System.Drawing.Size(190, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gym Management";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(65, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,7 +204,7 @@
             this.userProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.userProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userProfile.Image = ((System.Drawing.Image)(resources.GetObject("userProfile.Image")));
-            this.userProfile.Location = new System.Drawing.Point(766, 4);
+            this.userProfile.Location = new System.Drawing.Point(710, 8);
             this.userProfile.Name = "userProfile";
             this.userProfile.Size = new System.Drawing.Size(38, 37);
             this.userProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -292,7 +264,6 @@
         private Guna.UI2.WinForms.Guna2Button privateTrainerBTN;
         private Guna.UI2.WinForms.Guna2Button memberManagerBTN;
         private Guna.UI2.WinForms.Guna2Button homePageBTN;
-        private Guna.UI2.WinForms.Guna2TextBox searchBarTxT;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.PictureBox menuSidebarIcon;
         private System.Windows.Forms.FlowLayoutPanel sidebarPanel;
