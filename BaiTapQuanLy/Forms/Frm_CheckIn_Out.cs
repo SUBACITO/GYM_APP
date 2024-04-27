@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BaiTapQuanLy.Forms
 {
-    public partial class Frm_Dashboard : Form
+    public partial class Frm_CheckIn_Out : Form
     {
-        public Frm_Dashboard()
+        public Frm_CheckIn_Out()
         {
             InitializeComponent();
         }

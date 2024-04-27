@@ -87,8 +87,8 @@
             this.privateTrainerBTN.Name = "privateTrainerBTN";
             this.privateTrainerBTN.Size = new System.Drawing.Size(260, 45);
             this.privateTrainerBTN.TabIndex = 8;
-            this.privateTrainerBTN.Text = "Personal Trainer";
-            this.privateTrainerBTN.TextOffset = new System.Drawing.Point(-10, 0);
+            this.privateTrainerBTN.Text = "Membership Package";
+            this.privateTrainerBTN.TextOffset = new System.Drawing.Point(10, 0);
             this.privateTrainerBTN.Click += new System.EventHandler(this.privateTrainerBTN_Click);
             // 
             // memberManagerBTN
@@ -126,8 +126,8 @@
             this.dashBoardBTN.Name = "dashBoardBTN";
             this.dashBoardBTN.Size = new System.Drawing.Size(260, 45);
             this.dashBoardBTN.TabIndex = 6;
-            this.dashBoardBTN.Text = "Dashboard";
-            this.dashBoardBTN.TextOffset = new System.Drawing.Point(-25, 0);
+            this.dashBoardBTN.Text = "Check In/Out";
+            this.dashBoardBTN.TextOffset = new System.Drawing.Point(-20, 0);
             this.dashBoardBTN.Click += new System.EventHandler(this.dashBoardBTN_Click);
             // 
             // panelDesktop

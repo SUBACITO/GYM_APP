@@ -63,11 +63,11 @@
     <Compile Include="BussinessLayer\Bll_HeThong.cs" />
     <Compile Include="clsMain.cs" />
     <Compile Include="DTO\Member.cs" />
-    <Compile Include="Forms\Frm_Dashboard.cs">
+    <Compile Include="Forms\Frm_CheckIn_Out.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Dashboard.Designer.cs">
-      <DependentUpon>Frm_Dashboard.cs</DependentUpon>
+    <Compile Include="Forms\Frm_CheckIn_Out.Designer.cs">
+      <DependentUpon>Frm_CheckIn_Out.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_MembersAdd.cs">
       <SubType>Form</SubType>
@@ -105,11 +105,11 @@
     <Compile Include="Frm_Main.Designer.cs">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_PT.cs">
+    <Compile Include="Forms\Frm_MembershipPackage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_PT.Designer.cs">
-      <DependentUpon>Frm_PT.cs</DependentUpon>
+    <Compile Include="Forms\Frm_MembershipPackage.Designer.cs">
+      <DependentUpon>Frm_MembershipPackage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_UserProfile.cs">
       <SubType>Form</SubType>
@@ -120,8 +120,8 @@
     <Compile Include="makeFormRounded.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Frm_Dashboard.resx">
-      <DependentUpon>Frm_Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_CheckIn_Out.resx">
+      <DependentUpon>Frm_CheckIn_Out.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_MembersAdd.resx">
       <DependentUpon>Frm_MembersAdd.cs</DependentUpon>
@@ -141,8 +141,8 @@
     <EmbeddedResource Include="Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_PT.resx">
-      <DependentUpon>Frm_PT.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_MembershipPackage.resx">
+      <DependentUpon>Frm_MembershipPackage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_UserProfile.resx">
       <DependentUpon>Frm_UserProfile.cs</DependentUpon>

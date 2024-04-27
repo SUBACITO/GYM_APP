@@ -1,6 +1,6 @@
 ﻿namespace BaiTapQuanLy.Forms
 {
-    partial class Frm_PT
+    partial class Frm_CheckIn_Out
     {
         /// <summary>
         /// Required designer variable.
@@ -56,7 +56,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 350);
-            this.panel2.TabIndex = 4;
+            this.panel2.TabIndex = 6;
             // 
             // guna2DataGridView1
             // 
@@ -174,7 +174,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 100);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 5;
             // 
             // guna2Button3
             // 
@@ -184,7 +184,7 @@
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(123, 45);
             this.guna2Button3.TabIndex = 2;
-            this.guna2Button3.Text = "Personal Trainer";
+            this.guna2Button3.Text = "Dashboard";
             // 
             // guna2Button2
             // 
@@ -194,7 +194,7 @@
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(123, 45);
             this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "Personal Trainer";
+            this.guna2Button2.Text = "Dashboard";
             // 
             // guna2Button1
             // 
@@ -204,18 +204,17 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(123, 45);
             this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Personal Trainer";
+            this.guna2Button1.Text = "Dashboard";
             // 
-            // Frm_PT
+            // Frm_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Frm_PT";
-            this.Text = "Personal Trainer";
+            this.Name = "Frm_Dashboard";
+            this.Text = "Frm_Dashboard";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -226,10 +225,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
@@ -238,5 +233,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colC;
         private System.Windows.Forms.DataGridViewTextBoxColumn colD;
         private System.Windows.Forms.DataGridViewTextBoxColumn colE;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

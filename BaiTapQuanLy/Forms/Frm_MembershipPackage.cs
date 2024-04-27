@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BaiTapQuanLy.Forms
 {
-    public partial class Frm_PT : Form
+    public partial class Frm_MembershipPackage : Form
     {
-        public Frm_PT()
+        public Frm_MembershipPackage()
         {
             InitializeComponent();
         }
