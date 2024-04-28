@@ -14,6 +14,9 @@ using Guna.UI2.WinForms;
 using Transitions;
 using System.IO;
 using BaiTapQuanLy.Properties;
+using BaiTapQuanLy.BussinessLayer;
+using BaiTapQuanLy.DTO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BaiTapQuanLy
 {
@@ -22,7 +25,7 @@ namespace BaiTapQuanLy
         private Form currentChildForm;
         private Guna2Button currentButton;
         private Dictionary<Guna2Button, bool> buttonPressedState = new Dictionary<Guna2Button, bool>();
-
+        DataTable dt;
 
         public Frm_Main()
         {
@@ -53,6 +56,8 @@ namespace BaiTapQuanLy
         {
             InitializeButtonStates();
             pressedBTN(homePageBTN);
+            string err = string.Empty;
+            usernameLabel.Text = Account.userName;
         }
 
         //Sidebar expand and collapse

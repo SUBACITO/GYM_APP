@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="BussinessLayer\Bll_HeThong.cs" />
     <Compile Include="clsMain.cs" />
+    <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Member.cs" />
     <Compile Include="Forms\Frm_CheckIn_Out.cs">
       <SubType>Form</SubType>

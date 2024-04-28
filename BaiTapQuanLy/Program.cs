@@ -16,7 +16,7 @@ namespace BaiTapQuanLy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Main());
+            Application.Run(new Frm_Login());
         }
     }
 }

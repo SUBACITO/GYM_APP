@@ -1,4 +1,5 @@
 ﻿using BaiTapQuanLy.BussinessLayer;
+using BaiTapQuanLy.DTO;
 using BaiTapQuanLy.Forms;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace BaiTapQuanLy
     {
         Bll_HeThong bll;
         string err = string.Empty;
-        DataTable dtNhanVien;
+        DataTable dt;
         public Frm_Login()
         {
             InitializeComponent();
@@ -221,10 +222,10 @@ namespace BaiTapQuanLy
             // Kiểm tra đăng nhập khi người dùng nhấp vào nút Đăng nhập
             string userEmailText = txtEmailorPhone.Text.Trim();
             string userPassword = txtPassword.Text.Trim();
-            string loginStatus = bll.AuthenticateUser(ref err, userEmailText, userPassword);
+            string loginStatus = bll.AuthenticateUser(ref err, userEmailText, userPassword).ToString();
             if(!string.IsNullOrEmpty(txtPassword.Text))
             {
-                if (loginStatus == "Thanh cong")
+                if (!string.IsNullOrEmpty(loginStatus))
                 {
                     // Nếu đăng nhập thành công, chuyển đến form chính
                     Frm_Main frm_Main = new Frm_Main();
@@ -267,5 +268,7 @@ namespace BaiTapQuanLy
                 }, TaskScheduler.FromCurrentSynchronizationContext());
             }
         }
+
+        
     }
 }
