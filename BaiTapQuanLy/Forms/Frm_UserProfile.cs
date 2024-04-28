@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaiTapQuanLy.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,7 @@ namespace BaiTapQuanLy
 
         private void Frm_UserProfile_Load(object sender, EventArgs e)
         {
-
+            lbl_username.Text = "Hi, "+Account.userName;
         }
 
         private void logOutBTN_Click(object sender, EventArgs e)

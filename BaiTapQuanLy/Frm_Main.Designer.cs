@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Main));
             this.homePageBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.privateTrainerBTN = new Guna.UI2.WinForms.Guna2Button();
             this.memberManagerBTN = new Guna.UI2.WinForms.Guna2Button();
             this.dashBoardBTN = new Guna.UI2.WinForms.Guna2Button();
             this.panelDesktop = new System.Windows.Forms.Panel();
@@ -71,26 +70,6 @@
             this.homePageBTN.TextOffset = new System.Drawing.Point(-40, 0);
             this.homePageBTN.Click += new System.EventHandler(this.homePageBTN_Click);
             // 
-            // privateTrainerBTN
-            // 
-            this.privateTrainerBTN.AutoRoundedCorners = true;
-            this.privateTrainerBTN.BorderRadius = 21;
-            this.privateTrainerBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.privateTrainerBTN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.privateTrainerBTN.FillColor = System.Drawing.Color.Transparent;
-            this.privateTrainerBTN.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.privateTrainerBTN.ForeColor = System.Drawing.Color.Black;
-            this.privateTrainerBTN.Image = ((System.Drawing.Image)(resources.GetObject("privateTrainerBTN.Image")));
-            this.privateTrainerBTN.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.privateTrainerBTN.ImageSize = new System.Drawing.Size(25, 25);
-            this.privateTrainerBTN.Location = new System.Drawing.Point(3, 173);
-            this.privateTrainerBTN.Name = "privateTrainerBTN";
-            this.privateTrainerBTN.Size = new System.Drawing.Size(260, 45);
-            this.privateTrainerBTN.TabIndex = 8;
-            this.privateTrainerBTN.Text = "Membership Package";
-            this.privateTrainerBTN.TextOffset = new System.Drawing.Point(10, 0);
-            this.privateTrainerBTN.Click += new System.EventHandler(this.privateTrainerBTN_Click);
-            // 
             // memberManagerBTN
             // 
             this.memberManagerBTN.AutoRoundedCorners = true;
@@ -126,8 +105,8 @@
             this.dashBoardBTN.Name = "dashBoardBTN";
             this.dashBoardBTN.Size = new System.Drawing.Size(260, 45);
             this.dashBoardBTN.TabIndex = 6;
-            this.dashBoardBTN.Text = "Check In/Out";
-            this.dashBoardBTN.TextOffset = new System.Drawing.Point(-20, 0);
+            this.dashBoardBTN.Text = "Statistics";
+            this.dashBoardBTN.TextOffset = new System.Drawing.Point(-30, 0);
             this.dashBoardBTN.Click += new System.EventHandler(this.dashBoardBTN_Click);
             // 
             // panelDesktop
@@ -220,7 +199,6 @@
             this.sidebarPanel.Controls.Add(this.homePageBTN);
             this.sidebarPanel.Controls.Add(this.dashBoardBTN);
             this.sidebarPanel.Controls.Add(this.memberManagerBTN);
-            this.sidebarPanel.Controls.Add(this.privateTrainerBTN);
             this.sidebarPanel.Location = new System.Drawing.Point(0, 48);
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.Size = new System.Drawing.Size(270, 521);
@@ -261,7 +239,6 @@
         #endregion
         private System.Windows.Forms.Panel panelDesktop;
         private Guna.UI2.WinForms.Guna2Button dashBoardBTN;
-        private Guna.UI2.WinForms.Guna2Button privateTrainerBTN;
         private Guna.UI2.WinForms.Guna2Button memberManagerBTN;
         private Guna.UI2.WinForms.Guna2Button homePageBTN;
         private System.Windows.Forms.Panel topPanel;

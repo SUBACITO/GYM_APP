@@ -69,7 +69,7 @@ C:\Users\nguye\Downloads\GYM_APP_C-\GYM_APP\BaiTapQuanLy\obj\Debug\App.csproj.Co
 C:\Users\nguye\Downloads\GYM_APP_C-\GYM_APP\BaiTapQuanLy\obj\Debug\App.csproj.Up2Date
 C:\Users\nguye\Downloads\GYM_APP_C-\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.exe
 C:\Users\nguye\Downloads\GYM_APP_C-\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.pdb
-C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_CheckIn_Out.resources
 C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_MembershipPackage.resources
 C:\Users\nguye\Downloads\GYM_APP_C-\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_CheckIn_Out.resources
 C:\Users\nguye\Downloads\GYM_APP_C-\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_MembershipPackage.resources
+C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_Statistic.resources

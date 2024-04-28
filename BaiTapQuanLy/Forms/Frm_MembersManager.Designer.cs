@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.addMembershipToMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
             this.addMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
             this.editMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
             this.deleteMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -69,6 +70,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.Controls.Add(this.addMembershipToMemberBTN);
             this.guna2Panel1.Controls.Add(this.addMemberBTN);
             this.guna2Panel1.Controls.Add(this.editMemberBTN);
             this.guna2Panel1.Controls.Add(this.deleteMemberBTN);
@@ -76,6 +78,29 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(102, 332);
             this.guna2Panel1.TabIndex = 2;
+            // 
+            // addMembershipToMemberBTN
+            // 
+            this.addMembershipToMemberBTN.BackColor = System.Drawing.Color.Transparent;
+            this.addMembershipToMemberBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addMembershipToMemberBTN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addMembershipToMemberBTN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addMembershipToMemberBTN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addMembershipToMemberBTN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addMembershipToMemberBTN.FillColor = System.Drawing.Color.White;
+            this.addMembershipToMemberBTN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.addMembershipToMemberBTN.ForeColor = System.Drawing.Color.White;
+            this.addMembershipToMemberBTN.Image = ((System.Drawing.Image)(resources.GetObject("addMembershipToMemberBTN.Image")));
+            this.addMembershipToMemberBTN.ImageSize = new System.Drawing.Size(66, 65);
+            this.addMembershipToMemberBTN.Location = new System.Drawing.Point(19, 0);
+            this.addMembershipToMemberBTN.Name = "addMembershipToMemberBTN";
+            this.addMembershipToMemberBTN.PressedDepth = 0;
+            this.addMembershipToMemberBTN.ShadowDecoration.BorderRadius = 0;
+            this.addMembershipToMemberBTN.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.addMembershipToMemberBTN.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.addMembershipToMemberBTN.Size = new System.Drawing.Size(70, 70);
+            this.addMembershipToMemberBTN.TabIndex = 6;
+            this.addMembershipToMemberBTN.Click += new System.EventHandler(this.addMembershipToMemberBTN_Click);
             // 
             // addMemberBTN
             // 
@@ -90,7 +115,7 @@
             this.addMemberBTN.ForeColor = System.Drawing.Color.White;
             this.addMemberBTN.Image = ((System.Drawing.Image)(resources.GetObject("addMemberBTN.Image")));
             this.addMemberBTN.ImageSize = new System.Drawing.Size(66, 65);
-            this.addMemberBTN.Location = new System.Drawing.Point(17, 27);
+            this.addMemberBTN.Location = new System.Drawing.Point(19, 81);
             this.addMemberBTN.Name = "addMemberBTN";
             this.addMemberBTN.PressedDepth = 0;
             this.addMemberBTN.ShadowDecoration.BorderRadius = 0;
@@ -113,7 +138,7 @@
             this.editMemberBTN.ForeColor = System.Drawing.Color.White;
             this.editMemberBTN.Image = ((System.Drawing.Image)(resources.GetObject("editMemberBTN.Image")));
             this.editMemberBTN.ImageSize = new System.Drawing.Size(66, 65);
-            this.editMemberBTN.Location = new System.Drawing.Point(17, 114);
+            this.editMemberBTN.Location = new System.Drawing.Point(19, 163);
             this.editMemberBTN.Name = "editMemberBTN";
             this.editMemberBTN.PressedDepth = 0;
             this.editMemberBTN.ShadowDecoration.BorderRadius = 0;
@@ -136,7 +161,7 @@
             this.deleteMemberBTN.ForeColor = System.Drawing.Color.White;
             this.deleteMemberBTN.Image = ((System.Drawing.Image)(resources.GetObject("deleteMemberBTN.Image")));
             this.deleteMemberBTN.ImageSize = new System.Drawing.Size(66, 65);
-            this.deleteMemberBTN.Location = new System.Drawing.Point(17, 205);
+            this.deleteMemberBTN.Location = new System.Drawing.Point(19, 249);
             this.deleteMemberBTN.Name = "deleteMemberBTN";
             this.deleteMemberBTN.PressedDepth = 0;
             this.deleteMemberBTN.ShadowDecoration.BorderRadius = 0;
@@ -221,7 +246,7 @@
             // colMemberID
             // 
             this.colMemberID.DataPropertyName = "MemberID";
-            this.colMemberID.FillWeight = 101.0787F;
+            this.colMemberID.FillWeight = 80.23825F;
             this.colMemberID.HeaderText = "Member ID";
             this.colMemberID.Name = "colMemberID";
             this.colMemberID.ReadOnly = true;
@@ -230,7 +255,7 @@
             // 
             this.colFullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colFullName.DataPropertyName = "FullName";
-            this.colFullName.FillWeight = 101.0787F;
+            this.colFullName.FillWeight = 163.3248F;
             this.colFullName.HeaderText = "Full Name";
             this.colFullName.Name = "colFullName";
             this.colFullName.ReadOnly = true;
@@ -238,7 +263,7 @@
             // colGender
             // 
             this.colGender.DataPropertyName = "Gender";
-            this.colGender.FillWeight = 101.0787F;
+            this.colGender.FillWeight = 80.23825F;
             this.colGender.HeaderText = "Gender";
             this.colGender.Name = "colGender";
             this.colGender.ReadOnly = true;
@@ -246,7 +271,7 @@
             // colDateOfBirth
             // 
             this.colDateOfBirth.DataPropertyName = "DateOfBirth";
-            this.colDateOfBirth.FillWeight = 101.0787F;
+            this.colDateOfBirth.FillWeight = 80.23825F;
             this.colDateOfBirth.HeaderText = "Date of Birth";
             this.colDateOfBirth.Name = "colDateOfBirth";
             this.colDateOfBirth.ReadOnly = true;
@@ -255,7 +280,7 @@
             // 
             this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colEmail.DataPropertyName = "Email";
-            this.colEmail.FillWeight = 101.0787F;
+            this.colEmail.FillWeight = 184.4933F;
             this.colEmail.HeaderText = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.ReadOnly = true;
@@ -263,7 +288,7 @@
             // colPhone
             // 
             this.colPhone.DataPropertyName = "Phone";
-            this.colPhone.FillWeight = 101.0787F;
+            this.colPhone.FillWeight = 80.23825F;
             this.colPhone.HeaderText = "Phone";
             this.colPhone.Name = "colPhone";
             this.colPhone.ReadOnly = true;
@@ -271,7 +296,7 @@
             // colJoinDate
             // 
             this.colJoinDate.DataPropertyName = "JoinDate";
-            this.colJoinDate.FillWeight = 101.0787F;
+            this.colJoinDate.FillWeight = 80.23825F;
             this.colJoinDate.HeaderText = "Join Date";
             this.colJoinDate.Name = "colJoinDate";
             this.colJoinDate.ReadOnly = true;
@@ -279,7 +304,7 @@
             // colMembershipType
             // 
             this.colMembershipType.DataPropertyName = "MembershipType";
-            this.colMembershipType.FillWeight = 101.0787F;
+            this.colMembershipType.FillWeight = 80.23825F;
             this.colMembershipType.HeaderText = "Membership Type";
             this.colMembershipType.Name = "colMembershipType";
             this.colMembershipType.ReadOnly = true;
@@ -287,6 +312,7 @@
             // colexpiredDate
             // 
             this.colexpiredDate.DataPropertyName = "expiredDate";
+            this.colexpiredDate.FillWeight = 79.38195F;
             this.colexpiredDate.HeaderText = "Expired Date";
             this.colexpiredDate.Name = "colexpiredDate";
             this.colexpiredDate.ReadOnly = true;
@@ -375,6 +401,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton deleteMemberBTN;
         private Guna.UI2.WinForms.Guna2CircleButton addMemberBTN;
         private Guna.UI2.WinForms.Guna2CircleButton editMemberBTN;
+        private Guna.UI2.WinForms.Guna2TextBox searchBarTxT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMemberID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGender;
@@ -384,6 +411,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colJoinDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMembershipType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colexpiredDate;
-        private Guna.UI2.WinForms.Guna2TextBox searchBarTxT;
+        private Guna.UI2.WinForms.Guna2CircleButton addMembershipToMemberBTN;
     }
 }

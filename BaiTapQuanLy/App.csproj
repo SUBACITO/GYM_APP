@@ -47,6 +47,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,11 +65,11 @@
     <Compile Include="clsMain.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Member.cs" />
-    <Compile Include="Forms\Frm_CheckIn_Out.cs">
+    <Compile Include="Forms\Frm_Statistic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_CheckIn_Out.Designer.cs">
-      <DependentUpon>Frm_CheckIn_Out.cs</DependentUpon>
+    <Compile Include="Forms\Frm_Statistic.Designer.cs">
+      <DependentUpon>Frm_Statistic.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_MembersAdd.cs">
       <SubType>Form</SubType>
@@ -121,8 +122,8 @@
     <Compile Include="makeFormRounded.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Frm_CheckIn_Out.resx">
-      <DependentUpon>Frm_CheckIn_Out.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_Statistic.resx">
+      <DependentUpon>Frm_Statistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_MembersAdd.resx">
       <DependentUpon>Frm_MembersAdd.cs</DependentUpon>

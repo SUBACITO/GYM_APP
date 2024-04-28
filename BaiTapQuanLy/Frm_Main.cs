@@ -38,7 +38,6 @@ namespace BaiTapQuanLy
             buttonPressedState.Add(homePageBTN, false);
             buttonPressedState.Add(dashBoardBTN, false);
             buttonPressedState.Add(memberManagerBTN, false);
-            buttonPressedState.Add(privateTrainerBTN, false);
 
             UpdateButtonImages();
         }
@@ -114,15 +113,13 @@ namespace BaiTapQuanLy
             homePageBTN.Width = width;
             dashBoardBTN.Width = width;
             memberManagerBTN.Width = width;
-            privateTrainerBTN.Width = width;
         }
 
         private void UpdateButtonText(string state)
         {
             homePageBTN.Text = state == "Collapsed" ? "" : "Home";
-            dashBoardBTN.Text = state == "Collapsed" ? "" : "Check In/Out";
+            dashBoardBTN.Text = state == "Collapsed" ? "" : "Statistics";
             memberManagerBTN.Text = state == "Collapsed" ? "" : "Members Manager";
-            privateTrainerBTN.Text = state == "Collapsed" ? "" : "Membership Package";
         }
 
         private void menuSidebarIcon_Click(object sender, EventArgs e)
@@ -175,7 +172,7 @@ namespace BaiTapQuanLy
         //Open other forms as a child form with button click
         private void dashBoardBTN_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Frm_CheckIn_Out(), (Guna2Button)sender);
+            OpenChildForm(new Frm_Statistic(), (Guna2Button)sender);
         }
 
         private void memberManagerBTN_Click(object sender, EventArgs e)

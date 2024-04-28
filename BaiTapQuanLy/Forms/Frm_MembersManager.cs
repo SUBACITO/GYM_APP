@@ -130,6 +130,29 @@ namespace BaiTapQuanLy.Forms
             }
         }
 
+        private void addMembershipToMemberBTN_Click(object sender, EventArgs e)
+        {
+            if (dgvMembers.SelectedRows.Count == 1)
+            {
+                Frm_MembershipPackage frm_membershipPackage = new Frm_MembershipPackage();
+                frm_membershipPackage.StartPosition = FormStartPosition.CenterParent;
+                frm_membershipPackage.ShowDialog();
+            }
+            else
+            {
+                Frm_Messages noti = new Frm_Messages();
+                noti.StartPosition = FormStartPosition.CenterParent;
+                noti.TitleText = "GYM APP";
+                noti.MessageText = "Select a member to add memership!";
+                Task.Delay(200).ContinueWith(_ =>
+                {
+                    var anim = new Transition(new TransitionType_CriticalDamping(300));
+                    anim.add(noti, "Top", 500);
+                    anim.run();
+                    noti.ShowDialog();
+                }, TaskScheduler.FromCurrentSynchronizationContext());
+            }
+        }
         private void deleteMemberBTN_Click(object sender, EventArgs e)
         {
             if (dgvMembers.SelectedRows.Count == 1)
@@ -168,5 +191,6 @@ namespace BaiTapQuanLy.Forms
                 }, TaskScheduler.FromCurrentSynchronizationContext());
             }
         }
+
     }
 }
