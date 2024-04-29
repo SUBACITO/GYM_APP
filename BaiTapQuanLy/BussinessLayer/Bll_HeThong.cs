@@ -90,8 +90,7 @@ namespace BaiTapQuanLy.BussinessLayer
                 new SqlParameter("@DateOfBirth", member.DateOfBirth),
                 new SqlParameter("@Email", member.Email),
                 new SqlParameter("@Phone", member.Phone),
-                new SqlParameter("@JoinDate", member.JoinDate),
-                new SqlParameter("@MembershipType", member.MembershipType),
+                new SqlParameter("@JoinDate", member.JoinDate)
             };
 
             return db.MyExcuteNonQuery(ref err, "Member_AddOrUpdate", CommandType.StoredProcedure, sqlPara);
@@ -108,8 +107,7 @@ namespace BaiTapQuanLy.BussinessLayer
                 new SqlParameter("@DateOfBirth", member.DateOfBirth),
                 new SqlParameter("@Email", member.Email),
                 new SqlParameter("@Phone", member.Phone),
-                new SqlParameter("@JoinDate", member.JoinDate),
-                new SqlParameter("@MembershipType", member.MembershipType),
+                new SqlParameter("@JoinDate", member.JoinDate)
             };
 
             return db.MyExcuteNonQuery(ref err, "Member_AddOrUpdate", CommandType.StoredProcedure, sqlPara);
@@ -125,6 +123,15 @@ namespace BaiTapQuanLy.BussinessLayer
             return db.MyExcuteNonQuery(ref err, "Member_Delete", CommandType.StoredProcedure, sqlPara);
         }
 
-        
+        //Buy or renew membership package
+        public int BuyOrRenewPackage(ref string err, int memberID, int packageID )
+        {
+            SqlParameter[] sqlPara = new SqlParameter[]
+            {
+                new SqlParameter("@MemberID", memberID),
+                new SqlParameter("@PackageID", packageID)
+            };
+            return db.MyExcuteNonQuery(ref err, "PurchaseOrRenewPackage", CommandType.StoredProcedure, sqlPara);
+        }
     }
 }

@@ -26,8 +26,7 @@ namespace BaiTapQuanLy.Forms
         private string email;
         private string phone;
         private DateTime joinDate;
-        private string membershipType;
-        public Frm_MemberUpdate(int memberID, string fullName, string gender, DateTime dateOfBirth, string email, string phone, DateTime joinDate, string membershipType)
+        public Frm_MemberUpdate(int memberID, string fullName, string gender, DateTime dateOfBirth, string email, string phone, DateTime joinDate)
         {
             InitializeComponent();
             this.memberID = memberID;
@@ -37,7 +36,6 @@ namespace BaiTapQuanLy.Forms
             this.email = email;
             this.phone = phone;
             this.joinDate = joinDate;
-            this.membershipType = membershipType;
         }
 
         private void cancelUpdateBTN_Click(object sender, EventArgs e)
@@ -54,7 +52,6 @@ namespace BaiTapQuanLy.Forms
             txt_Email.Text = email;
             txt_Phone.Text = phone;
             dtp_JoinDate.Value = joinDate;
-            cbox_MembershipType.SelectedItem = membershipType;
             /////////////////////////////////////////////////
             txt_FullName.Focus();
             txt_FullName.Select(txt_FullName.Text.Length, 0);
@@ -71,7 +68,6 @@ namespace BaiTapQuanLy.Forms
                 string newEmail = txt_Email.Text;
                 string newPhone = txt_Phone.Text;
                 DateTime newJoinDate = dtp_JoinDate.Value;
-                string newMembershipType = cbox_MembershipType.SelectedItem.ToString();
 
                 // Check if any information has changed
                 if (newFullName == fullName &&
@@ -79,8 +75,7 @@ namespace BaiTapQuanLy.Forms
                     newDateOfBirth == dateOfBirth &&
                     newEmail == email &&
                     newPhone == phone &&
-                    newJoinDate == joinDate &&
-                    newMembershipType == membershipType)
+                    newJoinDate == joinDate)
                 {
                     // Nothing was changed
                     Frm_Messages noti = new Frm_Messages();
@@ -106,8 +101,7 @@ namespace BaiTapQuanLy.Forms
                     DateOfBirth = newDateOfBirth,
                     Email = newEmail,
                     Phone = newPhone,
-                    JoinDate = newJoinDate,
-                    MembershipType = newMembershipType
+                    JoinDate = newJoinDate
                 });
 
                 if (result > 0)
@@ -125,6 +119,7 @@ namespace BaiTapQuanLy.Forms
                         noti.ShowDialog();
                     }, TaskScheduler.FromCurrentSynchronizationContext());
                     ParentForm?.refreshMemberDataGridView();
+                    ParentForm?.LoadAllMembersData();
                     this.Close();
                 }
                 else

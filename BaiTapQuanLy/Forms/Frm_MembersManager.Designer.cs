@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MembersManager));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.addMembershipToMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -177,19 +177,19 @@
             this.dgvMembers.AllowUserToDeleteRows = false;
             this.dgvMembers.AllowUserToResizeColumns = false;
             this.dgvMembers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvMembers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
+            this.dgvMembers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvMembers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvMembers.ColumnHeadersHeight = 30;
             this.dgvMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMemberID,
@@ -201,14 +201,14 @@
             this.colJoinDate,
             this.colMembershipType,
             this.colexpiredDate});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMembers.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMembers.DefaultCellStyle = dataGridViewCellStyle27;
             this.dgvMembers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMembers.Location = new System.Drawing.Point(25, 6);
             this.dgvMembers.MultiSelect = false;
@@ -246,7 +246,7 @@
             // colMemberID
             // 
             this.colMemberID.DataPropertyName = "MemberID";
-            this.colMemberID.FillWeight = 80.23825F;
+            this.colMemberID.FillWeight = 86.99133F;
             this.colMemberID.HeaderText = "Member ID";
             this.colMemberID.Name = "colMemberID";
             this.colMemberID.ReadOnly = true;
@@ -255,7 +255,7 @@
             // 
             this.colFullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colFullName.DataPropertyName = "FullName";
-            this.colFullName.FillWeight = 163.3248F;
+            this.colFullName.FillWeight = 147.7584F;
             this.colFullName.HeaderText = "Full Name";
             this.colFullName.Name = "colFullName";
             this.colFullName.ReadOnly = true;
@@ -263,7 +263,7 @@
             // colGender
             // 
             this.colGender.DataPropertyName = "Gender";
-            this.colGender.FillWeight = 80.23825F;
+            this.colGender.FillWeight = 86.99133F;
             this.colGender.HeaderText = "Gender";
             this.colGender.Name = "colGender";
             this.colGender.ReadOnly = true;
@@ -271,7 +271,7 @@
             // colDateOfBirth
             // 
             this.colDateOfBirth.DataPropertyName = "DateOfBirth";
-            this.colDateOfBirth.FillWeight = 80.23825F;
+            this.colDateOfBirth.FillWeight = 86.99133F;
             this.colDateOfBirth.HeaderText = "Date of Birth";
             this.colDateOfBirth.Name = "colDateOfBirth";
             this.colDateOfBirth.ReadOnly = true;
@@ -280,7 +280,7 @@
             // 
             this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colEmail.DataPropertyName = "Email";
-            this.colEmail.FillWeight = 184.4933F;
+            this.colEmail.FillWeight = 138.37F;
             this.colEmail.HeaderText = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.ReadOnly = true;
@@ -288,7 +288,7 @@
             // colPhone
             // 
             this.colPhone.DataPropertyName = "Phone";
-            this.colPhone.FillWeight = 80.23825F;
+            this.colPhone.FillWeight = 86.99133F;
             this.colPhone.HeaderText = "Phone";
             this.colPhone.Name = "colPhone";
             this.colPhone.ReadOnly = true;
@@ -296,15 +296,16 @@
             // colJoinDate
             // 
             this.colJoinDate.DataPropertyName = "JoinDate";
-            this.colJoinDate.FillWeight = 80.23825F;
+            this.colJoinDate.FillWeight = 86.99133F;
             this.colJoinDate.HeaderText = "Join Date";
             this.colJoinDate.Name = "colJoinDate";
             this.colJoinDate.ReadOnly = true;
             // 
             // colMembershipType
             // 
+            this.colMembershipType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colMembershipType.DataPropertyName = "MembershipType";
-            this.colMembershipType.FillWeight = 80.23825F;
+            this.colMembershipType.FillWeight = 101.4815F;
             this.colMembershipType.HeaderText = "Membership Type";
             this.colMembershipType.Name = "colMembershipType";
             this.colMembershipType.ReadOnly = true;
@@ -312,7 +313,7 @@
             // colexpiredDate
             // 
             this.colexpiredDate.DataPropertyName = "expiredDate";
-            this.colexpiredDate.FillWeight = 79.38195F;
+            this.colexpiredDate.FillWeight = 86.06297F;
             this.colexpiredDate.HeaderText = "Expired Date";
             this.colexpiredDate.Name = "colexpiredDate";
             this.colexpiredDate.ReadOnly = true;
@@ -343,7 +344,7 @@
             this.searchBarTxT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.searchBarTxT.FillColor = System.Drawing.Color.WhiteSmoke;
             this.searchBarTxT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBarTxT.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.searchBarTxT.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBarTxT.ForeColor = System.Drawing.Color.Black;
             this.searchBarTxT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.searchBarTxT.IconLeft = ((System.Drawing.Image)(resources.GetObject("searchBarTxT.IconLeft")));
@@ -353,12 +354,13 @@
             this.searchBarTxT.Name = "searchBarTxT";
             this.searchBarTxT.PasswordChar = '\0';
             this.searchBarTxT.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.searchBarTxT.PlaceholderText = "Search";
+            this.searchBarTxT.PlaceholderText = "Search by Name";
             this.searchBarTxT.SelectedText = "";
             this.searchBarTxT.ShadowDecoration.Depth = 50;
             this.searchBarTxT.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1);
             this.searchBarTxT.Size = new System.Drawing.Size(655, 45);
             this.searchBarTxT.TabIndex = 10;
+            this.searchBarTxT.TextChanged += new System.EventHandler(this.searchBarTxT_TextChanged);
             // 
             // label1
             // 
@@ -402,6 +404,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton addMemberBTN;
         private Guna.UI2.WinForms.Guna2CircleButton editMemberBTN;
         private Guna.UI2.WinForms.Guna2TextBox searchBarTxT;
+        private Guna.UI2.WinForms.Guna2CircleButton addMembershipToMemberBTN;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMemberID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGender;
@@ -411,6 +414,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colJoinDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMembershipType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colexpiredDate;
-        private Guna.UI2.WinForms.Guna2CircleButton addMembershipToMemberBTN;
     }
 }

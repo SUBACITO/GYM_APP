@@ -34,8 +34,6 @@
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.cancelUpdateBTN = new Guna.UI2.WinForms.Guna2Button();
             this.updateMemberBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbox_MembershipType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtp_JoinDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Phone = new Guna.UI2.WinForms.Guna2TextBox();
@@ -75,8 +73,6 @@
             // 
             this.mainPanel.Controls.Add(this.cancelUpdateBTN);
             this.mainPanel.Controls.Add(this.updateMemberBTN);
-            this.mainPanel.Controls.Add(this.label5);
-            this.mainPanel.Controls.Add(this.cbox_MembershipType);
             this.mainPanel.Controls.Add(this.dtp_JoinDate);
             this.mainPanel.Controls.Add(this.label4);
             this.mainPanel.Controls.Add(this.txt_Phone);
@@ -89,7 +85,7 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 73);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(484, 447);
+            this.mainPanel.Size = new System.Drawing.Size(484, 419);
             this.mainPanel.TabIndex = 2;
             // 
             // cancelUpdateBTN
@@ -104,7 +100,7 @@
             this.cancelUpdateBTN.FillColor = System.Drawing.Color.Red;
             this.cancelUpdateBTN.Font = new System.Drawing.Font("Roboto", 12F);
             this.cancelUpdateBTN.ForeColor = System.Drawing.Color.White;
-            this.cancelUpdateBTN.Location = new System.Drawing.Point(254, 390);
+            this.cancelUpdateBTN.Location = new System.Drawing.Point(254, 350);
             this.cancelUpdateBTN.Name = "cancelUpdateBTN";
             this.cancelUpdateBTN.Size = new System.Drawing.Size(200, 45);
             this.cancelUpdateBTN.TabIndex = 12;
@@ -123,43 +119,12 @@
             this.updateMemberBTN.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
             this.updateMemberBTN.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateMemberBTN.ForeColor = System.Drawing.Color.White;
-            this.updateMemberBTN.Location = new System.Drawing.Point(26, 390);
+            this.updateMemberBTN.Location = new System.Drawing.Point(26, 350);
             this.updateMemberBTN.Name = "updateMemberBTN";
             this.updateMemberBTN.Size = new System.Drawing.Size(200, 45);
             this.updateMemberBTN.TabIndex = 11;
             this.updateMemberBTN.Text = "Update";
             this.updateMemberBTN.Click += new System.EventHandler(this.updateMemberBTN_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 349);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 18);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Membership Type:";
-            // 
-            // cbox_MembershipType
-            // 
-            this.cbox_MembershipType.AutoRoundedCorners = true;
-            this.cbox_MembershipType.BackColor = System.Drawing.Color.Transparent;
-            this.cbox_MembershipType.BorderRadius = 17;
-            this.cbox_MembershipType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbox_MembershipType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbox_MembershipType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbox_MembershipType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbox_MembershipType.Font = new System.Drawing.Font("Roboto", 11.25F);
-            this.cbox_MembershipType.ForeColor = System.Drawing.Color.Black;
-            this.cbox_MembershipType.ItemHeight = 30;
-            this.cbox_MembershipType.Items.AddRange(new object[] {
-            "Bronze",
-            "Silver",
-            "Gold"});
-            this.cbox_MembershipType.Location = new System.Drawing.Point(159, 340);
-            this.cbox_MembershipType.Name = "cbox_MembershipType";
-            this.cbox_MembershipType.Size = new System.Drawing.Size(295, 36);
-            this.cbox_MembershipType.TabIndex = 9;
             // 
             // dtp_JoinDate
             // 
@@ -327,7 +292,7 @@
             this.AcceptButton = this.updateMemberBTN;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 520);
+            this.ClientSize = new System.Drawing.Size(484, 492);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -349,8 +314,6 @@
         private Guna.UI2.WinForms.Guna2Panel mainPanel;
         private Guna.UI2.WinForms.Guna2Button cancelUpdateBTN;
         private Guna.UI2.WinForms.Guna2Button updateMemberBTN;
-        private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2ComboBox cbox_MembershipType;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_JoinDate;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txt_Phone;

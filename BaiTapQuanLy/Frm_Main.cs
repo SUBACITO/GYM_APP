@@ -180,11 +180,6 @@ namespace BaiTapQuanLy
             OpenChildForm(new Frm_MembersManager(), (Guna2Button)sender);
         }
 
-        private void privateTrainerBTN_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Frm_MembershipPackage(), (Guna2Button)sender);
-        }
-
         private void homePageBTN_Click(object sender, EventArgs e)
         {
             // Close all child forms

@@ -40,8 +40,7 @@ namespace BaiTapQuanLy.Forms
                 if (string.IsNullOrWhiteSpace(txt_FullName.Text) ||
                     cbox_Gender.SelectedItem == null ||
                     string.IsNullOrWhiteSpace(txt_Email.Text) ||
-                    string.IsNullOrWhiteSpace(txt_Phone.Text) ||
-                    cbox_MembershipType.SelectedItem == null)
+                    string.IsNullOrWhiteSpace(txt_Phone.Text) )
                 {
                     // Notify the user about missing information
                     Frm_Messages noti = new Frm_Messages();
@@ -65,7 +64,6 @@ namespace BaiTapQuanLy.Forms
                 string email = txt_Email.Text;
                 string phone = txt_Phone.Text;
                 DateTime joinDate = dtp_JoinDate.Value;
-                string membershipType = cbox_MembershipType.Text;
 
                 // Create a new Member object with the collected information
                 Member newMember = new Member()
@@ -75,8 +73,7 @@ namespace BaiTapQuanLy.Forms
                     DateOfBirth = dateOfBirth,
                     Email = email,
                     Phone = phone,
-                    JoinDate = joinDate,
-                    MembershipType = membershipType
+                    JoinDate = joinDate
                 };
 
                 // Call the AddOrUpdateMemberToDGV method to add the new member
@@ -98,6 +95,7 @@ namespace BaiTapQuanLy.Forms
                         noti.ShowDialog();
                     }, TaskScheduler.FromCurrentSynchronizationContext());
                     ParentForm?.refreshMemberDataGridView();
+                    ParentForm?.LoadAllMembersData();
                     this.Close();
                 }
                 else

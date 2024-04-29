@@ -33,10 +33,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_username = new System.Windows.Forms.Label();
             this.logOutBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.closeProfileButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,26 +82,6 @@
             this.logOutBTN.Text = "Log Out";
             this.logOutBTN.Click += new System.EventHandler(this.logOutBTN_Click);
             // 
-            // closeProfileButton
-            // 
-            this.closeProfileButton.AutoRoundedCorners = true;
-            this.closeProfileButton.BorderRadius = 14;
-            this.closeProfileButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeProfileButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.closeProfileButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.closeProfileButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.closeProfileButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.closeProfileButton.FillColor = System.Drawing.Color.Transparent;
-            this.closeProfileButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeProfileButton.ForeColor = System.Drawing.Color.Black;
-            this.closeProfileButton.Location = new System.Drawing.Point(306, 12);
-            this.closeProfileButton.Name = "closeProfileButton";
-            this.closeProfileButton.Size = new System.Drawing.Size(43, 30);
-            this.closeProfileButton.TabIndex = 4;
-            this.closeProfileButton.Text = "X";
-            this.closeProfileButton.TextOffset = new System.Drawing.Point(0, -5);
-            this.closeProfileButton.Click += new System.EventHandler(this.closeProfileButton_Click);
-            // 
             // guna2Button2
             // 
             this.guna2Button2.BorderRadius = 5;
@@ -143,6 +123,18 @@
             this.guna2BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm.TransparentWhileDrag = true;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(304, 12);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 7;
+            // 
             // Frm_UserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,12 +142,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(361, 268);
             this.ControlBox = false;
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.logOutBTN);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_username);
-            this.Controls.Add(this.closeProfileButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_UserProfile";
             this.Text = "Frm_UserProfile";
@@ -170,9 +162,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_username;
         private Guna.UI2.WinForms.Guna2Button logOutBTN;
-        private Guna.UI2.WinForms.Guna2Button closeProfileButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

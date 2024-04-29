@@ -1,12 +1,15 @@
 ﻿using BaiTapQuanLy.BussinessLayer;
 using BaiTapQuanLy.DTO;
 using DevComponents.DotNetBar.Controls;
+using Guna.UI2.WinForms;
 using QuanLyBanHang.DataLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -22,6 +25,8 @@ namespace BaiTapQuanLy.Forms
         Bll_HeThong bll_heThong;
         string err = string.Empty;
         private bool selectionChanged;
+        private DataTable allMembersData;
+
         public Frm_MembersManager()
         {
             InitializeComponent();
@@ -34,6 +39,7 @@ namespace BaiTapQuanLy.Forms
         private void Frm_MembersManager_Load(object sender, EventArgs e)
         {
             bll_heThong = new Bll_HeThong(clsMain.path);
+            LoadAllMembersData();
             DisplayMembersToDGV();
         }
         private void dgvMembers_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -53,11 +59,14 @@ namespace BaiTapQuanLy.Forms
             selectionChanged = true;
         }
 
+        internal void LoadAllMembersData()
+        {
+            allMembersData = bll_heThong.GetMembersListToDGV(ref err);
+        }
+
         private void DisplayMembersToDGV()
         {
-            DataTable dtMember = new DataTable();
-            dtMember = bll_heThong.GetMembersListToDGV(ref err);
-            dgvMembers.DataSource = dtMember.DefaultView;
+            dgvMembers.DataSource = allMembersData;
         }
 
         internal void refreshMemberDataGridView()
@@ -65,6 +74,41 @@ namespace BaiTapQuanLy.Forms
             DataTable dtMember = bll_heThong.GetMembersListToDGV(ref err);
             dgvMembers.DataSource = dtMember.DefaultView;
         }
+
+        ///Search bar
+        private void searchBarTxT_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = searchBarTxT.Text.Trim().ToLower();
+            dgvMembers.ClearSelection();
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                // Filter the preloaded DataTable based on the search keyword
+                DataTable filteredData = FilterMembersByName(keyword);
+                dgvMembers.DataSource = filteredData;
+            }
+            else
+            {
+                DisplayMembersToDGV();
+            }
+        }
+
+        private DataTable FilterMembersByName(string keyword)
+        {
+            DataTable filteredData = allMembersData.Clone(); // Create a clone of the original structure
+            foreach (DataRow row in allMembersData.Rows)
+            {
+                string fullName = row.Field<string>("FullName").ToLower();
+                if (fullName.Contains(keyword))
+                {
+                    filteredData.ImportRow(row);
+                }
+            }
+            return filteredData;
+        }
+
+
+        ///Add, Edit and Delete Members
 
         private void addMemberBTN_Click(object sender, EventArgs e)
         {
@@ -105,9 +149,8 @@ namespace BaiTapQuanLy.Forms
                 string email = Convert.ToString(selectedRow.Cells["colEmail"].Value);
                 string phone = Convert.ToString(selectedRow.Cells["colPhone"].Value);
                 DateTime joinDate = Convert.ToDateTime(selectedRow.Cells["colJoinDate"].Value);
-                string membershipType = Convert.ToString(selectedRow.Cells["colMembershipType"].Value);
 
-                Frm_MemberUpdate frmMemUpdate = new Frm_MemberUpdate(memberID, fullName, gender, dateOfBirth, email, phone, joinDate, membershipType);
+                Frm_MemberUpdate frmMemUpdate = new Frm_MemberUpdate(memberID, fullName, gender, dateOfBirth, email, phone, joinDate);
                 frmMemUpdate.ParentForm = this;
                 frmMemUpdate.StartPosition = FormStartPosition.CenterParent;
                 var anim = new Transition(new TransitionType_EaseInEaseOut(400));
@@ -133,8 +176,11 @@ namespace BaiTapQuanLy.Forms
         private void addMembershipToMemberBTN_Click(object sender, EventArgs e)
         {
             if (dgvMembers.SelectedRows.Count == 1)
-            {
-                Frm_MembershipPackage frm_membershipPackage = new Frm_MembershipPackage();
+            { 
+                int memberID = Convert.ToInt32(dgvMembers.SelectedRows[0].Cells["colMemberID"].Value);
+                string userName = dgvMembers.SelectedRows[0].Cells["colFullName"].Value.ToString();
+                Frm_MembershipPackage frm_membershipPackage = new Frm_MembershipPackage(memberID, userName);
+                frm_membershipPackage.ParentForm = this;
                 frm_membershipPackage.StartPosition = FormStartPosition.CenterParent;
                 frm_membershipPackage.ShowDialog();
             }
@@ -163,6 +209,7 @@ namespace BaiTapQuanLy.Forms
                 {
                     MemberID = memberID
                 });
+
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
                 noti.TitleText = "GYM APP";
@@ -174,6 +221,7 @@ namespace BaiTapQuanLy.Forms
                     anim.run();
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
+                LoadAllMembersData();
                 refreshMemberDataGridView();
             }
             else
@@ -191,6 +239,5 @@ namespace BaiTapQuanLy.Forms
                 }, TaskScheduler.FromCurrentSynchronizationContext());
             }
         }
-
     }
 }
