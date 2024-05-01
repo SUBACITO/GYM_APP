@@ -57,7 +57,7 @@
             this.lbl_username.Name = "lbl_username";
             this.lbl_username.Size = new System.Drawing.Size(337, 23);
             this.lbl_username.TabIndex = 1;
-            this.lbl_username.Text = "Nguyễn Hào Quang";
+            this.lbl_username.Text = "Username";
             this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // logOutBTN

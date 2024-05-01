@@ -33,7 +33,6 @@
             this.homePageBTN = new Guna.UI2.WinForms.Guna2Button();
             this.memberManagerBTN = new Guna.UI2.WinForms.Guna2Button();
             this.dashBoardBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.panelDesktop = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,11 +41,15 @@
             this.userProfile = new System.Windows.Forms.PictureBox();
             this.sidebarPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.sidebarTransistion = new System.Windows.Forms.Timer(this.components);
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.homePictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuSidebarIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userProfile)).BeginInit();
             this.sidebarPanel.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // homePageBTN
@@ -109,17 +112,6 @@
             this.dashBoardBTN.TextOffset = new System.Drawing.Point(-30, 0);
             this.dashBoardBTN.Click += new System.EventHandler(this.dashBoardBTN_Click);
             // 
-            // panelDesktop
-            // 
-            this.panelDesktop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDesktop.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelDesktop.Location = new System.Drawing.Point(270, 48);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(872, 521);
-            this.panelDesktop.TabIndex = 5;
-            // 
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.White;
@@ -142,9 +134,9 @@
             this.usernameLabel.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLabel.Location = new System.Drawing.Point(754, 17);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(140, 18);
+            this.usernameLabel.Size = new System.Drawing.Size(76, 18);
             this.usernameLabel.TabIndex = 0;
-            this.usernameLabel.Text = "Nguyễn Hào Quang ";
+            this.usernameLabel.Text = "Username";
             // 
             // label1
             // 
@@ -209,6 +201,33 @@
             this.sidebarTransistion.Interval = 10;
             this.sidebarTransistion.Tick += new System.EventHandler(this.sidebarTransistion_Tick);
             // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDesktop.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktop.Controls.Add(this.homePictureBox);
+            this.panelDesktop.Location = new System.Drawing.Point(269, 48);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(873, 521);
+            this.panelDesktop.TabIndex = 5;
+            // 
+            // homePictureBox
+            // 
+            this.homePictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.homePictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homePictureBox.FillColor = System.Drawing.Color.Transparent;
+            this.homePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("homePictureBox.Image")));
+            this.homePictureBox.ImageRotate = 0F;
+            this.homePictureBox.Location = new System.Drawing.Point(0, 0);
+            this.homePictureBox.Name = "homePictureBox";
+            this.homePictureBox.Size = new System.Drawing.Size(873, 521);
+            this.homePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.homePictureBox.TabIndex = 0;
+            this.homePictureBox.TabStop = false;
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,12 +251,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.menuSidebarIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userProfile)).EndInit();
             this.sidebarPanel.ResumeLayout(false);
+            this.panelDesktop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.homePictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelDesktop;
         private Guna.UI2.WinForms.Guna2Button dashBoardBTN;
         private Guna.UI2.WinForms.Guna2Button memberManagerBTN;
         private Guna.UI2.WinForms.Guna2Button homePageBTN;
@@ -249,5 +269,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox userProfile;
         private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Panel panelDesktop;
+        private Guna.UI2.WinForms.Guna2PictureBox homePictureBox;
     }
 }

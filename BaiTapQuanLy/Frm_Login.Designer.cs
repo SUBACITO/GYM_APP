@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
             this.Signin_EmailorPhone_Panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.signIn_RightEmailPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.backToEmailorPhoneBTN = new Guna.UI2.WinForms.Guna2Button();
@@ -41,13 +42,13 @@
             this.btnPassword = new Guna.UI2.WinForms.Guna2Button();
             this.label_LearnMore = new System.Windows.Forms.Label();
             this.btnNext_EmailorPhone = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCreateAccount = new Guna.UI2.WinForms.Guna2Button();
+            this.btnExitApp = new Guna.UI2.WinForms.Guna2Button();
             this.label_UserEmail = new System.Windows.Forms.Label();
             this.label_Username = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbl_SignIn = new System.Windows.Forms.Label();
             this.lblUseYourAccount = new System.Windows.Forms.Label();
             this.Signin_EmailorPhone_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.signIn_RightEmailPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,10 +60,10 @@
             this.Signin_EmailorPhone_Panel.BorderColor = System.Drawing.Color.White;
             this.Signin_EmailorPhone_Panel.BorderRadius = 35;
             this.Signin_EmailorPhone_Panel.BorderThickness = 1;
+            this.Signin_EmailorPhone_Panel.Controls.Add(this.guna2PictureBox1);
             this.Signin_EmailorPhone_Panel.Controls.Add(this.signIn_RightEmailPanel);
             this.Signin_EmailorPhone_Panel.Controls.Add(this.label_UserEmail);
             this.Signin_EmailorPhone_Panel.Controls.Add(this.label_Username);
-            this.Signin_EmailorPhone_Panel.Controls.Add(this.guna2Panel1);
             this.Signin_EmailorPhone_Panel.Controls.Add(this.lbl_SignIn);
             this.Signin_EmailorPhone_Panel.Controls.Add(this.lblUseYourAccount);
             this.Signin_EmailorPhone_Panel.FillColor = System.Drawing.Color.White;
@@ -70,6 +71,17 @@
             this.Signin_EmailorPhone_Panel.Name = "Signin_EmailorPhone_Panel";
             this.Signin_EmailorPhone_Panel.Size = new System.Drawing.Size(959, 386);
             this.Signin_EmailorPhone_Panel.TabIndex = 4;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(17, 26);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(79, 69);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 10;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // signIn_RightEmailPanel
             // 
@@ -83,7 +95,7 @@
             this.signIn_RightEmailPanel.Controls.Add(this.btnPassword);
             this.signIn_RightEmailPanel.Controls.Add(this.label_LearnMore);
             this.signIn_RightEmailPanel.Controls.Add(this.btnNext_EmailorPhone);
-            this.signIn_RightEmailPanel.Controls.Add(this.btnCreateAccount);
+            this.signIn_RightEmailPanel.Controls.Add(this.btnExitApp);
             this.signIn_RightEmailPanel.Location = new System.Drawing.Point(472, 17);
             this.signIn_RightEmailPanel.Name = "signIn_RightEmailPanel";
             this.signIn_RightEmailPanel.Size = new System.Drawing.Size(484, 343);
@@ -275,23 +287,24 @@
             this.btnNext_EmailorPhone.Text = "Next";
             this.btnNext_EmailorPhone.Click += new System.EventHandler(this.btnNext_EmailorPhone_Click);
             // 
-            // btnCreateAccount
+            // btnExitApp
             // 
-            this.btnCreateAccount.BorderRadius = 20;
-            this.btnCreateAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreateAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreateAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreateAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreateAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCreateAccount.FillColor = System.Drawing.Color.Azure;
-            this.btnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.btnCreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
-            this.btnCreateAccount.Location = new System.Drawing.Point(191, 295);
-            this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(138, 45);
-            this.btnCreateAccount.TabIndex = 1;
-            this.btnCreateAccount.Text = "Create account";
-            this.btnCreateAccount.Visible = false;
+            this.btnExitApp.BorderRadius = 20;
+            this.btnExitApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExitApp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExitApp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExitApp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExitApp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExitApp.FillColor = System.Drawing.Color.Azure;
+            this.btnExitApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnExitApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
+            this.btnExitApp.Location = new System.Drawing.Point(191, 295);
+            this.btnExitApp.Name = "btnExitApp";
+            this.btnExitApp.Size = new System.Drawing.Size(138, 45);
+            this.btnExitApp.TabIndex = 1;
+            this.btnExitApp.Text = "Exit Application";
+            this.btnExitApp.Visible = false;
+            this.btnExitApp.Click += new System.EventHandler(this.btnExitApp_Click);
             // 
             // label_UserEmail
             // 
@@ -312,15 +325,6 @@
             this.label_Username.Size = new System.Drawing.Size(230, 52);
             this.label_Username.TabIndex = 6;
             this.label_Username.Text = "Username";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackgroundImage = global::BaiTapQuanLy.Properties.Resources._69840;
-            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2Panel1.Location = new System.Drawing.Point(29, 23);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(62, 57);
-            this.guna2Panel1.TabIndex = 7;
             // 
             // lbl_SignIn
             // 
@@ -357,6 +361,7 @@
             this.Load += new System.EventHandler(this.Frm_Login_Load);
             this.Signin_EmailorPhone_Panel.ResumeLayout(false);
             this.Signin_EmailorPhone_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.signIn_RightEmailPanel.ResumeLayout(false);
             this.signIn_RightEmailPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -368,11 +373,10 @@
 
         private Guna.UI2.WinForms.Guna2Panel Signin_EmailorPhone_Panel;
         private Guna.UI2.WinForms.Guna2TextBox txtEmailorPhone;
-        private Guna.UI2.WinForms.Guna2Button btnCreateAccount;
+        private Guna.UI2.WinForms.Guna2Button btnExitApp;
         private Guna.UI2.WinForms.Guna2Button btnNext_EmailorPhone;
         private Guna.UI2.WinForms.Guna2Button btnForgotEmail;
         private Guna.UI2.WinForms.Guna2Button btnLearnMore;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label lbl_SignIn;
         private System.Windows.Forms.Label lblUseYourAccount;
         private System.Windows.Forms.Label label_LearnMore;
@@ -384,5 +388,6 @@
         private Guna.UI2.WinForms.Guna2CheckBox cboxShowPassword;
         private Guna.UI2.WinForms.Guna2Button backToEmailorPhoneBTN;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

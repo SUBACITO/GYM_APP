@@ -17,6 +17,7 @@ namespace BaiTapQuanLy.Forms
         {
             InitializeComponent();
             new makeFormRounded(this);
+            AcceptButton = btnOK;
         }
 
         public string TitleText
@@ -33,12 +34,22 @@ namespace BaiTapQuanLy.Forms
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void btnOK_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnOK_Click(sender, e);
+            }
         }
     }
 }

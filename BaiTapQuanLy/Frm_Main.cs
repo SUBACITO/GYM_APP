@@ -72,16 +72,16 @@ namespace BaiTapQuanLy
                 if (sidebarPanel.Width > targetWidthCollapsed)
                 {
                     sidebarPanel.Width -= transitionSpeed;
-                    panelDesktop.Left -= transitionSpeed; 
-                    panelDesktop.Width += transitionSpeed; 
+                    panelDesktop.Left -= transitionSpeed;
+                    panelDesktop.Width += transitionSpeed;
                     UpdateButtonWidths(sidebarPanel.Width);
                     UpdateButtonText("Collapsed");
                 }
                 else
                 {
                     sidebarPanel.Width = targetWidthCollapsed;
-                    panelDesktop.Left = targetWidthCollapsed; 
-                    panelDesktop.Width = this.ClientSize.Width - targetWidthCollapsed; 
+                    panelDesktop.Left = targetWidthCollapsed;
+                    panelDesktop.Width = this.ClientSize.Width - targetWidthCollapsed;
                     sidebarExpand = false;
                     sidebarTransistion.Stop();
                 }
@@ -92,16 +92,16 @@ namespace BaiTapQuanLy
                 if (sidebarPanel.Width < targetWidthExpanded)
                 {
                     sidebarPanel.Width += transitionSpeed;
-                    panelDesktop.Left += transitionSpeed; 
-                    panelDesktop.Width -= transitionSpeed; 
+                    panelDesktop.Left += transitionSpeed;
+                    panelDesktop.Width -= transitionSpeed;
                     UpdateButtonWidths(sidebarPanel.Width - 15);
                     UpdateButtonText("Expanded");
                 }
                 else
                 {
                     sidebarPanel.Width = targetWidthExpanded;
-                    panelDesktop.Left = targetWidthExpanded; 
-                    panelDesktop.Width = this.ClientSize.Width - targetWidthExpanded; 
+                    panelDesktop.Left = targetWidthExpanded;
+                    panelDesktop.Width = this.ClientSize.Width - targetWidthExpanded;
                     sidebarExpand = true;
                     sidebarTransistion.Stop();
                 }

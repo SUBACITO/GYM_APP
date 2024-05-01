@@ -51,7 +51,7 @@
             this.lblMessage.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.Location = new System.Drawing.Point(12, 60);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(396, 25);
+            this.lblMessage.Size = new System.Drawing.Size(396, 44);
             this.lblMessage.TabIndex = 1;
             this.lblMessage.Text = "Message Here";
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,6 +89,7 @@
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnOK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnOK_KeyDown);
             // 
             // guna2BorderlessForm
             // 
@@ -101,6 +102,7 @@
             // 
             // Frm_Messages
             // 
+            this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

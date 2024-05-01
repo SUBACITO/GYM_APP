@@ -62,6 +62,7 @@ namespace BaiTapQuanLy.Forms
         internal void LoadAllMembersData()
         {
             allMembersData = bll_heThong.GetMembersListToDGV(ref err);
+            dgvMembers.ClearSelection();
         }
 
         private void DisplayMembersToDGV()
@@ -73,6 +74,7 @@ namespace BaiTapQuanLy.Forms
         {
             DataTable dtMember = bll_heThong.GetMembersListToDGV(ref err);
             dgvMembers.DataSource = dtMember.DefaultView;
+            dgvMembers.ClearSelection();
         }
 
         ///Search bar
@@ -86,10 +88,12 @@ namespace BaiTapQuanLy.Forms
                 // Filter the preloaded DataTable based on the search keyword
                 DataTable filteredData = FilterMembersByName(keyword);
                 dgvMembers.DataSource = filteredData;
+                dgvMembers.ClearSelection();
             }
             else
             {
                 DisplayMembersToDGV();
+                dgvMembers.ClearSelection();
             }
         }
 
@@ -112,6 +116,7 @@ namespace BaiTapQuanLy.Forms
 
         private void addMemberBTN_Click(object sender, EventArgs e)
         {
+            addMemberBTN.Enabled = false;
             if(dgvMembers.SelectedRows.Count == 0)
             {
             Frm_MembersAdd frmMemAdd = new Frm_MembersAdd();
@@ -135,10 +140,12 @@ namespace BaiTapQuanLy.Forms
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
             }
+            addMemberBTN.Enabled = true;
         }
 
         private void editMemberBTN_Click(object sender, EventArgs e)
         {
+            editMemberBTN.Enabled = false;  
             if(dgvMembers.SelectedRows.Count == 1)
             {
                 DataGridViewRow selectedRow = dgvMembers.SelectedRows[0];
@@ -171,10 +178,12 @@ namespace BaiTapQuanLy.Forms
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
             }
+            editMemberBTN.Enabled = true;
         }
 
         private void addMembershipToMemberBTN_Click(object sender, EventArgs e)
         {
+            addMembershipToMemberBTN.Enabled = false;
             if (dgvMembers.SelectedRows.Count == 1)
             { 
                 int memberID = Convert.ToInt32(dgvMembers.SelectedRows[0].Cells["colMemberID"].Value);
@@ -198,31 +207,45 @@ namespace BaiTapQuanLy.Forms
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
             }
+            addMembershipToMemberBTN.Enabled = true;
         }
         private void deleteMemberBTN_Click(object sender, EventArgs e)
         {
+            deleteMemberBTN.Enabled = false;
             if (dgvMembers.SelectedRows.Count == 1)
             {
                 int memberID = Convert.ToInt32(dgvMembers.SelectedRows[0].Cells["colMemberID"].Value);
+                string userName = dgvMembers.SelectedRows[0].Cells["colFullName"].Value.ToString();
 
-                int result = bll_heThong.DeleteMemberFromDGV(ref err, new Member()
-                {
-                    MemberID = memberID
-                });
+                Frm_Messages delete_confirm = new Frm_Messages();
+                delete_confirm.StartPosition = FormStartPosition.CenterParent;
+                delete_confirm.TitleText = "Delete Member?";
+                delete_confirm.MessageText = userName + " - ID: " + memberID;
+                var anim = new Transition(new TransitionType_CriticalDamping(300));
+                anim.add(delete_confirm, "Top", 500);
+                anim.run();
 
-                Frm_Messages noti = new Frm_Messages();
-                noti.StartPosition = FormStartPosition.CenterParent;
-                noti.TitleText = "GYM APP";
-                noti.MessageText = "A member has been deleted!";
-                Task.Delay(150).ContinueWith(_ =>
+                if (delete_confirm.ShowDialog() == DialogResult.OK)
                 {
-                    var anim = new Transition(new TransitionType_CriticalDamping(300));
-                    anim.add(noti, "Top", 500);
-                    anim.run();
-                    noti.ShowDialog();
-                }, TaskScheduler.FromCurrentSynchronizationContext());
-                LoadAllMembersData();
-                refreshMemberDataGridView();
+                    int result = bll_heThong.DeleteMemberFromDGV(ref err, new Member()
+                    {
+                        MemberID = memberID
+                    });
+
+                    Frm_Messages noti = new Frm_Messages();
+                    noti.StartPosition = FormStartPosition.CenterParent;
+                    noti.TitleText = "GYM APP";
+                    noti.MessageText = userName + " has been deleted!";
+                    Task.Delay(150).ContinueWith(_ =>
+                    {
+                        anim = new Transition(new TransitionType_CriticalDamping(300));
+                        anim.add(noti, "Top", 500);
+                        anim.run();
+                        noti.ShowDialog();
+                    }, TaskScheduler.FromCurrentSynchronizationContext());
+                    LoadAllMembersData();
+                    refreshMemberDataGridView();
+                }
             }
             else
             {
@@ -238,6 +261,7 @@ namespace BaiTapQuanLy.Forms
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
             }
+            deleteMemberBTN.Enabled = true;
         }
     }
 }

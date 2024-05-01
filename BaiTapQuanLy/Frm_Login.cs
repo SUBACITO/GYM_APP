@@ -46,7 +46,7 @@ namespace BaiTapQuanLy
         {
             bll = new Bll_HeThong(clsMain.path);
             //comment
-            btnCreateAccount.Visible = false;
+            btnExitApp.Visible = true;
             cboxShowPassword.Checked = false;
             txtPassword.UseSystemPasswordChar = true;
             txtEmailorPhone.Focus();
@@ -140,7 +140,7 @@ namespace BaiTapQuanLy
         private void doTransitionAnimationToPasswordFormField()
         {
             //////////////////////////////////
-            //btnCreateAccount.Visible = false;
+            btnExitApp.Visible = false;
             btnNext_EmailorPhone.Visible = false;
             lbl_SignIn.Visible = false;
             lblUseYourAccount.Visible = false;
@@ -155,7 +155,7 @@ namespace BaiTapQuanLy
             cboxShowPassword.Visible = true;
             cboxShowPassword.Location = new Point(txtPassword.Location.X - 100, txtPassword.Location.Y + 60);
             btnForgotPassword.Visible = false;
-            btnForgotPassword.Location = new Point(btnCreateAccount.Location.X - 40, btnCreateAccount.Location.Y);
+            btnForgotPassword.Location = new Point(btnExitApp.Location.X - 40, btnExitApp.Location.Y);
             btnPassword.Visible = true;
             btnPassword.Location = new Point(btnNext_EmailorPhone.Location.X, btnNext_EmailorPhone.Location.Y);
             label_Username.Visible = true;
@@ -181,7 +181,7 @@ namespace BaiTapQuanLy
         private void backToEmailorPhoneBTN_Click(object sender, EventArgs e)
         {
             /////////////////////////////////
-            //btnCreateAccount.Visible = true;
+            btnExitApp.Visible = true;
             btnNext_EmailorPhone.Visible = true;
             lbl_SignIn.Visible = true;
             lblUseYourAccount.Visible = true;
@@ -269,6 +269,25 @@ namespace BaiTapQuanLy
             }
         }
 
-        
+        private void btnExitApp_Click(object sender, EventArgs e)
+        {
+            Frm_Messages noti = new Frm_Messages();
+            noti.StartPosition = FormStartPosition.CenterParent;
+            noti.TitleText = "GYM APP";
+            noti.MessageText = "Are you sure you want to exit application?";
+
+            Task.Delay(100).ContinueWith(_ =>
+            {
+                var anim = new Transition(new TransitionType_CriticalDamping(200));
+                anim.add(noti, "Top", 450);
+                anim.run();
+
+                DialogResult exitApp = noti.ShowDialog();
+                if(exitApp == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+            }, TaskScheduler.FromCurrentSynchronizationContext());
+        }
     }
 }
