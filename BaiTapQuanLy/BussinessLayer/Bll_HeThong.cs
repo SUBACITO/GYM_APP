@@ -80,6 +80,12 @@ namespace BaiTapQuanLy.BussinessLayer
             return db.GetDataTable(ref err, "MembersList_Select", CommandType.StoredProcedure, sqlPara);
         }
 
+        //Override above :>> just lazy to write again
+        public DataTable GetMembersListToDGV(ref string err)
+        {
+            return db.GetDataTable(ref err, "MembersList_Select", CommandType.StoredProcedure, null);
+        }
+
         //Add Member
         public int AddMemberToDGV(ref string err, Member member)
         {

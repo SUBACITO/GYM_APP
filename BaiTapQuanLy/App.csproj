@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BussinessLayer\Bll_HeThong.cs" />
+    <Compile Include="BussinessLayer\Bll_ThongKe.cs" />
     <Compile Include="clsMain.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Member.cs" />
