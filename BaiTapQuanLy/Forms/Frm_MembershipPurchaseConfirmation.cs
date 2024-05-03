@@ -17,7 +17,7 @@ namespace BaiTapQuanLy.Forms
     {
         private int memberID, packageID;
         private string userName;
-        Bll_HeThong bll_heThong;
+        Bll_Member bll_member;
         private string err = string.Empty;
 
         public Frm_MembershipPurchaseConfirmation(int memberID, string userName, int packageID)
@@ -59,13 +59,13 @@ namespace BaiTapQuanLy.Forms
 
         private void Frm_MembershipPurchaseConfirmation_Load(object sender, EventArgs e)
         {
-            bll_heThong = new Bll_HeThong(clsMain.path);
+            bll_member = new Bll_Member(clsMain.path);
             lblUsername.Text = userName + " - ID: " + memberID;
         }
 
         private void buyConfirmPackageBTN_Click(object sender, EventArgs e)
         {
-            int result = bll_heThong.BuyOrRenewPackage(ref err, memberID, packageID);
+            int result = bll_member.BuyOrRenewPackage(ref err, memberID, packageID);
             if(result > 0 && packageID == 1) 
             {
                 Frm_Messages noti = new Frm_Messages();

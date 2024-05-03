@@ -19,6 +19,13 @@ namespace BaiTapQuanLy.BussinessLayer
             db = new MyDatabase(path);
         }
 
+        //Get member list for statistics datagridview
+        public DataTable GetMembersListToDGV(ref string err)
+        {
+            return db.GetDataTable(ref err, "MembersList_Select", CommandType.StoredProcedure, null);
+        }
+
+        //Get package stats
         public DataTable GetPackageStats(ref string err, DateTime fromDate, DateTime toDate)
         {
             SqlParameter[] sqlPara = new SqlParameter[]
@@ -29,16 +36,19 @@ namespace BaiTapQuanLy.BussinessLayer
             return db.GetDataTable(ref err, "GetStats", CommandType.StoredProcedure, sqlPara);
         }
 
+        //Get member gender stats
         public DataTable GetMembersByGender(ref string err)
         {
             return db.GetDataTable(ref err, "GetStats_Gender", CommandType.StoredProcedure, null);
         }
 
+        //Get detail package
         public DataTable GetDetailPackage(ref string err)
         {
             return db.GetDataTable(ref err, "GetDetailPackage", CommandType.StoredProcedure, null);
         }
 
+        //Get package
         public DataTable GetPackage(ref string err)
         {
             return db.GetDataTable(ref err, "GetPackage", CommandType.StoredProcedure, null);

@@ -22,7 +22,7 @@ namespace BaiTapQuanLy.Forms
 {
     public partial class Frm_MembersManager : Form
     {
-        Bll_HeThong bll_heThong;
+        Bll_Member bll_member;
         string err = string.Empty;
         private bool selectionChanged;
         private DataTable allMembersData;
@@ -38,7 +38,7 @@ namespace BaiTapQuanLy.Forms
 
         private void Frm_MembersManager_Load(object sender, EventArgs e)
         {
-            bll_heThong = new Bll_HeThong(clsMain.path);
+            bll_member = new Bll_Member(clsMain.path);
             LoadAllMembersData();
             DisplayMembersToDGV();
         }
@@ -61,7 +61,7 @@ namespace BaiTapQuanLy.Forms
 
         internal void LoadAllMembersData()
         {
-            allMembersData = bll_heThong.GetMembersListToDGV(ref err);
+            allMembersData = bll_member.GetMembersListToDGV(ref err);
             dgvMembers.ClearSelection();
         }
 
@@ -72,7 +72,7 @@ namespace BaiTapQuanLy.Forms
 
         internal void refreshMemberDataGridView()
         {
-            DataTable dtMember = bll_heThong.GetMembersListToDGV(ref err);
+            DataTable dtMember = bll_member.GetMembersListToDGV(ref err);
             dgvMembers.DataSource = dtMember.DefaultView;
             dgvMembers.ClearSelection();
         }
@@ -227,7 +227,7 @@ namespace BaiTapQuanLy.Forms
 
                 if (delete_confirm.ShowDialog() == DialogResult.OK)
                 {
-                    int result = bll_heThong.DeleteMemberFromDGV(ref err, new Member()
+                    int result = bll_member.DeleteMemberFromDGV(ref err, new Member()
                     {
                         MemberID = memberID
                     });

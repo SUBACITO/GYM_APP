@@ -15,7 +15,6 @@ namespace BaiTapQuanLy.Forms
     public partial class Frm_Statistic : Form
     {
         Bll_ThongKe bll_thongke;
-        Bll_HeThong bll_HeThong;
 
         DataTable dt, dt2;
         string err = string.Empty;
@@ -28,7 +27,6 @@ namespace BaiTapQuanLy.Forms
         private void Frm_Statistic_Load(object sender, EventArgs e)
         {
             bll_thongke = new Bll_ThongKe(clsMain.path);
-            bll_HeThong = new Bll_HeThong(clsMain.path);
             // Optionally initialize the date pickers to a default range, e.g., current month
             dtpFromDate.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
             dtpToDate.Value = DateTime.Now;
@@ -50,7 +48,7 @@ namespace BaiTapQuanLy.Forms
             dgvDetailPackage.DataSource = dt3.DefaultView;
             lbTotalPackagesBought.Text = dt3.Rows.Count.ToString();
 
-            dt4 = bll_HeThong.GetMembersListToDGV(ref err);
+            dt4 = bll_thongke.GetMembersListToDGV(ref err);
            
             lbTotalMembers.Text = dt4.Rows.Count.ToString();
 
@@ -131,8 +129,6 @@ namespace BaiTapQuanLy.Forms
         {
             LoadDataDetailPackages();
         }
-
-      
 
         private void fillChart()
         {

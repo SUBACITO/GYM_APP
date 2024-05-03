@@ -15,7 +15,7 @@ namespace BaiTapQuanLy.Forms
 {
     public partial class Frm_MembersAdd : Form
     {
-        Bll_HeThong bll_heThong;
+        Bll_Member bll_member;
         public Frm_MembersManager ParentForm { get; set; }
         public Frm_MembersAdd()
         {
@@ -23,7 +23,7 @@ namespace BaiTapQuanLy.Forms
         }
         private void Frm_MembersAdd_Load(object sender, EventArgs e)
         {
-            bll_heThong = new Bll_HeThong(clsMain.path);
+            bll_member = new Bll_Member(clsMain.path);
         }
 
         private void cancelAddBTN_Click(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace BaiTapQuanLy.Forms
 
                 // Call the AddOrUpdateMemberToDGV method to add the new member
                 string err = string.Empty;
-                int result = bll_heThong.AddMemberToDGV(ref err, newMember);
+                int result = bll_member.AddMemberToDGV(ref err, newMember);
 
                 if (result > 0)
                 {

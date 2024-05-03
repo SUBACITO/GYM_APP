@@ -15,7 +15,7 @@ namespace BaiTapQuanLy.Forms
 {
     public partial class Frm_MemberUpdate : Form
     {
-        Bll_HeThong bll_heThong;
+        Bll_Member bll_member;
         string err = string.Empty;
         public Frm_MembersManager ParentForm { get; set; }
 
@@ -45,7 +45,7 @@ namespace BaiTapQuanLy.Forms
 
         private void Frm_MemberUpdate_Load(object sender, EventArgs e)
         {
-            bll_heThong = new Bll_HeThong(clsMain.path);
+            bll_member = new Bll_Member(clsMain.path);
             txt_FullName.Text = fullName;
             cbox_Gender.SelectedItem = gender;
             dtp_DateOfBirth.Value = dateOfBirth;
@@ -93,7 +93,7 @@ namespace BaiTapQuanLy.Forms
                 }
 
                 // Call the appropriate method from your business layer to update the member's information
-                int result = bll_heThong.UpdateMemberToDGV(ref err, new Member()
+                int result = bll_member.UpdateMemberToDGV(ref err, new Member()
                 {
                     MemberID = memberID,
                     FullName = newFullName,
