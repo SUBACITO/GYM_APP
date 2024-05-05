@@ -70,16 +70,14 @@ namespace BaiTapQuanLy
             {
                 if (isValidEmail(userEmailText))
                 {
+                    txtEmailorPhone.Enabled = false;
+
                     // Kiểm tra sự tồn tại của username trước khi chuyển đến form nhập mật khẩu
                     int usernameExists = bll.CheckUsernameExistence(ref err, userEmailText);
                     if (usernameExists == 1)
                     {
                         // Nếu username tồn tại, hiển thị các mục nhập mật khẩu và chuyển đến form nhập mật khẩu
-                        txtEmailorPhone.Enabled = false;
                         doTransitionAnimationToPasswordFormField();
-
-                        await Task.Delay(1000); 
-                        txtPassword.Focus();
                     }
                     else
                     {
@@ -91,6 +89,7 @@ namespace BaiTapQuanLy
                         anim.add(noti, "Top", 450);
                         anim.run();
                         noti.ShowDialog();
+                        txtEmailorPhone.Enabled = true;
                         txtEmailorPhone.Focus();
                     }
                 }
@@ -108,8 +107,10 @@ namespace BaiTapQuanLy
                         anim.run();
 
                         noti.ShowDialog();
+                        
                         txtEmailorPhone.Focus();
                     }, TaskScheduler.FromCurrentSynchronizationContext());
+                    txtEmailorPhone.Enabled = true;
                 }
             }
             else
@@ -126,21 +127,16 @@ namespace BaiTapQuanLy
                     anim.run();
 
                     noti.ShowDialog();
+                    
                     txtEmailorPhone.Focus();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
+                txtEmailorPhone.Enabled = true;
             }
 
         }
 
-        //private bool KiemTraDangNhap(string taiKhoan, string matKhau)
-        //{
-        //    dtNhanVien = new DataTable();
-        //    dtNhanVien = bll.KiemTraDangNhap(ref err, taiKhoan, matKhau);
-        //    return false;
-        //}
-
         //Do transition animation to move to password form
-        private void doTransitionAnimationToPasswordFormField()
+        private async void doTransitionAnimationToPasswordFormField()
         {
             //////////////////////////////////
             btnExitApp.Visible = false;
@@ -153,10 +149,12 @@ namespace BaiTapQuanLy
             /////////////////////////////////
             backToEmailorPhoneBTN.Visible = true;
             backToEmailorPhoneBTN.Location = new Point(-100, 60);
-            txtPassword.Visible = true;
+            txtPassword.Enabled = false;
             txtPassword.Location = new Point(txtEmailorPhone.Location.X - 1000, txtEmailorPhone.Location.Y + 50);
-            cboxShowPassword.Visible = true;
+            txtPassword.Visible = true;
+            cboxShowPassword.Enabled = false;
             cboxShowPassword.Location = new Point(txtPassword.Location.X - 100, txtPassword.Location.Y + 60);
+            cboxShowPassword.Visible = true;
             btnForgotPassword.Visible = false;
             btnForgotPassword.Location = new Point(btnExitApp.Location.X - 40, btnExitApp.Location.Y);
             btnPassword.Visible = true;
@@ -178,6 +176,10 @@ namespace BaiTapQuanLy
             anim.add(cboxShowPassword, "Left", 0);
             anim.run();
             /////////////////////////////////////////////////////////
+            await Task.Delay(1000);
+            txtPassword.Enabled = true;
+            cboxShowPassword.Enabled = true;
+            txtPassword.Focus();
         }
 
         //Back to email form with transition (current in password form)
@@ -234,9 +236,9 @@ namespace BaiTapQuanLy
                 {
                     if (!string.IsNullOrEmpty(loginStatus))
                     {
-                        // Nếu đăng nhập thành công, chuyển đến form chính
-                        Frm_Main frm_Main = new Frm_Main();
-                        frm_Main.Show();
+                        // Nếu đăng nhập thành công, chuyển đến form loading và đến form main
+                        Frm_LoadingToMain frm_loadToMain = new Frm_LoadingToMain();
+                        frm_loadToMain.Show();  
                         this.Hide();
                     }
                     else

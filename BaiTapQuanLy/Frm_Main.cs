@@ -1,22 +1,18 @@
 ﻿using DevComponents.DotNetBar;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
+using BaiTapQuanLy.BussinessLayer;
 using BaiTapQuanLy.Forms;
+using BaiTapQuanLy.Properties;
+using BaiTapQuanLy.DTO;
 using Guna.UI2.WinForms;
 using Transitions;
-using System.IO;
-using BaiTapQuanLy.Properties;
-using BaiTapQuanLy.BussinessLayer;
-using BaiTapQuanLy.DTO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BaiTapQuanLy
 {
@@ -25,7 +21,6 @@ namespace BaiTapQuanLy
         private Form currentChildForm;
         private Guna2Button currentButton;
         private Dictionary<Guna2Button, bool> buttonPressedState = new Dictionary<Guna2Button, bool>();
-        DataTable dt;
 
         public Frm_Main()
         {
@@ -55,7 +50,6 @@ namespace BaiTapQuanLy
         {
             InitializeButtonStates();
             pressedBTN(homePageBTN);
-            string err = string.Empty;
             usernameLabel.Text = Account.userName;
         }
 
@@ -126,18 +120,20 @@ namespace BaiTapQuanLy
         {
             sidebarTransistion.Start();
         }
-        ////////////////////////////////////////////////////////////// 
-
 
         //Open child forms
-        private void OpenChildForm(Form childform, Guna2Button senderButton)
+        private async void OpenChildForm(Form childform, Guna2Button senderButton)
         {
-            if(currentChildForm != null)
+            // Store the current button and cancel the previous action
+            currentButton = senderButton;
+            pressedBTN(senderButton);
+
+            await Task.Delay(100);
+            if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
             currentChildForm = childform;
-            pressedBTN(senderButton);
             childform.TopLevel = false;
             childform.FormBorderStyle = FormBorderStyle.None;
             childform.Dock = DockStyle.Fill;
@@ -146,7 +142,6 @@ namespace BaiTapQuanLy
             childform.BringToFront();
             childform.Show();
         }
-        //////////////////////////////////////////////////
 
         //Change colors when button is pressed
         private void pressedBTN(Guna2Button button)
@@ -154,34 +149,86 @@ namespace BaiTapQuanLy
             // Update appearance of the previously pressed button
             if (currentButton != null)
             {
-                currentButton.FillColor = System.Drawing.Color.Transparent;
-                currentButton.ForeColor = System.Drawing.Color.Black;
+                currentButton.FillColor = Color.Transparent;
+                currentButton.ForeColor = Color.Black;
                 currentButton.Image = Image.FromFile($"..\\..\\..\\image\\{currentButton.Name}_unpressed.png");
             }
 
             // Update appearance of the current button
-            button.FillColor = System.Drawing.Color.FromArgb(11, 87, 208);
-            button.ForeColor = System.Drawing.Color.White;
+            button.FillColor = Color.FromArgb(11, 87, 208);
+            button.ForeColor = Color.White;
             button.Image = Image.FromFile($"..\\..\\..\\image\\{button.Name}_pressed.png");
 
             // Update the current button
             currentButton = button;
         }
-        /////////////////////////////////////////////////
 
         //Open other forms as a child form with button click
-        private void dashBoardBTN_Click(object sender, EventArgs e)
+        private async void dashBoardBTN_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Frm_Statistic(), (Guna2Button)sender);
+            pressedBTN(dashBoardBTN);
+            Frm_LoadingStats loadingForm = new Frm_LoadingStats();
+            loadingForm.TopLevel = false;
+            loadingForm.FormBorderStyle = FormBorderStyle.None;
+            loadingForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(loadingForm);
+            panelDesktop.Tag = loadingForm;
+            loadingForm.BringToFront();
+            loadingForm.Show();
+
+            await Task.Delay(500);
+
+            Bll_ThongKe bll_thongke = new Bll_ThongKe(clsMain.path);
+            Frm_Statistic stat = new Frm_Statistic(bll_thongke);
+
+            await Task.Run(() =>
+            {
+                stat.LoadDataDetailPackages();
+                stat.LoadGenderStats();
+            });
+            OpenChildForm(stat, (Guna2Button)sender);
+            await Task.Delay(500);
+            loadingForm.Close();
         }
 
-        private void memberManagerBTN_Click(object sender, EventArgs e)
+        private async void memberManagerBTN_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Frm_MembersManager(), (Guna2Button)sender);
+            pressedBTN(memberManagerBTN);
+            Frm_LoadingStats loadingForm = new Frm_LoadingStats();
+            loadingForm.TopLevel = false;
+            loadingForm.FormBorderStyle = FormBorderStyle.None;
+            loadingForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(loadingForm);
+            panelDesktop.Tag = loadingForm;
+            loadingForm.BringToFront();
+            loadingForm.Show();
+
+            await Task.Delay(500);
+
+            Bll_Member bll_mem = new Bll_Member(clsMain.path);
+            Frm_MembersManager frmMem = new Frm_MembersManager(bll_mem);
+            await Task.Run(() =>
+            {
+                frmMem.LoadAllMembersData();
+            });
+            OpenChildForm(frmMem, (Guna2Button)sender);
+            await Task.Delay(500);
+            loadingForm.Close();
         }
 
         private void homePageBTN_Click(object sender, EventArgs e)
         {
+            // Check if the current form is the loading form and close it if it exists
+            var loadingForm = panelDesktop.Controls.OfType<Frm_LoadingStats>().FirstOrDefault();
+            if (loadingForm != null)
+            {
+                loadingForm.Close();
+            }
+
+            // Reset currentChildForm to null
+            currentChildForm = null;
+            pressedBTN(homePageBTN);
+
             // Close all child forms
             foreach (Control control in panelDesktop.Controls)
             {
@@ -190,25 +237,20 @@ namespace BaiTapQuanLy
                     form.Close();
                 }
             }
-            // Reset currentChildForm to null
-            currentChildForm = null;
-            pressedBTN(homePageBTN);
         }
 
-        /////////////////////////////////////////////////////////
-
-        /// Open popup form (User profile)
+        // Open popup form (User profile)
         private void userProfile_Click(object sender, EventArgs e)
         {
-                var popupForm = new Frm_UserProfile();
-                var anim = new Transition(new TransitionType_CriticalDamping(500));
-                Point profileLocation = userProfile.PointToScreen(Point.Empty);
-                popupForm.StartPosition = FormStartPosition.Manual;
-                popupForm.Location = new Point(profileLocation.X - 40);
-                var getWidthY = profileLocation.Y + userProfile.Height;
-                anim.add(popupForm, "Top", getWidthY + 10);
-                anim.run();
-                popupForm.ShowDialog();
+            var popupForm = new Frm_UserProfile();
+            var anim = new Transition(new TransitionType_CriticalDamping(500));
+            Point profileLocation = userProfile.PointToScreen(Point.Empty);
+            popupForm.StartPosition = FormStartPosition.Manual;
+            popupForm.Location = new Point(profileLocation.X - 40);
+            var getWidthY = profileLocation.Y + userProfile.Height;
+            anim.add(popupForm, "Top", getWidthY + 10);
+            anim.run();
+            popupForm.ShowDialog();
         }
     }
 }

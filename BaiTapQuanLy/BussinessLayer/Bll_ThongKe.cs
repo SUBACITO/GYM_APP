@@ -49,9 +49,9 @@ namespace BaiTapQuanLy.BussinessLayer
         }
 
         //Get package
-        public DataTable GetPackage(ref string err)
+        /*public DataTable GetPackage(ref string err)
         {
             return db.GetDataTable(ref err, "GetPackage", CommandType.StoredProcedure, null);
-        }
+        }*/
     }
 }

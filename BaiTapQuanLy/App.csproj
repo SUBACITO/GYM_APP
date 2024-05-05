@@ -36,6 +36,9 @@
     <ApplicationIcon>gymappicon_3x0_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="DevComponents.DotNetBar2">
       <HintPath>..\..\..\..\..\Downloads\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
@@ -62,6 +65,9 @@
     <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
     </Reference>
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BussinessLayer\Bll_HeThong.cs" />
@@ -70,6 +76,18 @@
     <Compile Include="clsMain.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Member.cs" />
+    <Compile Include="Forms\Frm_LoadingStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_LoadingStats.Designer.cs">
+      <DependentUpon>Frm_LoadingStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_LoadingToMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_LoadingToMain.Designer.cs">
+      <DependentUpon>Frm_LoadingToMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_MembershipPurchaseConfirmation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +151,12 @@
     <Compile Include="makeFormRounded.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Frm_LoadingStats.resx">
+      <DependentUpon>Frm_LoadingStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_LoadingToMain.resx">
+      <DependentUpon>Frm_LoadingToMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_MembershipPurchaseConfirmation.resx">
       <DependentUpon>Frm_MembershipPurchaseConfirmation.cs</DependentUpon>
     </EmbeddedResource>

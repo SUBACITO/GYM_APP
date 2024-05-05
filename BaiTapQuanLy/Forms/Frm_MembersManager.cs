@@ -27,9 +27,10 @@ namespace BaiTapQuanLy.Forms
         private bool selectionChanged;
         private DataTable allMembersData;
 
-        public Frm_MembersManager()
+        public Frm_MembersManager(Bll_Member bll_mem)
         {
             InitializeComponent();
+            this.bll_member = bll_mem;
         }
         private void Frm_MembersManager_Shown(object sender, EventArgs e)
         {

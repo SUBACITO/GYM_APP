@@ -97,3 +97,8 @@ C:\Users\nguye\Downloads\GYM_APP-main\GYM_APP-main\BaiTapQuanLy\obj\Debug\App.cs
 C:\Users\nguye\Downloads\GYM_APP-main\GYM_APP-main\BaiTapQuanLy\obj\Debug\App.csproj.Up2Date
 C:\Users\nguye\Downloads\GYM_APP-main\GYM_APP-main\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.exe
 C:\Users\nguye\Downloads\GYM_APP-main\GYM_APP-main\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.pdb
+C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\bin\Debug\CircularProgressBar.dll
+C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\bin\Debug\WinFormAnimation.dll
+C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\bin\Debug\CircularProgressBar.xml
+C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_LoadingToMain.resources
+C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_LoadingStats.resources

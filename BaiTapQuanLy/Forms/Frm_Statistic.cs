@@ -14,81 +14,62 @@ namespace BaiTapQuanLy.Forms
 {
     public partial class Frm_Statistic : Form
     {
-        Bll_ThongKe bll_thongke;
-
+        private Bll_ThongKe bll_thongke;
         DataTable dt, dt2;
         string err = string.Empty;
 
-        public Frm_Statistic()
+        public Frm_Statistic(Bll_ThongKe bll)
         {
             InitializeComponent();
-        }
+            this.bll_thongke = bll;
 
-        private void Frm_Statistic_Load(object sender, EventArgs e)
-        {
-            bll_thongke = new Bll_ThongKe(clsMain.path);
-            // Optionally initialize the date pickers to a default range, e.g., current month
             dtpFromDate.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
             dtpToDate.Value = DateTime.Now;
-
-            LoadDataToStats(dtpFromDate.Value, dtpToDate.Value);
-            fillChart();
-            LoadGenderStats();
-            LoadDataDetailPackages();
-            LoadDataPackages();
         }
 
- 
-        private void LoadDataDetailPackages()
+        public void LoadDataDetailPackages()
         {
             DataTable dt3 = new DataTable();
             DataTable dt4 = new DataTable();
 
             dt3 = bll_thongke.GetDetailPackage(ref err);
-            dgvDetailPackage.DataSource = dt3.DefaultView;
-            lbTotalPackagesBought.Text = dt3.Rows.Count.ToString();
+            // Access UI controls safely using Invoke if the handle has been created
+            if (dgvDetailPackage.IsHandleCreated)
+            {
+                dgvDetailPackage.Invoke((MethodInvoker)delegate
+                {
+                    dgvDetailPackage.DataSource = dt3.DefaultView;
+                    lbTotalPackagesBought.Text = dt3.Rows.Count.ToString();
+                });
+            }
 
             dt4 = bll_thongke.GetMembersListToDGV(ref err);
-           
             lbTotalMembers.Text = dt4.Rows.Count.ToString();
-
-
-        }
-
-        private void LoadDataPackages()
-        {
-            DataTable dt4 = new DataTable();
-            dt4 = bll_thongke.GetPackage(ref err);
-          
         }
 
         private void LoadDataToStats(DateTime fromDate, DateTime toDate)
         {
             dt = bll_thongke.GetPackageStats(ref err, fromDate, toDate);
             fillChart();
-            if (!string.IsNullOrEmpty(err))
-            {
-                MessageBox.Show("Error loading data: " + err);
-                return;
-            }
-
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                MessageBox.Show("No data available for the selected date range.");
-                return;
-            }
         }
-
-    
 
         private void dtpToDate_ValueChanged(object sender, EventArgs e)
         {
             LoadDataToStats(dtpFromDate.Value, dtpToDate.Value);
         }
 
-        private void LoadGenderStats()
+        private void btnLoadGenderStats_Click(object sender, EventArgs e)
         {
-            string err = string.Empty;
+            LoadGenderStats();
+        }
+
+        private void btnGetHistoryBoughPackages_Click(object sender, EventArgs e)
+        {
+            LoadDataDetailPackages();
+        }
+
+        public void LoadGenderStats()
+        {
             dt2 = bll_thongke.GetMembersByGender(ref err);
             if (!string.IsNullOrEmpty(err))
             {
@@ -120,16 +101,6 @@ namespace BaiTapQuanLy.Forms
             MyChart_Genders.Invalidate(); // Refresh the chart
         }
 
-        private void btnLoadGenderStats_Click(object sender, EventArgs e)
-        {
-            LoadGenderStats();
-        }
-
-        private void btnGetHistoryBoughPackages_Click(object sender, EventArgs e)
-        {
-            LoadDataDetailPackages();
-        }
-
         private void fillChart()
         {
             MyChart_Packages.Series.Clear(); // Clear existing series
@@ -138,6 +109,14 @@ namespace BaiTapQuanLy.Forms
             var packageGroups = dt.AsEnumerable()
                 .GroupBy(row => row.Field<string>("PackageName"))
                 .ToList();
+
+            // Check if there are no data points to display
+            if (packageGroups.Count == 0)
+            {
+                // Display a message or set the chart to an empty state
+                InitializeEmptyChart();
+                return;
+            }
 
             foreach (var packageGroup in packageGroups)
             {
@@ -162,6 +141,31 @@ namespace BaiTapQuanLy.Forms
             MyChart_Packages.Titles.Clear();
             MyChart_Packages.Titles.Add("Membership Usage Statistics by Package");
             MyChart_Packages.Invalidate(); // Refresh the chart
+        }
+
+        private void InitializeEmptyChart()
+        {
+            // Clear any existing series
+            MyChart_Packages.Series.Clear();
+
+            // Configure axis labels and title
+            MyChart_Packages.ChartAreas[0].AxisX.Title = "Month / Year";
+            MyChart_Packages.ChartAreas[0].AxisY.Title = "Number of Members";
+            MyChart_Packages.Titles.Clear();
+            MyChart_Packages.Titles.Add("Membership Usage Statistics by Package");
+
+            // Get the month and year from the fromDate
+            string selectedMonthYear = dtpFromDate.Value.ToString("MM / yyyy");
+
+            // Add a template series with zero data for the selected month/year
+            Series templateSeries = MyChart_Packages.Series.Add("No Packages");
+            templateSeries.ChartType = SeriesChartType.Column;
+            templateSeries.Points.AddXY(selectedMonthYear, 0);
+
+            templateSeries.Color = Color.LightGray;
+
+            // Refresh the chart
+            MyChart_Packages.Invalidate();
         }
     }
 }
