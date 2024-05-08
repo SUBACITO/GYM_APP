@@ -102,3 +102,4 @@ C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\bin\Debug\WinFormAnimation.dll
 C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\bin\Debug\CircularProgressBar.xml
 C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_LoadingToMain.resources
 C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_LoadingStats.resources
+C:\Users\Admin\Desktop\GYM_APP\BaiTapQuanLy\obj\Debug\BaiTapQuanLy.Forms.Frm_MemershipPackageControls.resources

@@ -17,7 +17,6 @@ namespace BaiTapQuanLy
         public Frm_UserProfile()
         {
             InitializeComponent();
-            /*new makeFormRounded(this);*/
         }
 
         private void closeProfileButton_Click(object sender, EventArgs e)

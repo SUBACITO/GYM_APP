@@ -17,15 +17,19 @@ namespace BaiTapQuanLy.Forms
     {
         private int memberID, packageID;
         private string userName;
+        private double packagePrice;
         Bll_Member bll_member;
         private string err = string.Empty;
+        private Frm_MembersManager parentForm;
 
-        public Frm_MembershipPurchaseConfirmation(int memberID, string userName, int packageID)
+        public Frm_MembershipPurchaseConfirmation(int memberID, string userName, int packageID, double packagePrice, Frm_MembersManager parentForm)
         {
             InitializeComponent();
             this.memberID = memberID;
             this.userName = userName;
             this.packageID = packageID;
+            this.packagePrice = packagePrice;
+            this.parentForm = parentForm;
         }
 
         public Guna2GradientPanel topPanel
@@ -52,6 +56,12 @@ namespace BaiTapQuanLy.Forms
             set { lblMembershipDuration.Text = value;}
         }
 
+        public string membershipPrice
+        {
+            get { return lblMembershipPrice.Text; }
+            set { lblMembershipPrice.Text = value;}
+        }
+
         private void cancelPackagePurchaseBTN_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -65,7 +75,7 @@ namespace BaiTapQuanLy.Forms
 
         private void buyConfirmPackageBTN_Click(object sender, EventArgs e)
         {
-            int result = bll_member.BuyOrRenewPackage(ref err, memberID, packageID);
+            int result = bll_member.BuyOrRenewPackage(ref err, memberID, packageID, packagePrice);
             if(result > 0 && packageID == 1) 
             {
                 Frm_Messages noti = new Frm_Messages();
@@ -78,8 +88,8 @@ namespace BaiTapQuanLy.Forms
                     anim.add(noti, "Top", 500);
                     anim.run();
                     noti.ShowDialog();
-                }, TaskScheduler.FromCurrentSynchronizationContext());    
-                this.DialogResult = DialogResult.OK;
+                }, TaskScheduler.FromCurrentSynchronizationContext());
+                parentForm.refreshMemberDataGridView();
                 this.Close();
             } else if(result > 0 && packageID == 2)
             {
@@ -94,7 +104,7 @@ namespace BaiTapQuanLy.Forms
                     anim.run();
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-                this.DialogResult = DialogResult.OK;
+                parentForm.refreshMemberDataGridView();
                 this.Close();
             } else if(result > 0 && packageID == 3)
             {
@@ -109,7 +119,7 @@ namespace BaiTapQuanLy.Forms
                     anim.run();
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-                this.DialogResult = DialogResult.OK;
+                parentForm.refreshMemberDataGridView();
                 this.Close();
             } else if (result > 0 && packageID == 4)
             {
@@ -124,7 +134,7 @@ namespace BaiTapQuanLy.Forms
                     anim.run();
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-                this.DialogResult = DialogResult.OK;
+                parentForm.refreshMemberDataGridView();
                 this.Close();
             } else if(result > 0 && packageID == 5)
             {
@@ -139,14 +149,14 @@ namespace BaiTapQuanLy.Forms
                     anim.run();
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-                this.DialogResult = DialogResult.OK;
+                parentForm.refreshMemberDataGridView();
                 this.Close();
             } else
             {
                 Frm_Messages noti = new Frm_Messages();
                 noti.StartPosition = FormStartPosition.CenterParent;
                 noti.TitleText = "ERROR";
-                noti.MessageText = "Error buying membership for user!";
+                noti.MessageText = "Error buying membership for user!" + err;
                 Task.Delay(200).ContinueWith(_ =>
                 {
                     var anim = new Transition(new TransitionType_CriticalDamping(300));

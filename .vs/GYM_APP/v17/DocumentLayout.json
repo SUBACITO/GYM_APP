@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GYM_APP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|c:\\users\\admin\\desktop\\gym_app\\baitapquanly\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_loadingstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_loadingstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membershippackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membershippackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membershippackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membershippackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|c:\\users\\admin\\desktop\\gym_app\\baitapquanly\\forms\\frm_memershippackagecontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_memershippackagecontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|c:\\users\\admin\\desktop\\gym_app\\baitapquanly\\forms\\frm_statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|c:\\users\\admin\\desktop\\gym_app\\baitapquanly\\forms\\frm_memershippackagecontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_memershippackagecontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_loadingtomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_loadingtomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membershippurchaseconfirmation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membershippurchaseconfirmation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_loadingtomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_loadingtomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membershippurchaseconfirmation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membershippurchaseconfirmation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +41,54 @@
     {
       "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membersadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membersadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membersadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membersadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\bussinesslayer\\bll_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\bussinesslayer\\bll_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\bussinesslayer\\bll_member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\bussinesslayer\\bll_member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_loadingstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_loadingstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_loadingtomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_loadingtomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_loadingtomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_loadingtomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -51,14 +103,6 @@
       "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\bussinesslayer\\bll_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\bussinesslayer\\bll_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\bussinesslayer\\bll_member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\bussinesslayer\\bll_member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\bussinesslayer\\bll_hethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\bussinesslayer\\bll_hethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -71,40 +115,8 @@
       "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membershippurchaseconfirmation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membershippurchaseconfirmation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membershippurchaseconfirmation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membershippurchaseconfirmation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membershippackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membershippackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membershippackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membershippackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_memberupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_memberupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membersadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membersadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_membersadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|solutionrelative:baitapquanly\\forms\\frm_membersadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2A9A5C4-3A6C-47F6-8D88-6F54D375FC26}|BaiTapQuanLy\\App.csproj|C:\\Users\\Admin\\Desktop\\GYM_APP\\baitapquanly\\forms\\frm_messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -130,47 +142,174 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Frm_Main.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Frm_Main.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Frm_Main.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Frm_Main.cs",
-              "RelativeToolTip": "BaiTapQuanLy\\Frm_Main.cs",
-              "ViewState": "AQIAAKcAAAAAAAAAAAAswL0AAAAeAAAA",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Program.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Program.cs",
+              "RelativeToolTip": "BaiTapQuanLy\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T08:22:25.738Z",
+              "WhenOpened": "2024-05-08T16:04:37.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "Frm_MembershipPurchaseConfirmation.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs [Design]",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T16:17:35.208Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Frm_MembershipPurchaseConfirmation.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAuwJsAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T16:17:35.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Frm_Statistic.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_Statistic.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_Statistic.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_Statistic.cs [Design]",
               "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_Statistic.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T15:28:32.346Z",
+              "WhenOpened": "2024-05-08T14:24:02.627Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Frm_MembershipPackage.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAIwGQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T07:16:12.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Frm_MembershipPackage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs [Design]",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T06:38:16.2Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Frm_MemershipPackageControls.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MemershipPackageControls.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MemershipPackageControls.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MemershipPackageControls.cs [Design]",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MemershipPackageControls.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T11:13:18.245Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Frm_MemershipPackageControls.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MemershipPackageControls.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MemershipPackageControls.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MemershipPackageControls.cs",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MemershipPackageControls.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAmwIkAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T11:32:22.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Frm_MembersManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersManager.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembersManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersManager.cs",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembersManager.cs",
+              "ViewState": "AQIAAKUAAAAAAAAAAAAkwL8AAABwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T12:49:49.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Frm_MembersManager.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersManager.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembersManager.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersManager.cs [Design]",
               "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembersManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T16:12:38.094Z"
+              "WhenOpened": "2024-04-22T16:12:38.094Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "Frm_MembersAdd.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAcwGAAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:03:02.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Frm_MembersAdd.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs [Design]",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:03:01.571Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Bll_ThongKe.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\BussinessLayer\\Bll_ThongKe.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\BussinessLayer\\Bll_ThongKe.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\BussinessLayer\\Bll_ThongKe.cs",
+              "RelativeToolTip": "BaiTapQuanLy\\BussinessLayer\\Bll_ThongKe.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwDAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T16:29:18.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Frm_Statistic.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_Statistic.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_Statistic.cs",
@@ -178,34 +317,63 @@
               "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_Statistic.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAgwKcAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T15:34:23.638Z"
+              "WhenOpened": "2024-05-03T15:34:23.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Frm_LoadingToMain.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_LoadingToMain.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_LoadingToMain.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_LoadingToMain.cs [Design]",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_LoadingToMain.cs [Design]",
+              "DocumentIndex": 14,
+              "Title": "Bll_Member.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\BussinessLayer\\Bll_Member.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\BussinessLayer\\Bll_Member.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\BussinessLayer\\Bll_Member.cs",
+              "RelativeToolTip": "BaiTapQuanLy\\BussinessLayer\\Bll_Member.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAIwFEAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T12:20:46.394Z"
+              "WhenOpened": "2024-05-03T16:17:11.633Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Frm_LoadingStats.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs [Design]",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs [Design]",
+              "DocumentIndex": 15,
+              "Title": "Frm_Main.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Frm_Main.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Frm_Main.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Frm_Main.cs",
+              "RelativeToolTip": "BaiTapQuanLy\\Frm_Main.cs",
+              "ViewState": "AQIAAOgAAAAAAAAAAAAkwPwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T15:39:57.86Z",
+              "WhenOpened": "2024-04-22T08:22:25.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Frm_UserProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T09:02:09.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Frm_UserProfile.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_UserProfile.cs [Design]",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_UserProfile.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T15:45:13.486Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 18,
               "Title": "Frm_Main.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Frm_Main.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Frm_Main.cs",
@@ -217,7 +385,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 19,
+              "Title": "Frm_LoadingStats.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs [Design]",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:39:57.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Frm_LoadingToMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_LoadingToMain.cs",
+              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_LoadingToMain.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_LoadingToMain.cs [Design]",
+              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_LoadingToMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T12:20:46.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "Frm_LoadingToMain.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_LoadingToMain.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_LoadingToMain.cs",
@@ -229,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 22,
               "Title": "Frm_Login.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Frm_Login.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Frm_Login.cs",
@@ -240,19 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Frm_MembersManager.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersManager.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembersManager.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersManager.cs",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembersManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAIwBUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T12:49:49.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "Frm_LoadingStats.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs",
@@ -260,12 +438,11 @@
               "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_LoadingStats.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T06:38:15.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-05T06:38:15.095Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "Frm_Login.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Frm_Login.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Frm_Login.cs",
@@ -277,19 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Bll_ThongKe.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\BussinessLayer\\Bll_ThongKe.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\BussinessLayer\\Bll_ThongKe.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\BussinessLayer\\Bll_ThongKe.cs",
-              "RelativeToolTip": "BaiTapQuanLy\\BussinessLayer\\Bll_ThongKe.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAADYAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T16:29:18.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 25,
               "Title": "Bll_HeThong.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\BussinessLayer\\Bll_HeThong.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\BussinessLayer\\Bll_HeThong.cs",
@@ -301,19 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Bll_Member.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\BussinessLayer\\Bll_Member.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\BussinessLayer\\Bll_Member.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\BussinessLayer\\Bll_Member.cs",
-              "RelativeToolTip": "BaiTapQuanLy\\BussinessLayer\\Bll_Member.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T16:17:11.633Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 26,
               "Title": "Frm_MemberUpdate.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MemberUpdate.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MemberUpdate.cs",
@@ -324,7 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 27,
               "Title": "Frm_Messages.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_Messages.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_Messages.cs",
@@ -335,76 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Frm_UserProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAAB0AAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T09:02:09.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Frm_UserProfile.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_UserProfile.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_UserProfile.cs [Design]",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_UserProfile.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T15:45:13.486Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Frm_MembershipPurchaseConfirmation.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T16:17:35.943Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Frm_MembershipPurchaseConfirmation.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs [Design]",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembershipPurchaseConfirmation.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T16:17:35.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Frm_MembershipPackage.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T07:16:12.106Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Frm_MembershipPackage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs [Design]",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembershipPackage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T06:38:16.2Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "Frm_MemberUpdate.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MemberUpdate.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MemberUpdate.cs",
@@ -416,30 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Frm_MembersAdd.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T17:03:02.914Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Frm_MembersAdd.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
-              "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs [Design]",
-              "RelativeToolTip": "BaiTapQuanLy\\Forms\\Frm_MembersAdd.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T17:03:01.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "Frm_Messages.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\Forms\\Frm_Messages.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\Forms\\Frm_Messages.cs",
@@ -451,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "Member.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\DTO\\Member.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\DTO\\Member.cs",
@@ -463,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\DTO\\Account.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\DTO\\Account.cs",
@@ -475,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "clsMain.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GYM_APP\\BaiTapQuanLy\\clsMain.cs",
               "RelativeDocumentMoniker": "BaiTapQuanLy\\clsMain.cs",

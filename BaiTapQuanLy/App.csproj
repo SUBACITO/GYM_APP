@@ -94,6 +94,12 @@
     <Compile Include="Forms\Frm_MembershipPurchaseConfirmation.Designer.cs">
       <DependentUpon>Frm_MembershipPurchaseConfirmation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_MemershipPackageControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_MemershipPackageControls.Designer.cs">
+      <DependentUpon>Frm_MemershipPackageControls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_Statistic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_MembershipPurchaseConfirmation.resx">
       <DependentUpon>Frm_MembershipPurchaseConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_MemershipPackageControls.resx">
+      <DependentUpon>Frm_MemershipPackageControls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Statistic.resx">
       <DependentUpon>Frm_Statistic.cs</DependentUpon>

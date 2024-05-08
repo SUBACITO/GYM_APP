@@ -72,13 +72,20 @@ namespace BaiTapQuanLy.BussinessLayer
             return db.MyExcuteNonQuery(ref err, "Member_Delete", CommandType.StoredProcedure, sqlPara);
         }
 
+        //Get package
+        public DataTable GetPackage(ref string err)
+        {
+            return db.GetDataTable(ref err, "GetPackage", CommandType.StoredProcedure, null);
+        }
+
         //Buy or renew membership package
-        public int BuyOrRenewPackage(ref string err, int memberID, int packageID)
+        public int BuyOrRenewPackage(ref string err, int memberID, int packageID, double packagePrice)
         {
             SqlParameter[] sqlPara = new SqlParameter[]
             {
                 new SqlParameter("@MemberID", memberID),
-                new SqlParameter("@PackageID", packageID)
+                new SqlParameter("@PackageID", packageID),
+                new SqlParameter("@PackagePrice", packagePrice)
             };
             return db.MyExcuteNonQuery(ref err, "PurchaseOrRenewPackage", CommandType.StoredProcedure, sqlPara);
         }

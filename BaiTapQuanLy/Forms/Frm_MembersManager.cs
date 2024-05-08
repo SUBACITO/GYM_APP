@@ -189,8 +189,7 @@ namespace BaiTapQuanLy.Forms
             { 
                 int memberID = Convert.ToInt32(dgvMembers.SelectedRows[0].Cells["colMemberID"].Value);
                 string userName = dgvMembers.SelectedRows[0].Cells["colFullName"].Value.ToString();
-                Frm_MembershipPackage frm_membershipPackage = new Frm_MembershipPackage(memberID, userName);
-                frm_membershipPackage.ParentForm = this;
+                Frm_MembershipPackage frm_membershipPackage = new Frm_MembershipPackage(memberID, userName, this);
                 frm_membershipPackage.StartPosition = FormStartPosition.CenterParent;
                 frm_membershipPackage.ShowDialog();
             }

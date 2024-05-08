@@ -28,23 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.dgvDetailPackage = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.colFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPackageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTransactionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnGetHistoryBoughPackages = new Guna.UI2.WinForms.Guna2Button();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -67,6 +64,10 @@
             this.MyChart_Genders = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnLoadGenderStats = new Guna.UI2.WinForms.Guna2Button();
+            this.colFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPackageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTransactionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -132,43 +133,43 @@
             this.dgvDetailPackage.AllowUserToDeleteRows = false;
             this.dgvDetailPackage.AllowUserToResizeColumns = false;
             this.dgvDetailPackage.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dgvDetailPackage.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetailPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvDetailPackage.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetailPackage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDetailPackage.ColumnHeadersHeight = 35;
-            this.dgvDetailPackage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDetailPackage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFullName,
             this.colPackageName,
-            this.colTransactionDate});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetailPackage.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colTransactionDate,
+            this.colPrice});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetailPackage.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDetailPackage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDetailPackage.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDetailPackage.Location = new System.Drawing.Point(0, 43);
             this.dgvDetailPackage.Name = "dgvDetailPackage";
             this.dgvDetailPackage.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetailPackage.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetailPackage.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDetailPackage.RowHeadersVisible = false;
             this.dgvDetailPackage.RowHeadersWidth = 40;
             this.dgvDetailPackage.RowTemplate.Height = 35;
@@ -185,7 +186,7 @@
             this.dgvDetailPackage.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDetailPackage.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDetailPackage.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvDetailPackage.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvDetailPackage.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvDetailPackage.ThemeStyle.HeaderStyle.Height = 35;
             this.dgvDetailPackage.ThemeStyle.ReadOnly = true;
             this.dgvDetailPackage.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -195,30 +196,6 @@
             this.dgvDetailPackage.ThemeStyle.RowsStyle.Height = 35;
             this.dgvDetailPackage.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDetailPackage.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // colFullName
-            // 
-            this.colFullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colFullName.DataPropertyName = "FullName";
-            this.colFullName.HeaderText = "FullName";
-            this.colFullName.Name = "colFullName";
-            this.colFullName.ReadOnly = true;
-            // 
-            // colPackageName
-            // 
-            this.colPackageName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colPackageName.DataPropertyName = "PackageName";
-            this.colPackageName.HeaderText = "Package Name";
-            this.colPackageName.Name = "colPackageName";
-            this.colPackageName.ReadOnly = true;
-            // 
-            // colTransactionDate
-            // 
-            this.colTransactionDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTransactionDate.DataPropertyName = "TransactionDate";
-            this.colTransactionDate.HeaderText = "Date";
-            this.colTransactionDate.Name = "colTransactionDate";
-            this.colTransactionDate.ReadOnly = true;
             // 
             // panel5
             // 
@@ -382,17 +359,17 @@
             // 
             // MyChart_Packages
             // 
-            chartArea4.Name = "ChartArea1";
-            this.MyChart_Packages.ChartAreas.Add(chartArea4);
+            chartArea1.Name = "ChartArea1";
+            this.MyChart_Packages.ChartAreas.Add(chartArea1);
             this.MyChart_Packages.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.MyChart_Packages.Legends.Add(legend4);
+            legend1.Name = "Legend1";
+            this.MyChart_Packages.Legends.Add(legend1);
             this.MyChart_Packages.Location = new System.Drawing.Point(0, 45);
             this.MyChart_Packages.Name = "MyChart_Packages";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.MyChart_Packages.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.MyChart_Packages.Series.Add(series1);
             this.MyChart_Packages.Size = new System.Drawing.Size(546, 295);
             this.MyChart_Packages.TabIndex = 0;
             this.MyChart_Packages.Text = "chart1";
@@ -468,17 +445,17 @@
             // 
             // MyChart_Genders
             // 
-            chartArea3.Name = "ChartArea1";
-            this.MyChart_Genders.ChartAreas.Add(chartArea3);
+            chartArea2.Name = "ChartArea1";
+            this.MyChart_Genders.ChartAreas.Add(chartArea2);
             this.MyChart_Genders.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.MyChart_Genders.Legends.Add(legend3);
+            legend2.Name = "Legend1";
+            this.MyChart_Genders.Legends.Add(legend2);
             this.MyChart_Genders.Location = new System.Drawing.Point(0, 45);
             this.MyChart_Genders.Name = "MyChart_Genders";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.MyChart_Genders.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.MyChart_Genders.Series.Add(series2);
             this.MyChart_Genders.Size = new System.Drawing.Size(546, 282);
             this.MyChart_Genders.TabIndex = 0;
             this.MyChart_Genders.Text = "chart1";
@@ -509,6 +486,41 @@
             this.btnLoadGenderStats.TabIndex = 1;
             this.btnLoadGenderStats.Text = "Gender Statistic";
             this.btnLoadGenderStats.Click += new System.EventHandler(this.btnLoadGenderStats_Click);
+            // 
+            // colFullName
+            // 
+            this.colFullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colFullName.DataPropertyName = "FullName";
+            this.colFullName.HeaderText = "FullName";
+            this.colFullName.Name = "colFullName";
+            this.colFullName.ReadOnly = true;
+            this.colFullName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colPackageName
+            // 
+            this.colPackageName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colPackageName.DataPropertyName = "PackageName";
+            this.colPackageName.HeaderText = "Package Name";
+            this.colPackageName.Name = "colPackageName";
+            this.colPackageName.ReadOnly = true;
+            this.colPackageName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colTransactionDate
+            // 
+            this.colTransactionDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTransactionDate.DataPropertyName = "TransactionDate";
+            this.colTransactionDate.HeaderText = "Date";
+            this.colTransactionDate.Name = "colTransactionDate";
+            this.colTransactionDate.ReadOnly = true;
+            this.colTransactionDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colPrice
+            // 
+            this.colPrice.DataPropertyName = "Price";
+            this.colPrice.HeaderText = "Price";
+            this.colPrice.Name = "colPrice";
+            this.colPrice.ReadOnly = true;
+            this.colPrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Frm_Statistic
             // 
@@ -560,9 +572,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvDetailPackage;
         private System.Windows.Forms.Panel panel5;
         private Guna.UI2.WinForms.Guna2Button btnGetHistoryBoughPackages;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPackageName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTransactionDate;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
@@ -572,5 +581,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbTotalMembers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPackageName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTransactionDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
     }
 }
