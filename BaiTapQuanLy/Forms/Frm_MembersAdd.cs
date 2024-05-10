@@ -16,10 +16,11 @@ namespace BaiTapQuanLy.Forms
     public partial class Frm_MembersAdd : Form
     {
         Bll_Member bll_member;
-        public Frm_MembersManager ParentForm { get; set; }
-        public Frm_MembersAdd()
+        Frm_MembersManager parentForm;
+        public Frm_MembersAdd(Frm_MembersManager parentForm)
         {
             InitializeComponent();
+            this.parentForm = parentForm;
         }
         private void Frm_MembersAdd_Load(object sender, EventArgs e)
         {
@@ -94,8 +95,8 @@ namespace BaiTapQuanLy.Forms
                         anim.run();
                         noti.ShowDialog();
                     }, TaskScheduler.FromCurrentSynchronizationContext());
-                    ParentForm?.refreshMemberDataGridView();
-                    ParentForm?.LoadAllMembersData();
+                    parentForm.refreshMemberDataGridView();
+                    parentForm.LoadAllMembersData();
                     this.Close();
                 }
                 else

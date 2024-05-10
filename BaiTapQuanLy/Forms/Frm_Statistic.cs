@@ -138,6 +138,7 @@ namespace BaiTapQuanLy.Forms
             // Configure axis labels and title
             MyChart_Packages.ChartAreas[0].AxisX.Title = "Month / Year";
             MyChart_Packages.ChartAreas[0].AxisY.Title = "Number of Members";
+            MyChart_Packages.ChartAreas[0].AxisY.Interval = 1;
             MyChart_Packages.Titles.Clear();
             MyChart_Packages.Titles.Add("Membership Usage Statistics by Package");
             MyChart_Packages.Invalidate(); // Refresh the chart

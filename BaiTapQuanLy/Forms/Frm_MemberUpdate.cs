@@ -17,7 +17,7 @@ namespace BaiTapQuanLy.Forms
     {
         Bll_Member bll_member;
         string err = string.Empty;
-        public Frm_MembersManager ParentForm { get; set; }
+        Frm_MembersManager parentForm;
 
         private int memberID;
         private string fullName;
@@ -26,7 +26,7 @@ namespace BaiTapQuanLy.Forms
         private string email;
         private string phone;
         private DateTime joinDate;
-        public Frm_MemberUpdate(int memberID, string fullName, string gender, DateTime dateOfBirth, string email, string phone, DateTime joinDate)
+        public Frm_MemberUpdate(int memberID, string fullName, string gender, DateTime dateOfBirth, string email, string phone, DateTime joinDate, Frm_MembersManager parentForm)
         {
             InitializeComponent();
             this.memberID = memberID;
@@ -36,6 +36,7 @@ namespace BaiTapQuanLy.Forms
             this.email = email;
             this.phone = phone;
             this.joinDate = joinDate;
+            this.parentForm = parentForm;
         }
 
         private void cancelUpdateBTN_Click(object sender, EventArgs e)
@@ -118,8 +119,8 @@ namespace BaiTapQuanLy.Forms
                         anim.run();
                         noti.ShowDialog();
                     }, TaskScheduler.FromCurrentSynchronizationContext());
-                    ParentForm?.refreshMemberDataGridView();
-                    ParentForm?.LoadAllMembersData();
+                    parentForm.refreshMemberDataGridView();
+                    parentForm.LoadAllMembersData();
                     this.Close();
                 }
                 else

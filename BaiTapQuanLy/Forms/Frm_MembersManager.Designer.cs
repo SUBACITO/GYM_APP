@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MembersManager));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.addMembershipToMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -49,6 +49,13 @@
             this.colMembershipType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colexpiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboxMembershipExpireState = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboxMembershipType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cboxGenderFilter = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboxSearchFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.searchBarTxT = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -64,7 +71,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 111);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 339);
+            this.panel2.Size = new System.Drawing.Size(1608, 442);
             this.panel2.TabIndex = 6;
             // 
             // guna2Panel1
@@ -74,9 +81,9 @@
             this.guna2Panel1.Controls.Add(this.addMemberBTN);
             this.guna2Panel1.Controls.Add(this.editMemberBTN);
             this.guna2Panel1.Controls.Add(this.deleteMemberBTN);
-            this.guna2Panel1.Location = new System.Drawing.Point(686, -5);
+            this.guna2Panel1.Location = new System.Drawing.Point(1494, 6);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(102, 332);
+            this.guna2Panel1.Size = new System.Drawing.Size(102, 424);
             this.guna2Panel1.TabIndex = 2;
             // 
             // addMembershipToMemberBTN
@@ -92,7 +99,7 @@
             this.addMembershipToMemberBTN.ForeColor = System.Drawing.Color.White;
             this.addMembershipToMemberBTN.Image = ((System.Drawing.Image)(resources.GetObject("addMembershipToMemberBTN.Image")));
             this.addMembershipToMemberBTN.ImageSize = new System.Drawing.Size(66, 65);
-            this.addMembershipToMemberBTN.Location = new System.Drawing.Point(19, 0);
+            this.addMembershipToMemberBTN.Location = new System.Drawing.Point(19, 84);
             this.addMembershipToMemberBTN.Name = "addMembershipToMemberBTN";
             this.addMembershipToMemberBTN.PressedDepth = 0;
             this.addMembershipToMemberBTN.ShadowDecoration.BorderRadius = 0;
@@ -115,7 +122,7 @@
             this.addMemberBTN.ForeColor = System.Drawing.Color.White;
             this.addMemberBTN.Image = ((System.Drawing.Image)(resources.GetObject("addMemberBTN.Image")));
             this.addMemberBTN.ImageSize = new System.Drawing.Size(66, 65);
-            this.addMemberBTN.Location = new System.Drawing.Point(19, 81);
+            this.addMemberBTN.Location = new System.Drawing.Point(19, 165);
             this.addMemberBTN.Name = "addMemberBTN";
             this.addMemberBTN.PressedDepth = 0;
             this.addMemberBTN.ShadowDecoration.BorderRadius = 0;
@@ -138,7 +145,7 @@
             this.editMemberBTN.ForeColor = System.Drawing.Color.White;
             this.editMemberBTN.Image = ((System.Drawing.Image)(resources.GetObject("editMemberBTN.Image")));
             this.editMemberBTN.ImageSize = new System.Drawing.Size(66, 65);
-            this.editMemberBTN.Location = new System.Drawing.Point(19, 163);
+            this.editMemberBTN.Location = new System.Drawing.Point(19, 247);
             this.editMemberBTN.Name = "editMemberBTN";
             this.editMemberBTN.PressedDepth = 0;
             this.editMemberBTN.ShadowDecoration.BorderRadius = 0;
@@ -161,7 +168,7 @@
             this.deleteMemberBTN.ForeColor = System.Drawing.Color.White;
             this.deleteMemberBTN.Image = ((System.Drawing.Image)(resources.GetObject("deleteMemberBTN.Image")));
             this.deleteMemberBTN.ImageSize = new System.Drawing.Size(66, 65);
-            this.deleteMemberBTN.Location = new System.Drawing.Point(19, 249);
+            this.deleteMemberBTN.Location = new System.Drawing.Point(19, 333);
             this.deleteMemberBTN.Name = "deleteMemberBTN";
             this.deleteMemberBTN.PressedDepth = 0;
             this.deleteMemberBTN.ShadowDecoration.BorderRadius = 0;
@@ -177,19 +184,19 @@
             this.dgvMembers.AllowUserToDeleteRows = false;
             this.dgvMembers.AllowUserToResizeColumns = false;
             this.dgvMembers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvMembers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgvMembers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvMembers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvMembers.ColumnHeadersHeight = 30;
             this.dgvMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMemberID,
@@ -201,14 +208,14 @@
             this.colJoinDate,
             this.colMembershipType,
             this.colexpiredDate});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMembers.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMembers.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvMembers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMembers.Location = new System.Drawing.Point(25, 6);
             this.dgvMembers.MultiSelect = false;
@@ -217,7 +224,7 @@
             this.dgvMembers.RowHeadersVisible = false;
             this.dgvMembers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvMembers.RowTemplate.Height = 50;
-            this.dgvMembers.Size = new System.Drawing.Size(655, 321);
+            this.dgvMembers.Size = new System.Drawing.Size(1463, 403);
             this.dgvMembers.TabIndex = 0;
             this.dgvMembers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMembers.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -320,22 +327,162 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.cboxMembershipExpireState);
+            this.panel1.Controls.Add(this.cboxMembershipType);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.cboxGenderFilter);
+            this.panel1.Controls.Add(this.cboxSearchFilter);
             this.panel1.Controls.Add(this.searchBarTxT);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 111);
+            this.panel1.Size = new System.Drawing.Size(1608, 111);
             this.panel1.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1041, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(203, 33);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Membership Expiration State";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cboxMembershipExpireState
+            // 
+            this.cboxMembershipExpireState.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboxMembershipExpireState.AutoRoundedCorners = true;
+            this.cboxMembershipExpireState.BackColor = System.Drawing.Color.Transparent;
+            this.cboxMembershipExpireState.BorderColor = System.Drawing.Color.Silver;
+            this.cboxMembershipExpireState.BorderRadius = 17;
+            this.cboxMembershipExpireState.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboxMembershipExpireState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxMembershipExpireState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.cboxMembershipExpireState.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxMembershipExpireState.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxMembershipExpireState.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.cboxMembershipExpireState.ForeColor = System.Drawing.Color.Black;
+            this.cboxMembershipExpireState.ItemHeight = 30;
+            this.cboxMembershipExpireState.Items.AddRange(new object[] {
+            "None",
+            "7 days left",
+            "Expireded"});
+            this.cboxMembershipExpireState.Location = new System.Drawing.Point(1250, 58);
+            this.cboxMembershipExpireState.Name = "cboxMembershipExpireState";
+            this.cboxMembershipExpireState.Size = new System.Drawing.Size(238, 36);
+            this.cboxMembershipExpireState.StartIndex = 0;
+            this.cboxMembershipExpireState.TabIndex = 17;
+            this.cboxMembershipExpireState.SelectedIndexChanged += new System.EventHandler(this.cboxMembershipExpireState_SelectedIndexChanged);
+            // 
+            // cboxMembershipType
+            // 
+            this.cboxMembershipType.AutoRoundedCorners = true;
+            this.cboxMembershipType.BackColor = System.Drawing.Color.Transparent;
+            this.cboxMembershipType.BorderColor = System.Drawing.Color.Silver;
+            this.cboxMembershipType.BorderRadius = 17;
+            this.cboxMembershipType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboxMembershipType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxMembershipType.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.cboxMembershipType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxMembershipType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxMembershipType.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.cboxMembershipType.ForeColor = System.Drawing.Color.Black;
+            this.cboxMembershipType.ItemHeight = 30;
+            this.cboxMembershipType.Items.AddRange(new object[] {
+            "All",
+            "Bronze",
+            "Silver",
+            "Gold",
+            "Premium",
+            "Deluxe"});
+            this.cboxMembershipType.Location = new System.Drawing.Point(911, 58);
+            this.cboxMembershipType.Name = "cboxMembershipType";
+            this.cboxMembershipType.Size = new System.Drawing.Size(124, 36);
+            this.cboxMembershipType.StartIndex = 0;
+            this.cboxMembershipType.TabIndex = 15;
+            this.cboxMembershipType.SelectedIndexChanged += new System.EventHandler(this.cboxMembershipType_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(735, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 33);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Filter Membership Type";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(512, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 33);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Filter Gender";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cboxGenderFilter
+            // 
+            this.cboxGenderFilter.AutoRoundedCorners = true;
+            this.cboxGenderFilter.BackColor = System.Drawing.Color.Transparent;
+            this.cboxGenderFilter.BorderColor = System.Drawing.Color.Silver;
+            this.cboxGenderFilter.BorderRadius = 17;
+            this.cboxGenderFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboxGenderFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxGenderFilter.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.cboxGenderFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxGenderFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxGenderFilter.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.cboxGenderFilter.ForeColor = System.Drawing.Color.Black;
+            this.cboxGenderFilter.ItemHeight = 30;
+            this.cboxGenderFilter.Items.AddRange(new object[] {
+            "All",
+            "Male",
+            "Female"});
+            this.cboxGenderFilter.Location = new System.Drawing.Point(617, 58);
+            this.cboxGenderFilter.Name = "cboxGenderFilter";
+            this.cboxGenderFilter.Size = new System.Drawing.Size(112, 36);
+            this.cboxGenderFilter.StartIndex = 0;
+            this.cboxGenderFilter.TabIndex = 12;
+            this.cboxGenderFilter.SelectedIndexChanged += new System.EventHandler(this.cboxGenderFilter_SelectedIndexChanged);
+            // 
+            // cboxSearchFilter
+            // 
+            this.cboxSearchFilter.AutoRoundedCorners = true;
+            this.cboxSearchFilter.BackColor = System.Drawing.Color.Transparent;
+            this.cboxSearchFilter.BorderColor = System.Drawing.Color.Silver;
+            this.cboxSearchFilter.BorderRadius = 17;
+            this.cboxSearchFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboxSearchFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxSearchFilter.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.cboxSearchFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxSearchFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxSearchFilter.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxSearchFilter.ForeColor = System.Drawing.Color.Black;
+            this.cboxSearchFilter.ItemHeight = 30;
+            this.cboxSearchFilter.Items.AddRange(new object[] {
+            "Name",
+            "Phone Number",
+            "Email"});
+            this.cboxSearchFilter.Location = new System.Drawing.Point(353, 58);
+            this.cboxSearchFilter.Name = "cboxSearchFilter";
+            this.cboxSearchFilter.Size = new System.Drawing.Size(153, 36);
+            this.cboxSearchFilter.StartIndex = 0;
+            this.cboxSearchFilter.TabIndex = 11;
+            this.cboxSearchFilter.SelectedIndexChanged += new System.EventHandler(this.cboxSearchFilter_SelectedIndexChanged);
             // 
             // searchBarTxT
             // 
-            this.searchBarTxT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.searchBarTxT.AutoRoundedCorners = true;
             this.searchBarTxT.BackColor = System.Drawing.Color.Transparent;
             this.searchBarTxT.BorderColor = System.Drawing.Color.Silver;
-            this.searchBarTxT.BorderRadius = 21;
+            this.searchBarTxT.BorderRadius = 17;
             this.searchBarTxT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.searchBarTxT.DefaultText = "";
             this.searchBarTxT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -344,7 +491,7 @@
             this.searchBarTxT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.searchBarTxT.FillColor = System.Drawing.Color.WhiteSmoke;
             this.searchBarTxT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBarTxT.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBarTxT.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.searchBarTxT.ForeColor = System.Drawing.Color.Black;
             this.searchBarTxT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.searchBarTxT.IconLeft = ((System.Drawing.Image)(resources.GetObject("searchBarTxT.IconLeft")));
@@ -358,7 +505,7 @@
             this.searchBarTxT.SelectedText = "";
             this.searchBarTxT.ShadowDecoration.Depth = 50;
             this.searchBarTxT.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1);
-            this.searchBarTxT.Size = new System.Drawing.Size(655, 45);
+            this.searchBarTxT.Size = new System.Drawing.Size(320, 36);
             this.searchBarTxT.TabIndex = 10;
             this.searchBarTxT.TextChanged += new System.EventHandler(this.searchBarTxT_TextChanged);
             // 
@@ -377,7 +524,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1608, 553);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Frm_MembersManager";
@@ -414,5 +561,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colJoinDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMembershipType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colexpiredDate;
+        private Guna.UI2.WinForms.Guna2ComboBox cboxSearchFilter;
+        private Guna.UI2.WinForms.Guna2ComboBox cboxGenderFilter;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2ComboBox cboxMembershipType;
+        private Guna.UI2.WinForms.Guna2ComboBox cboxMembershipExpireState;
+        private System.Windows.Forms.Label label4;
     }
 }
