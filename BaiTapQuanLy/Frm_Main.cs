@@ -116,8 +116,21 @@ namespace BaiTapQuanLy
             memberManagerBTN.Text = state == "Collapsed" ? "" : "Members Manager";
         }
 
+        bool isSidebarCollapsed = false;
         private void menuSidebarIcon_Click(object sender, EventArgs e)
         {
+            isSidebarCollapsed = !isSidebarCollapsed;
+
+            // Change the sidebar icon image based on the current state
+            if (isSidebarCollapsed)
+            {
+                menuSidebarIcon.Image = Image.FromFile($"..\\..\\..\\image\\sidebar_show.png"); 
+            }
+            else
+            {
+                menuSidebarIcon.Image = Image.FromFile($"..\\..\\..\\image\\sidebar_collapse.png");
+            }
+
             sidebarTransistion.Start();
         }
 

@@ -141,18 +141,19 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(107, 17);
+            this.label1.Location = new System.Drawing.Point(107, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 23);
+            this.label1.Size = new System.Drawing.Size(190, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gym Management";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(61, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -162,9 +163,9 @@
             this.menuSidebarIcon.BackColor = System.Drawing.Color.White;
             this.menuSidebarIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuSidebarIcon.Image = ((System.Drawing.Image)(resources.GetObject("menuSidebarIcon.Image")));
-            this.menuSidebarIcon.Location = new System.Drawing.Point(12, 12);
+            this.menuSidebarIcon.Location = new System.Drawing.Point(12, 8);
             this.menuSidebarIcon.Name = "menuSidebarIcon";
-            this.menuSidebarIcon.Size = new System.Drawing.Size(32, 28);
+            this.menuSidebarIcon.Size = new System.Drawing.Size(34, 32);
             this.menuSidebarIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuSidebarIcon.TabIndex = 7;
             this.menuSidebarIcon.TabStop = false;

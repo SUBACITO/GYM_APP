@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MembersManager));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.addMembershipToMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -39,6 +39,15 @@
             this.editMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
             this.deleteMemberBTN = new Guna.UI2.WinForms.Guna2CircleButton();
             this.dgvMembers = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboxMembershipExpireState = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboxMembershipType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cboxGenderFilter = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.searchBarTxT = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.colMemberID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,16 +57,6 @@
             this.colJoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMembershipType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colexpiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboxMembershipExpireState = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboxMembershipType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cboxGenderFilter = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboxSearchFilter = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.searchBarTxT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
@@ -184,19 +183,19 @@
             this.dgvMembers.AllowUserToDeleteRows = false;
             this.dgvMembers.AllowUserToResizeColumns = false;
             this.dgvMembers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgvMembers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvMembers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMembers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMembers.ColumnHeadersHeight = 30;
             this.dgvMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMemberID,
@@ -208,14 +207,14 @@
             this.colJoinDate,
             this.colMembershipType,
             this.colexpiredDate});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMembers.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMembers.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMembers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMembers.Location = new System.Drawing.Point(25, 6);
             this.dgvMembers.MultiSelect = false;
@@ -250,81 +249,6 @@
             this.dgvMembers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembers_CellClick);
             this.dgvMembers.SelectionChanged += new System.EventHandler(this.dgvMembers_SelectionChanged);
             // 
-            // colMemberID
-            // 
-            this.colMemberID.DataPropertyName = "MemberID";
-            this.colMemberID.FillWeight = 86.99133F;
-            this.colMemberID.HeaderText = "Member ID";
-            this.colMemberID.Name = "colMemberID";
-            this.colMemberID.ReadOnly = true;
-            // 
-            // colFullName
-            // 
-            this.colFullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colFullName.DataPropertyName = "FullName";
-            this.colFullName.FillWeight = 147.7584F;
-            this.colFullName.HeaderText = "Full Name";
-            this.colFullName.Name = "colFullName";
-            this.colFullName.ReadOnly = true;
-            // 
-            // colGender
-            // 
-            this.colGender.DataPropertyName = "Gender";
-            this.colGender.FillWeight = 86.99133F;
-            this.colGender.HeaderText = "Gender";
-            this.colGender.Name = "colGender";
-            this.colGender.ReadOnly = true;
-            // 
-            // colDateOfBirth
-            // 
-            this.colDateOfBirth.DataPropertyName = "DateOfBirth";
-            this.colDateOfBirth.FillWeight = 86.99133F;
-            this.colDateOfBirth.HeaderText = "Date of Birth";
-            this.colDateOfBirth.Name = "colDateOfBirth";
-            this.colDateOfBirth.ReadOnly = true;
-            // 
-            // colEmail
-            // 
-            this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colEmail.DataPropertyName = "Email";
-            this.colEmail.FillWeight = 138.37F;
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
-            // 
-            // colPhone
-            // 
-            this.colPhone.DataPropertyName = "Phone";
-            this.colPhone.FillWeight = 86.99133F;
-            this.colPhone.HeaderText = "Phone";
-            this.colPhone.Name = "colPhone";
-            this.colPhone.ReadOnly = true;
-            // 
-            // colJoinDate
-            // 
-            this.colJoinDate.DataPropertyName = "JoinDate";
-            this.colJoinDate.FillWeight = 86.99133F;
-            this.colJoinDate.HeaderText = "Join Date";
-            this.colJoinDate.Name = "colJoinDate";
-            this.colJoinDate.ReadOnly = true;
-            // 
-            // colMembershipType
-            // 
-            this.colMembershipType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colMembershipType.DataPropertyName = "MembershipType";
-            this.colMembershipType.FillWeight = 101.4815F;
-            this.colMembershipType.HeaderText = "Membership Type";
-            this.colMembershipType.Name = "colMembershipType";
-            this.colMembershipType.ReadOnly = true;
-            // 
-            // colexpiredDate
-            // 
-            this.colexpiredDate.DataPropertyName = "expiredDate";
-            this.colexpiredDate.FillWeight = 86.06297F;
-            this.colexpiredDate.HeaderText = "Expired Date";
-            this.colexpiredDate.Name = "colexpiredDate";
-            this.colexpiredDate.ReadOnly = true;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label4);
@@ -333,7 +257,6 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cboxGenderFilter);
-            this.panel1.Controls.Add(this.cboxSearchFilter);
             this.panel1.Controls.Add(this.searchBarTxT);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -371,7 +294,7 @@
             this.cboxMembershipExpireState.Items.AddRange(new object[] {
             "None",
             "7 days left",
-            "Expireded"});
+            "Expired"});
             this.cboxMembershipExpireState.Location = new System.Drawing.Point(1250, 58);
             this.cboxMembershipExpireState.Name = "cboxMembershipExpireState";
             this.cboxMembershipExpireState.Size = new System.Drawing.Size(238, 36);
@@ -452,31 +375,6 @@
             this.cboxGenderFilter.TabIndex = 12;
             this.cboxGenderFilter.SelectedIndexChanged += new System.EventHandler(this.cboxGenderFilter_SelectedIndexChanged);
             // 
-            // cboxSearchFilter
-            // 
-            this.cboxSearchFilter.AutoRoundedCorners = true;
-            this.cboxSearchFilter.BackColor = System.Drawing.Color.Transparent;
-            this.cboxSearchFilter.BorderColor = System.Drawing.Color.Silver;
-            this.cboxSearchFilter.BorderRadius = 17;
-            this.cboxSearchFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboxSearchFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxSearchFilter.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.cboxSearchFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboxSearchFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboxSearchFilter.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxSearchFilter.ForeColor = System.Drawing.Color.Black;
-            this.cboxSearchFilter.ItemHeight = 30;
-            this.cboxSearchFilter.Items.AddRange(new object[] {
-            "Name",
-            "Phone Number",
-            "Email"});
-            this.cboxSearchFilter.Location = new System.Drawing.Point(353, 58);
-            this.cboxSearchFilter.Name = "cboxSearchFilter";
-            this.cboxSearchFilter.Size = new System.Drawing.Size(153, 36);
-            this.cboxSearchFilter.StartIndex = 0;
-            this.cboxSearchFilter.TabIndex = 11;
-            this.cboxSearchFilter.SelectedIndexChanged += new System.EventHandler(this.cboxSearchFilter_SelectedIndexChanged);
-            // 
             // searchBarTxT
             // 
             this.searchBarTxT.AutoRoundedCorners = true;
@@ -501,11 +399,11 @@
             this.searchBarTxT.Name = "searchBarTxT";
             this.searchBarTxT.PasswordChar = '\0';
             this.searchBarTxT.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.searchBarTxT.PlaceholderText = "Search by Name";
+            this.searchBarTxT.PlaceholderText = "Search by Name, Phone Number and Email";
             this.searchBarTxT.SelectedText = "";
             this.searchBarTxT.ShadowDecoration.Depth = 50;
             this.searchBarTxT.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1);
-            this.searchBarTxT.Size = new System.Drawing.Size(320, 36);
+            this.searchBarTxT.Size = new System.Drawing.Size(479, 36);
             this.searchBarTxT.TabIndex = 10;
             this.searchBarTxT.TextChanged += new System.EventHandler(this.searchBarTxT_TextChanged);
             // 
@@ -518,6 +416,88 @@
             this.label1.Size = new System.Drawing.Size(243, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Members Manager";
+            // 
+            // colMemberID
+            // 
+            this.colMemberID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colMemberID.DataPropertyName = "MemberID";
+            this.colMemberID.FillWeight = 82.60366F;
+            this.colMemberID.HeaderText = "Member ID";
+            this.colMemberID.Name = "colMemberID";
+            this.colMemberID.ReadOnly = true;
+            // 
+            // colFullName
+            // 
+            this.colFullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colFullName.DataPropertyName = "FullName";
+            this.colFullName.FillWeight = 156.0945F;
+            this.colFullName.HeaderText = "Full Name";
+            this.colFullName.Name = "colFullName";
+            this.colFullName.ReadOnly = true;
+            // 
+            // colGender
+            // 
+            this.colGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colGender.DataPropertyName = "Gender";
+            this.colGender.FillWeight = 82.60366F;
+            this.colGender.HeaderText = "Gender";
+            this.colGender.Name = "colGender";
+            this.colGender.ReadOnly = true;
+            // 
+            // colDateOfBirth
+            // 
+            this.colDateOfBirth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDateOfBirth.DataPropertyName = "DateOfBirth";
+            this.colDateOfBirth.FillWeight = 82.60366F;
+            this.colDateOfBirth.HeaderText = "Date of Birth";
+            this.colDateOfBirth.Name = "colDateOfBirth";
+            this.colDateOfBirth.ReadOnly = true;
+            // 
+            // colEmail
+            // 
+            this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colEmail.DataPropertyName = "Email";
+            this.colEmail.FillWeight = 161.4316F;
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            // 
+            // colPhone
+            // 
+            this.colPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colPhone.DataPropertyName = "Phone";
+            this.colPhone.FillWeight = 82.60366F;
+            this.colPhone.HeaderText = "Phone";
+            this.colPhone.Name = "colPhone";
+            this.colPhone.ReadOnly = true;
+            // 
+            // colJoinDate
+            // 
+            this.colJoinDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colJoinDate.DataPropertyName = "JoinDate";
+            this.colJoinDate.FillWeight = 82.60366F;
+            this.colJoinDate.HeaderText = "Join Date";
+            this.colJoinDate.Name = "colJoinDate";
+            this.colJoinDate.ReadOnly = true;
+            // 
+            // colMembershipType
+            // 
+            this.colMembershipType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colMembershipType.DataPropertyName = "MembershipType";
+            this.colMembershipType.FillWeight = 96.36297F;
+            this.colMembershipType.HeaderText = "Membership Type";
+            this.colMembershipType.Name = "colMembershipType";
+            this.colMembershipType.ReadOnly = true;
+            this.colMembershipType.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colexpiredDate
+            // 
+            this.colexpiredDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colexpiredDate.DataPropertyName = "expiredDate";
+            this.colexpiredDate.FillWeight = 81.72213F;
+            this.colexpiredDate.HeaderText = "Expired Date";
+            this.colexpiredDate.Name = "colexpiredDate";
+            this.colexpiredDate.ReadOnly = true;
             // 
             // Frm_MembersManager
             // 
@@ -552,6 +532,12 @@
         private Guna.UI2.WinForms.Guna2CircleButton editMemberBTN;
         private Guna.UI2.WinForms.Guna2TextBox searchBarTxT;
         private Guna.UI2.WinForms.Guna2CircleButton addMembershipToMemberBTN;
+        private Guna.UI2.WinForms.Guna2ComboBox cboxGenderFilter;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2ComboBox cboxMembershipType;
+        private Guna.UI2.WinForms.Guna2ComboBox cboxMembershipExpireState;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMemberID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGender;
@@ -561,12 +547,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colJoinDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMembershipType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colexpiredDate;
-        private Guna.UI2.WinForms.Guna2ComboBox cboxSearchFilter;
-        private Guna.UI2.WinForms.Guna2ComboBox cboxGenderFilter;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox cboxMembershipType;
-        private Guna.UI2.WinForms.Guna2ComboBox cboxMembershipExpireState;
-        private System.Windows.Forms.Label label4;
     }
 }

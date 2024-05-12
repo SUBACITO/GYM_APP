@@ -42,8 +42,6 @@ namespace BaiTapQuanLy.Forms
             bll_member = new Bll_Member(clsMain.path);
             LoadAllMembersData();
             DisplayMembersToDGV();
-            cboxSearchFilter.SelectedIndex = 0;
-            cboxSearchFilter_SelectedIndexChanged(this, EventArgs.Empty);
             cboxGenderFilter.SelectedIndex = 0;
             cboxGenderFilter_SelectedIndexChanged(this, EventArgs.Empty);
             cboxMembershipType.SelectedIndex = 0;
@@ -116,13 +114,12 @@ namespace BaiTapQuanLy.Forms
                 else
                 {
                     // Filter by membership type only
-                    filteredData = FilterMembersByMembershipType(selectedMembershipType);
+                    filteredData = FilterMembersByMembershipType(selectedMembershipType, allMembersData);
                 }
             }
             else
             {
-                string memberGender = selectedGender == "Male" ? "Nam" : "Nữ";
-                filteredData = FilterMembersByGenderAndMembershipType(memberGender, selectedMembershipType);
+                filteredData = FilterMembersByGenderAndMembershipType(selectedGender, selectedMembershipType);
             }
 
             // Apply search criteria to the filtered data
@@ -160,7 +157,7 @@ namespace BaiTapQuanLy.Forms
             else
             {
                 // Filter by membership type
-                filteredData = FilterMembersByMembershipType(selectedMembershipType);
+                filteredData = FilterMembersByMembershipType(selectedMembershipType, allMembersData);
 
                 // If a specific gender filter is applied, further filter by gender
                 if (selectedGender != "All")
@@ -176,10 +173,10 @@ namespace BaiTapQuanLy.Forms
             dgvMembers.ClearSelection();
 
             // Update the gender filter
-            updateGenderFilter();    
+            updateGenderFilter();
         }
 
-        /// Filter for membership status (Not finished yet)
+        /// Filter for membership status
         private void cboxMembershipExpireState_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedMembershipStatus = cboxMembershipExpireState.SelectedItem.ToString();
@@ -188,7 +185,31 @@ namespace BaiTapQuanLy.Forms
 
         private void updateMembershipStatusFilter()
         {
-            ///Not finished yet
+            DataTable filteredData;
+
+            if (selectedMembershipStatus == "None")
+            {
+                //apply gender and membership filters
+                updateMembershipFilter();
+                return;
+            }
+            else if (selectedMembershipStatus == "7 days left")
+            {
+                // Filter members expiring in the next 7 days
+                filteredData = FilterMembersExpiringInNextSevenDays();
+            }
+            else if (selectedMembershipStatus == "Expired")
+            {
+                // Filter expired members
+                filteredData = FilterExpiredMembers();
+            }
+            else
+            {
+                filteredData = allMembersData.Copy();
+            }
+            ApplySearchCriteria(filteredData);
+            dgvMembers.DataSource = filteredData;
+            dgvMembers.ClearSelection();
         }
 
 
@@ -205,10 +226,10 @@ namespace BaiTapQuanLy.Forms
             return filteredData;
         }
 
-        private DataTable FilterMembersByMembershipType(string membershipType)
+        private DataTable FilterMembersByMembershipType(string membershipType, DataTable data)
         {
-            DataTable filteredData = allMembersData.Clone();
-            foreach (DataRow row in allMembersData.Rows)
+            DataTable filteredData = data.Clone();
+            foreach (DataRow row in data.Rows)
             {
                 if (row.Field<string>("MembershipType") == membershipType)
                 {
@@ -217,6 +238,7 @@ namespace BaiTapQuanLy.Forms
             }
             return filteredData;
         }
+
 
         private DataTable FilterMembersByGenderAndMembershipType(string gender, string membershipType)
         {
@@ -238,10 +260,41 @@ namespace BaiTapQuanLy.Forms
             return filteredData;
         }
 
-        private DataTable FilterMembersByMembershipStatus(string membershipStatus)
+        private DataTable FilterMembersExpiringInNextSevenDays()
         {
-            return null;
-            ////Not finished yet
+            DataTable filteredData = allMembersData.Clone();
+            DateTime today = DateTime.Today;
+
+            foreach (DataRow row in allMembersData.Rows)
+            {
+                DateTime expiredDate = row.Field<DateTime>("expiredDate");
+                int daysUntilExpiration = (expiredDate - today).Days;
+
+                if (daysUntilExpiration > 0 && daysUntilExpiration <= 7)
+                {
+                    filteredData.ImportRow(row);
+                }
+            }
+
+            return filteredData;
+        }
+
+        private DataTable FilterExpiredMembers()
+        {
+            DataTable filteredData = allMembersData.Clone();
+            DateTime today = DateTime.Today.Date;
+
+            foreach (DataRow row in allMembersData.Rows)
+            {
+                DateTime expiredDate = row.Field<DateTime>("expiredDate").Date;
+
+                if (expiredDate < today)
+                {
+                    filteredData.ImportRow(row);
+                }
+            }
+
+            return filteredData;
         }
 
         private void ApplySearchCriteria(DataTable data)
@@ -253,23 +306,23 @@ namespace BaiTapQuanLy.Forms
                 return;
             }
 
-            string nameKeyword = searchText.Trim().ToLower();
-            string email = searchText.Trim();
-            string phoneNum = searchText.Trim();
+            string searchText = searchBarTxT.Text.Trim().ToLower(); // Get the entered search text
+            string nameKeyword = searchText;
+            string email = searchText;
+            string phoneNum = searchText;
 
             for (int i = data.Rows.Count - 1; i >= 0; i--)
             {
                 DataRow row = data.Rows[i];
                 string fullName = row.Field<string>("FullName").ToLower();
-                string memberGender = row.Field<string>("Gender");
                 string memberPhone = row.Field<string>("Phone");
-                string memberEmail = row.Field<string>("Email");
+                string memberEmail = row.Field<string>("Email").ToLower();
 
-                // Check if the row matches the search criteria based on the selected filter and the entered search text
+                // Check if the row matches the search criteria based on the entered search text
                 bool matchesSearchCriteria = (
-                    (selectedSearchFilter == "Name" && fullName.Contains(nameKeyword)) ||
-                    (selectedSearchFilter == "Phone Number" && memberPhone.Contains(phoneNum)) ||
-                    (selectedSearchFilter == "Email" && memberEmail.Contains(email))
+                    fullName.Contains(nameKeyword) || // Check if the full name contains the search text
+                    memberPhone.Contains(phoneNum) || // Check if the phone number contains the search text
+                    memberEmail.Contains(email) // Check if the email contains the search text
                 );
 
                 if (!matchesSearchCriteria)
@@ -278,80 +331,51 @@ namespace BaiTapQuanLy.Forms
                 }
             }
         }
-        //////////////////////////////////////////////////////////////////
-
-        /// FIlter for search bar
-        string selectedSearchFilter;
-        private void cboxSearchFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            selectedSearchFilter = cboxSearchFilter.SelectedItem?.ToString();
-            updateFilter();
-        }
-
-        private void updateFilter()
-        {
-            if (selectedSearchFilter == "Name")
-            {
-                searchBarTxT.PlaceholderText = "Search by Member's Name";
-            }
-            else if (selectedSearchFilter == "Phone Number")
-            {
-                searchBarTxT.PlaceholderText = "Search by Member's Phone Number";
-            }
-            else if (selectedSearchFilter == "Email")
-            {
-                searchBarTxT.PlaceholderText = "Search by Member's Email";
-            }
-
-            // Get the data source from the DataGridView
-            object dataSource = dgvMembers.DataSource;
-
-            if (dataSource is DataTable)
-            {
-                ApplySearchCriteria((DataTable)dataSource);
-            }
-            else if (dataSource is DataView)
-            {
-                // If the data source is a DataView, get its underlying DataTable
-                ApplySearchCriteria(((DataView)dataSource).Table);
-            }
-        }
 
         private void searchBarTxT_TextChanged(object sender, EventArgs e)
         {
-            string nameKeyword = searchBarTxT.Text.Trim().ToLower();
-            string email = searchBarTxT.Text.Trim();
-            string phoneNum = searchBarTxT.Text.Trim();
+            string searchText = searchBarTxT.Text.Trim().ToLower(); // Get the entered search text
             dgvMembers.ClearSelection();
-            searchText = searchBarTxT.Text;
 
-            // Filter the preloaded DataTable based on the search criteria and gender
+            // Filter the preloaded DataTable based on the search criteria
             DataTable filteredData = allMembersData.Clone();
             foreach (DataRow row in allMembersData.Rows)
             {
                 string fullName = row.Field<string>("FullName").ToLower();
-                string memberGender = row.Field<string>("Gender");
-                string memberMembershipType = row.Field<string>("MembershipType");
+                string phoneNum = row.Field<string>("Phone");
+                string email = row.Field<string>("Email").ToLower();
 
-                // Check if the member's gender matches the selected gender filter, or if the filter is "All"
-                bool genderMatch = selectedGender == "All" || memberGender == (selectedGender == "Male" ? "Nam" : "Nữ");
+                // Check if the row matches the search criteria based on the entered search text
+                bool matchesSearchCriteria = (
+                    fullName.Contains(searchText) || // Check if the full name contains the search text
+                    phoneNum.Contains(searchText) || // Check if the phone number contains the search text
+                    email.Contains(searchText) // Check if the email contains the search text
+                );
 
-                // Check if the member's membership type matches the selected membership type filter, or if the filter is "All"
-                bool membershipTypeMatch = selectedMembershipType == "All" || memberMembershipType == selectedMembershipType;
-
-                // Check if the row matches the search criteria based on the selected filter and the entered search text
-                if (genderMatch && membershipTypeMatch &&
-                    ((selectedSearchFilter == "Name" && fullName.Contains(nameKeyword)) ||
-                     (selectedSearchFilter == "Phone Number" && row.Field<string>("Phone").Contains(phoneNum)) ||
-                     (selectedSearchFilter == "Email" && row.Field<string>("Email").Contains(email))))
+                // Apply additional filters if necessary
+                if (matchesSearchCriteria)
                 {
-                    filteredData.ImportRow(row);
+                    string memberGender = row.Field<string>("Gender");
+                    string memberMembershipType = row.Field<string>("MembershipType");
+
+                    // Check if the member's gender matches the selected gender filter, or if the filter is "All"
+                    bool genderMatch = selectedGender == "All" || memberGender == (selectedGender == "Male" ? "Nam" : "Nữ");
+
+                    // Check if the member's membership type matches the selected membership type filter, or if the filter is "All"
+                    bool membershipTypeMatch = selectedMembershipType == "All" || memberMembershipType == selectedMembershipType;
+
+                    // Apply additional filters based on gender and membership type
+                    if (genderMatch && membershipTypeMatch)
+                    {
+                        filteredData.ImportRow(row);
+                    }
                 }
             }
 
             if (filteredData.Rows.Count > 0)
             {
                 dgvMembers.DataSource = filteredData;
+                dgvMembers.AutoResizeColumns();
             }
             else
             {
