@@ -189,9 +189,7 @@ namespace BaiTapQuanLy.Forms
 
             if (selectedMembershipStatus == "None")
             {
-                //apply gender and membership filters
-                updateMembershipFilter();
-                return;
+                filteredData = allMembersData.Copy();
             }
             else if (selectedMembershipStatus == "7 days left")
             {
@@ -267,12 +265,16 @@ namespace BaiTapQuanLy.Forms
 
             foreach (DataRow row in allMembersData.Rows)
             {
-                DateTime expiredDate = row.Field<DateTime>("expiredDate");
-                int daysUntilExpiration = (expiredDate - today).Days;
-
-                if (daysUntilExpiration > 0 && daysUntilExpiration <= 7)
+                // Check if the expiration date is not null
+                if (!row.IsNull("expiredDate"))
                 {
-                    filteredData.ImportRow(row);
+                    DateTime expiredDate = row.Field<DateTime>("expiredDate");
+                    int daysUntilExpiration = (expiredDate - today).Days;
+
+                    if (daysUntilExpiration > 0 && daysUntilExpiration <= 7)
+                    {
+                        filteredData.ImportRow(row);
+                    }
                 }
             }
 
@@ -286,11 +288,15 @@ namespace BaiTapQuanLy.Forms
 
             foreach (DataRow row in allMembersData.Rows)
             {
-                DateTime expiredDate = row.Field<DateTime>("expiredDate").Date;
-
-                if (expiredDate < today)
+                // Check if the expiration date is not null
+                if (!row.IsNull("expiredDate"))
                 {
-                    filteredData.ImportRow(row);
+                    DateTime expiredDate = row.Field<DateTime>("expiredDate").Date;
+
+                    if (expiredDate < today)
+                    {
+                        filteredData.ImportRow(row);
+                    }
                 }
             }
 

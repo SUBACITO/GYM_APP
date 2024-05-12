@@ -90,6 +90,7 @@ namespace BaiTapQuanLy.Forms
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
                 parentForm.refreshMemberDataGridView();
+                parentForm.LoadAllMembersData();
                 this.Close();
             } else if(result > 0 && packageID == 2)
             {
