@@ -106,6 +106,7 @@ namespace BaiTapQuanLy.Forms
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
                 parentForm.refreshMemberDataGridView();
+                parentForm.LoadAllMembersData();
                 this.Close();
             } else if(result > 0 && packageID == 3)
             {
@@ -121,6 +122,7 @@ namespace BaiTapQuanLy.Forms
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
                 parentForm.refreshMemberDataGridView();
+                parentForm.LoadAllMembersData();
                 this.Close();
             } else if (result > 0 && packageID == 4)
             {
@@ -136,6 +138,7 @@ namespace BaiTapQuanLy.Forms
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
                 parentForm.refreshMemberDataGridView();
+                parentForm.LoadAllMembersData();
                 this.Close();
             } else if(result > 0 && packageID == 5)
             {
@@ -151,6 +154,7 @@ namespace BaiTapQuanLy.Forms
                     noti.ShowDialog();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
                 parentForm.refreshMemberDataGridView();
+                parentForm.LoadAllMembersData();
                 this.Close();
             } else
             {

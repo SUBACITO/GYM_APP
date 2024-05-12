@@ -469,8 +469,8 @@ namespace BaiTapQuanLy.Forms
             addMembershipToMemberBTN.Enabled = false;
             if (dgvMembers.SelectedRows.Count == 1)
             { 
-                int memberID = Convert.ToInt32(dgvMembers.SelectedRows[0].Cells["colMemberID"].Value);
-                string userName = dgvMembers.SelectedRows[0].Cells["colFullName"].Value.ToString();
+                int memberID = Convert.ToInt32(dgvMembers.SelectedRows[0].Cells[0].Value);
+                string userName = dgvMembers.SelectedRows[0].Cells[1].Value.ToString();
                 Frm_MembershipPackage frm_membershipPackage = new Frm_MembershipPackage(memberID, userName, this);
                 frm_membershipPackage.StartPosition = FormStartPosition.CenterParent;
                 frm_membershipPackage.ShowDialog();
@@ -496,8 +496,8 @@ namespace BaiTapQuanLy.Forms
             deleteMemberBTN.Enabled = false;
             if (dgvMembers.SelectedRows.Count == 1)
             {
-                int memberID = Convert.ToInt32(dgvMembers.SelectedRows[0].Cells["colMemberID"].Value);
-                string userName = dgvMembers.SelectedRows[0].Cells["colFullName"].Value.ToString();
+                int memberID = Convert.ToInt32(dgvMembers.SelectedRows[0].Cells[0].Value);
+                string userName = dgvMembers.SelectedRows[0].Cells[1].Value.ToString();
 
                 Frm_Messages delete_confirm = new Frm_Messages();
                 delete_confirm.StartPosition = FormStartPosition.CenterParent;
