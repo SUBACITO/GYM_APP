@@ -21,6 +21,7 @@ namespace BaiTapQuanLy.Forms
         {
             InitializeComponent();
             this.parentForm = parentForm;
+            dtp_JoinDate.Value = DateTime.Now;
         }
         private void Frm_MembersAdd_Load(object sender, EventArgs e)
         {
