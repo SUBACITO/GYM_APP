@@ -134,7 +134,7 @@ namespace BaiTapQuanLy.Forms
                 anim.add(frm_confirm, "Top", 400);
                 frm_confirm.topPanel.FillColor = Color.BlueViolet;
                 frm_confirm.topPanel.FillColor2 = Color.Fuchsia;
-                frm_confirm.buyPackageBTN.FillColor = Color.Blue ;
+                frm_confirm.buyPackageBTN.FillColor = Color.BlueViolet ;
                 frm_confirm.buyPackageBTN.FillColor2 = Color.Fuchsia;
                 frm_confirm.membershipType = "Membership Type: Deluxe";
                 frm_confirm.durationMembership = "Duration: 1 year";

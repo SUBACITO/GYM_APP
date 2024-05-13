@@ -33,12 +33,12 @@
             this.confirmGradienTopPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.labelHeader = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblMembershipPrice = new System.Windows.Forms.Label();
             this.buyConfirmPackageBTN = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblMembershipDuration = new System.Windows.Forms.Label();
             this.lblMembershipType = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.cancelPackagePurchaseBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.lblMembershipPrice = new System.Windows.Forms.Label();
             this.confirmGradienTopPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,16 @@
             this.guna2Panel1.Size = new System.Drawing.Size(651, 254);
             this.guna2Panel1.TabIndex = 1;
             // 
+            // lblMembershipPrice
+            // 
+            this.lblMembershipPrice.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMembershipPrice.Location = new System.Drawing.Point(0, 128);
+            this.lblMembershipPrice.Name = "lblMembershipPrice";
+            this.lblMembershipPrice.Size = new System.Drawing.Size(648, 38);
+            this.lblMembershipPrice.TabIndex = 18;
+            this.lblMembershipPrice.Text = "Price";
+            this.lblMembershipPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // buyConfirmPackageBTN
             // 
             this.buyConfirmPackageBTN.AutoRoundedCorners = true;
@@ -93,7 +103,9 @@
             this.buyConfirmPackageBTN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.buyConfirmPackageBTN.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.buyConfirmPackageBTN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buyConfirmPackageBTN.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyConfirmPackageBTN.FillColor = System.Drawing.Color.BlueViolet;
+            this.buyConfirmPackageBTN.FillColor2 = System.Drawing.Color.Fuchsia;
+            this.buyConfirmPackageBTN.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
             this.buyConfirmPackageBTN.ForeColor = System.Drawing.Color.White;
             this.buyConfirmPackageBTN.Location = new System.Drawing.Point(75, 189);
             this.buyConfirmPackageBTN.Name = "buyConfirmPackageBTN";
@@ -150,16 +162,6 @@
             this.cancelPackagePurchaseBTN.TabIndex = 13;
             this.cancelPackagePurchaseBTN.Text = "Cancel";
             this.cancelPackagePurchaseBTN.Click += new System.EventHandler(this.cancelPackagePurchaseBTN_Click);
-            // 
-            // lblMembershipPrice
-            // 
-            this.lblMembershipPrice.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMembershipPrice.Location = new System.Drawing.Point(0, 128);
-            this.lblMembershipPrice.Name = "lblMembershipPrice";
-            this.lblMembershipPrice.Size = new System.Drawing.Size(648, 38);
-            this.lblMembershipPrice.TabIndex = 18;
-            this.lblMembershipPrice.Text = "Price";
-            this.lblMembershipPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Frm_MembershipPurchaseConfirmation
             // 
